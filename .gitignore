@@ -1,0 +1,12 @@
+# Editor / IDE
+.vscode/
+.idea/
+.kiro/
+/gestion
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Exports temporales de diagramas (no se versionan, se renderizan en vivo)
+*.svg.bak

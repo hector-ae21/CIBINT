@@ -1,0 +1,26 @@
+@startuml
+hide empty description
+skinparam backgroundColor transparent
+skinparam state {
+  BackgroundColor #f5f5f5
+  BorderColor #333333
+}
+
+[*] --> Direccion
+
+Direccion : Dirección y planificación
+Direccion --> Obtencion
+
+Obtencion : Obtención\n(recolección de datos en bruto)
+Obtencion --> Procesamiento
+
+Procesamiento : Procesamiento\n(integración, traducción, decodificación)
+Procesamiento --> Analisis
+
+Analisis : Análisis y producción\n(interpretación, contexto, valoración)
+Analisis --> Difusion
+
+Difusion : Difusión\n(entrega del producto de inteligencia)
+Difusion --> Direccion : Retroalimentación
+
+@enduml

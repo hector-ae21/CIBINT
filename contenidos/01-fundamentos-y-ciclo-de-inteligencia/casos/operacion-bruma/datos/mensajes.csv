@@ -1,0 +1,15 @@
+mensaje_id,hora_recepcion,remitente_aparente,asunto_normalizado,dominio_enlace,cabecera_disponible
+M01,07:52,soporte@acceso-boreal.example,cuenta suspendida,acceso-boreal.example,si
+M02,07:55,soporte@acceso-boreal.example,verificacion pendiente,acceso-boreal.example,no
+M03,07:57,avisos@campus-boreal.example,actualizacion del campus,campus-boreal.example,si
+M04,08:01,soporte@acceso-boreal.example,cuenta suspendida,acceso-boreal.example,si
+M05,08:03,soporte@acceso-boreal.example,verificacion pendiente,acceso-boreal.example,no
+M06,08:05,avisos@boreal.example,actualizacion del campus,,si
+M07,08:07,avisos@campus-boreal.example,verificacion pendiente,campus-boreal.example,si
+M08,08:09,soporte@acceso-boreal.example,verificacion pendiente,acceso-boreal.example,si
+M09,08:11,avisos@campus-boreal.example,cuenta suspendida,campus-boreal.example,no
+M10,08:13,soporte@acceso-boreal.example,verificacion pendiente,acceso-boreal.example,si
+M11,08:16,avisos@campus-boreal.example,actualizacion del campus,campus-boreal.example,si
+M12,08:18,soporte@acceso-boreal.example,cuenta suspendida,acceso-boreal.example,no
+M13,08:20,soporte@acceso-boreal.example,verificacion pendiente,acceso-boreal.example,no
+M14,08:21,avisos@boreal.example,verificacion pendiente,,no

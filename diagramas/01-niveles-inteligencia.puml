@@ -1,0 +1,25 @@
+@startuml
+title Niveles de inteligencia y audiencia
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BorderColor #0085CF
+  FontColor #3E3E3D
+  RoundCorner 14
+}
+
+rectangle "Estratégica\nPrioridades y escenarios\nMeses o años" as strategic #E9F6FB
+rectangle "Operacional\nCampañas y actores\nDías o meses" as operational #BFE3F3
+rectangle "Táctica\nComportamientos y detección\nHoras o semanas" as tactical #FFF2E6
+rectangle "Técnica\nIndicadores y reglas\nMinutos o días" as technical #EEF7E5
+
+strategic -down-> operational : orienta prioridades
+operational -down-> tactical : describe la campaña
+tactical -down-> technical : concreta observables
+technical .up.> tactical : aporta hallazgos
+tactical .up.> operational : revela patrones
+operational .up.> strategic : informa sobre impacto
+
+@enduml

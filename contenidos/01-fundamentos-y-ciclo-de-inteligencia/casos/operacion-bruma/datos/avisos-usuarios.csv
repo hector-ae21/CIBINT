@@ -1,0 +1,6 @@
+aviso_id,mensaje_id,hora_aviso,interaccion_declarada,dato_introducido
+U01,M02,08:09,abrio_enlace_e_introdujo_dato,nombre_de_usuario
+U02,M07,08:16,abrio_enlace_e_introdujo_dato,nombre_de_usuario
+U03,M09,08:22,abrio_enlace_e_introdujo_dato,nombre_de_usuario
+U04,M10,08:24,abrio_enlace,ninguno
+U05,M14,08:27,no_interactuo,ninguno

@@ -1,0 +1,29 @@
+@startuml
+title De los datos a una decisión
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam rectangle {
+  BorderColor #0085CF
+  FontColor #3E3E3D
+}
+
+rectangle "Datos\nObservaciones disponibles" as datos #E9F6FB
+rectangle "Información\nDatos ordenados y relacionados" as info #BFE3F3
+rectangle "Inteligencia\nValoración para una necesidad concreta" as intel #FFF2E6
+rectangle "Decisión\nAcción, prioridad o seguimiento" as decision #EEF7E5
+
+datos --> info : organizar y relacionar
+info --> intel : interpretar y valorar
+intel --> decision : comunicar a tiempo
+decision ..> datos : plantea nuevas preguntas
+
+note bottom of intel
+  Responde a un requerimiento y
+  explica evidencia e incertidumbre
+end note
+
+@enduml

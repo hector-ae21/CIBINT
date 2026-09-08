@@ -40,6 +40,6 @@ El estudiante completará el recorrido con referencias concretas al expediente:
 | Difusión | | | | |
 | Retroalimentación | | | | |
 
-La tabla debe incluir al menos una vuelta justificada a una fase anterior y distinguir una tarea de la herramienta que podría utilizarse para realizarla. No requiere entrega fuera de la sesión en la que se indique.
+La tabla debe incluir al menos una vuelta justificada a una fase anterior y distinguir una tarea de la herramienta que podría utilizarse para realizarla.
 
 La explicación general continúa en [El ciclo de inteligencia](../../README.md#el-ciclo-de-inteligencia).

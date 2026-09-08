@@ -34,6 +34,6 @@ El estudiante preparará una versión propia de ambos productos a partir de las 
 | Alerta técnica | 6 líneas | Vigencia, indicadores, contexto mínimo, acción y límite |
 | Nota de situación | 150 palabras | Valoración, evidencia principal, impacto, confianza, recomendación y lagunas |
 
-Ambos productos deben ser compatibles entre sí y permitir remontar sus afirmaciones al expediente. El trabajo se utiliza para contraste en clase; no requiere entrega salvo que el repositorio anual publique un enunciado específico.
+Ambos productos deben ser compatibles entre sí y permitir remontar sus afirmaciones al expediente.
 
 La explicación general continúa en [Productos y audiencias](../../README.md#productos-y-audiencias).

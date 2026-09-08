@@ -42,4 +42,4 @@ El resultado se recogerá en una tabla de trabajo:
 | Información | | | |
 | Inteligencia | | | |
 
-Esta práctica se comenta en clase y no constituye una entrega. La explicación general continúa en [De los datos a la inteligencia](../../README.md#de-los-datos-a-la-inteligencia).
+La explicación general continúa en [De los datos a la inteligencia](../../README.md#de-los-datos-a-la-inteligencia).

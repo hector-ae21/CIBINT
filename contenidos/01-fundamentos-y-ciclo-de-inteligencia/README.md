@@ -25,8 +25,6 @@ La ciberinteligencia cubre la distancia entre ambas columnas: transforma observa
 
 > **La investigación comienza por una necesidad de decisión, no por una herramienta.**
 
-Durante la primera sesión, Operación Bruma se utiliza como hilo de una explicación dirigida por el profesor. El estudiante no tiene que resolver ni entregar el caso: basta con seguir cómo una misma evidencia cambia cuando se organiza, se interpreta y se adapta a una decisión.
-
 ## De los datos a la inteligencia
 
 ![De los datos a la decisión](https://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/hector-ae21/CIBINT/main/diagramas/01-datos-informacion-inteligencia.puml)
@@ -57,7 +55,7 @@ Una lista de indicadores puede ser útil, pero todavía no es un producto de int
 
 El documento breve [*The Work of a Nation: The Intelligence Cycle*](https://www.cia.gov/static/c050e9d29b6a04b639f050d6555e35c6/The-Work-of-a-Nation.pdf), de la CIA, presenta esta transformación como el paso de información en bruto a inteligencia terminada para apoyar decisiones.
 
-La distinción puede aplicarse sobre las muestras del expediente en [Operación Bruma · Del dato a la inteligencia](casos/operacion-bruma/01-datos-informacion-inteligencia.md). El apartado combina un ejemplo resuelto con una breve tarea de análisis que no requiere entrega.
+La distinción puede aplicarse sobre las muestras del expediente en [Operación Bruma · Del dato a la inteligencia](casos/operacion-bruma/01-datos-informacion-inteligencia.md). El apartado combina un ejemplo resuelto con un ejercicio breve de análisis.
 
 ## El requerimiento de inteligencia
 

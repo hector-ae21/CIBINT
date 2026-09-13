@@ -31,7 +31,7 @@ Las preguntas descomponen el requerimiento sin convertirlo todavía en una lista
 
 ## Trabajo guiado
 
-El estudiante revisará cada pregunta y completará el plan mínimo:
+Se debe revisar cada pregunta y completar el plan mínimo:
 
 | Pregunta | Evidencia ya disponible | Evidencia que falta | Resultado esperado |
 |---|---|---|---|

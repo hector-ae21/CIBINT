@@ -27,7 +27,7 @@ La alerta permite ejecutar acciones concretas. La nota explica por qué esas acc
 
 ## Trabajo guiado
 
-El estudiante preparará una versión propia de ambos productos a partir de las muestras:
+Se debe preparar una versión propia de ambos productos a partir de las muestras:
 
 | Producto | Límite de extensión | Elementos obligatorios |
 |---|---:|---|

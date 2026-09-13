@@ -10,7 +10,7 @@ Este apartado utiliza el [expediente del caso](README.md) para distinguir observ
 | **Información** | Los dominios de los doce mensajes con enlace resolvían a la misma dirección a las 08:14 | Relación entre `mensajes.csv` y `resolucion-dns.csv` |
 | **Inteligencia** | Es probable que los doce mensajes con enlace formen parte de una misma campaña; la infraestructura común y la proximidad temporal justifican una contención inicial, aunque no permiten establecer autoría | Muestras BRU-MSG y BRU-DNS, interpretadas para la decisión de las 14:00 |
 
-La tercera fila no repite los datos. Los interpreta para una necesidad concreta, limita lo que puede afirmarse y permite actuar sin presentar la hipótesis como certeza.
+La inteligencia no repite los datos. Los interpreta para una necesidad concreta, limita lo que puede afirmarse y permite actuar sin presentar la hipótesis como certeza.
 
 ## Evidencia, interpretación y límite
 
@@ -28,7 +28,7 @@ Ejemplo:
 
 ## Trabajo sobre las muestras
 
-El estudiante seleccionará:
+Se debe seleccionar:
 
 1. un dato de `mensajes.csv`;
 2. una relación que necesite al menos dos filas o dos muestras distintas;

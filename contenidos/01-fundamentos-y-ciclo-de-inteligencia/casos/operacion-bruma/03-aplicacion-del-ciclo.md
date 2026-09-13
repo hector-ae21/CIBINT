@@ -29,7 +29,7 @@ Este retorno muestra que el ciclo sirve para organizar decisiones y trazabilidad
 
 ## Registro de trabajo
 
-El estudiante completará el recorrido con referencias concretas al expediente:
+Se debe completar el recorrido con referencias concretas al expediente:
 
 | Fase | Entrada utilizada | Decisión o tarea | Salida | Siguiente fase |
 |---|---|---|---|---|

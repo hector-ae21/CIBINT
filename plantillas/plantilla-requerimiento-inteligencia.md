@@ -1,64 +1,36 @@
 # Requerimiento de inteligencia
 
-> Completar antes de iniciar la obtención. El enunciado de la actividad puede exigir campos adicionales.
+> Se completa antes de iniciar la obtención. Convierte una petición abierta en un encargo que el analista puede planificar y responder. El enunciado de la actividad puede exigir campos adicionales.
 
-## Identificación
+## Componentes
 
-| Campo | Contenido |
-|---|---|
-| Título | |
-| Solicitante o audiencia | |
-| Decisión que debe apoyar | |
-| Fecha y hora límite | |
-| Responsable del análisis | |
-| Estado | Borrador / validado / revisado / cerrado |
+| Componente | Qué responde | Contenido |
+|---|---|---|
+| **Destinatario** | ¿Quién va a utilizar el resultado? | |
+| **Decisión** | ¿Qué decisión concreta debe apoyar? | |
+| **Objeto** | ¿Sobre qué se analiza? | |
+| **Horizonte** | ¿Para cuándo se necesita? | |
+| **Alcance** | ¿Qué material, fuentes y técnicas pueden utilizarse? | |
+| **Exclusiones** | ¿Qué queda fuera de forma expresa? | |
+| **Producto** | ¿Qué se entrega, con qué formato y detalle? | |
 
-## Requerimiento
+## Requerimiento en una frase
 
-**Necesidad de inteligencia:**
-
-<!-- Una frase: qué debe saberse, para qué decisión, sobre qué objeto y para cuándo. -->
+<!-- Qué debe saberse, para qué decisión, sobre qué objeto, con qué límite y para cuándo. -->
 
 ## Preguntas de inteligencia
 
-1.
-2.
-3.
+Descomponen el requerimiento. Indican qué debe poder afirmarse al final, no qué se va a teclear en un buscador.
 
-## Alcance
+| Prioridad | Pregunta | Decisión a la que contribuye |
+|---:|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
 
-### Incluido
+## Comprobación
 
--
-
-### Excluido
-
--
-
-## Fuentes y técnicas
-
-| Fuente o técnica prevista | Finalidad | Autorización o restricción |
-|---|---|---|
-| | | |
-
-## Producto esperado
-
-| Campo | Definición |
-|---|---|
-| Formato | |
-| Extensión o duración | |
-| Nivel de detalle | |
-| Canal de entrega | |
-| Vigencia estimada | |
-
-## Riesgos y lagunas iniciales
-
--
-
-## Validación
-
-- [ ] El requerimiento está vinculado a una decisión.
-- [ ] Las preguntas son concretas y respondibles.
+- [ ] El requerimiento está vinculado a una decisión concreta.
+- [ ] Las preguntas son respondibles con evidencia y no son consultas de búsqueda.
 - [ ] El alcance y las exclusiones son explícitos.
-- [ ] Todas las fuentes y técnicas previstas están autorizadas.
-- [ ] El producto se adapta a su audiencia y plazo.
+- [ ] El producto se ajusta a su destinatario y a su plazo.

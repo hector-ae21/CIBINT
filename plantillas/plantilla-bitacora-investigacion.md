@@ -18,6 +18,14 @@
 |---|---|---|---|---|---|
 | AAAA-MM-DD HH:MM | | | | | |
 
+## Evidencias conservadas
+
+> Registrar la existencia de una exposición, no el dato expuesto. No se anotan aquí credenciales ni datos personales innecesarios.
+
+| Identificador | Descripción | Dirección u origen | Fecha y hora de obtención (con zona horaria) | Huella SHA-256 | Ubicación y acceso |
+|---|---|---|---|---|---|
+| EV-01 | | | AAAA-MM-DD HH:MM | | |
+
 ## Decisiones metodológicas
 
 | Fecha | Decisión o cambio | Motivo | Consecuencia para el análisis |

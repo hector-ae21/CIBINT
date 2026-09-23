@@ -1,0 +1,8 @@
+entrada_id,fecha_hora,autor,proposito,fuente,accion,resultado,siguiente_paso
+B01,2026-03-09 09:50,JM,Conservar el anuncio del foro,Foro publico,Captura de pantalla del anuncio,Guardada en el escritorio,Pasarla al grupo del equipo
+B02,,JM,,Foro publico,Mirar el perfil de nordvik,Tiene mas mensajes,Seguir mirando
+B03,2026-03-09 10:40,JM,Ver si la imagen del panel es nuestra,Captura del cliente,Comparar con el panel real,Coincide la version y el logotipo,Avisar a sistemas
+B04,2026-03-09 11:05,JM,Buscar mas informacion,Buscador generico,Buscar orvalia filtracion,Aparece un pegado publico con una lista de cuentas @orvalia.example,Copiar la lista para revisarla
+B05,2026-03-09 11:10,JM,Revisar la lista,Pegado publico,Copiar la lista a un documento compartido,23 lineas; [se copio aqui el correo completo de una empleada y un fragmento de su contrasena],Comprobar cuales funcionan
+B06,2026-03-09 12:30,JM,Conservar las publicaciones de la cuenta anonima,Red social,Descargar los tres documentos,Descargados,
+B07,lunes tarde,JM,,,Hablar con recursos humanos,Me pasan nombres de gente que se queja,Mirar sus perfiles

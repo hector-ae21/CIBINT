@@ -1,0 +1,40 @@
+@startuml
+title Espectro de identidad en una investigación
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam rectangle {
+  BorderColor #0085CF
+  FontColor #3E3E3D
+}
+
+rectangle "Consulta sin identificarse\nContenido público, sin iniciar sesión" as anon #EEF7E5
+rectangle "Identidad institucional\nCuenta de trabajo, separada de la personal" as inst #EEF7E5
+rectangle "Identidad virtual pasiva\nPerfil ficticio que solo observa" as pasiva #FFF2E6
+rectangle "Identidad virtual que interactúa\nContacta o pide acceso con falsos pretextos" as activa #F8D7D3
+rectangle "Suplantación\nHacerse pasar por una persona real" as supl #F8D7D3
+
+anon -right-> inst
+inst -right-> pasiva
+pasiva -right-> activa
+activa -right-> supl
+
+note bottom of inst
+  Límite de las prácticas
+  de la asignatura
+end note
+
+note bottom of pasiva
+  Solo con política y
+  autorización expresa
+end note
+
+note bottom of activa
+  Fuera de la investigación
+  de fuentes abiertas
+end note
+
+@enduml

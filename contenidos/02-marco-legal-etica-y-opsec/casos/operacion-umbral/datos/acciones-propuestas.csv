@@ -1,0 +1,15 @@
+accion_id,propuesta_por,descripcion,sistema_o_fuente,afecta_a_personas
+OB01,Asesoria juridica,Conservar la publicacion del foro con su direccion fecha y hora y una huella del archivo,Foro publico,si
+OB02,Asesoria juridica,Conservar las tres publicaciones de la cuenta anonima con su direccion fecha y hora,Red social,si
+OB03,Analista,Consultar en fuentes pasivas si existen dominios registrados parecidos a orvalia.example,Registros publicos de dominios,no
+OB04,Analista,Revisar los registros de acceso del panel de gestion de almacenes de las ultimas cuatro semanas,Sistema propio,si
+OB05,Analista,Identificar a quien se distribuyeron internamente las hojas de tarifas y el organigrama publicados,Gestor documental propio,si
+OB06,Recursos humanos,Revisar las redes sociales personales de los empleados del area de operaciones,Perfiles personales,si
+OB07,Direccion general,Revisar el correo corporativo de los empleados del area de operaciones,Correo corporativo,si
+OB08,Direccion general,Reunir todo lo que el alias nordvik haya publicado en otros foros para averiguar quien es,Foros publicos,si
+OB09,Sistemas,Interactuar con el vendedor o con el acceso ofrecido para comprobar si es real,Foro y sistema ajeno,si
+OB10,Comunicacion,Solicitar a la plataforma la retirada de los documentos internos publicados,Red social,no
+OB11,Comunicacion,Responder publicamente a la cuenta anonima desde el perfil corporativo,Red social,si
+OB12,Asesoria juridica,Presentar denuncia ante la Policia Nacional o la Guardia Civil,Autoridades,no
+OB13,Analista,Notificar el incidente a INCIBE-CERT,CSIRT de referencia,no
+OB14,Sistemas,Forzar el cambio de contrasena de las cuentas con acceso al panel de almacenes,Sistema propio,si

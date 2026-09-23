@@ -33,6 +33,7 @@ La casilla indica que el contenido está publicado y revisado, no que el estudia
 - [Requerimiento de inteligencia](plantillas/plantilla-requerimiento-inteligencia.md)
 - [Bitácora de investigación](plantillas/plantilla-bitacora-investigacion.md)
 - [Evaluación de fuentes](plantillas/plantilla-evaluacion-fuentes.md)
+- [Evaluación de licitud de la obtención](plantillas/plantilla-evaluacion-licitud.md)
 - [Informe de inteligencia](plantillas/plantilla-informe-inteligencia.md)
 
 ## Cursos académicos

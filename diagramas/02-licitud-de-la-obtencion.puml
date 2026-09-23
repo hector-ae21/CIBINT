@@ -1,0 +1,46 @@
+@startuml
+title Antes de obtener: seis comprobaciones
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam rectangle {
+  BorderColor #0085CF
+  FontColor #3E3E3D
+}
+skinparam activity {
+  BackgroundColor #E9F6FB
+  BorderColor #0085CF
+  FontColor #3E3E3D
+  DiamondBackgroundColor #FFFFFF
+  DiamondBorderColor #0085CF
+}
+
+start
+:Acción de obtención propuesta;
+if (¿Responde a una pregunta\ndel requerimiento?) then (no)
+  #FFF2E6:No se realiza;
+  stop
+endif
+if (¿Implica datos personales?) then (sí)
+  if (¿Hay base de licitud y se\nlimita a lo necesario?) then (no)
+    #FFF2E6:No se realiza\no se replantea;
+    stop
+  endif
+endif
+if (¿Accede a sistemas o contenidos\nprotegidos sin autorización?) then (sí)
+  #FFF2E6:Descartada;
+  stop
+endif
+if (¿Existe una forma\nmenos intrusiva?) then (sí)
+  :Usar la alternativa;
+endif
+if (¿Expone la investigación,\nal analista o a terceros?) then (sí)
+  :Aplicar contramedidas\no replantear;
+endif
+#EEF7E5:Registrar en la bitácora\ny obtener;
+stop
+
+@enduml

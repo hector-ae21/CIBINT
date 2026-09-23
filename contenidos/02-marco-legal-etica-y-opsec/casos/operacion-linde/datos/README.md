@@ -1,4 +1,4 @@
-# Operación Umbral · Diccionario de datos
+# Operación Linde · Diccionario de datos
 
 Las muestras reflejan la situación del lunes a última hora. Son material docente: no contienen datos reales de ninguna persona ni de ninguna organización.
 

@@ -1,4 +1,4 @@
-# Operación Umbral · De la petición al alcance
+# Operación Linde · De la petición al alcance
 
 La petición de la dirección general, «quiero saber quién está detrás de esto», es comprensible. Pero tal como está formulada mezcla tres cosas distintas, y solo una de ellas corresponde al equipo de seguridad.
 

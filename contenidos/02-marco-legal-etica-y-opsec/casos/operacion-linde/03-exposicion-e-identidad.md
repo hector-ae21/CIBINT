@@ -1,4 +1,4 @@
-# Operación Umbral · Exposición e identidad
+# Operación Linde · Exposición e identidad
 
 El martes por la mañana, la directora general pregunta si no sería más rápido que alguien del equipo «entrara en ese foro como uno más» para averiguar algo. La pregunta obliga a hablar de dos cosas a la vez: qué puede delatar la investigación y hasta dónde puede llegar el equipo para protegerla.
 
@@ -6,10 +6,10 @@ El martes por la mañana, la directora general pregunta si no sería más rápid
 
 El proceso de OPSEC del tema, aplicado al caso:
 
-| Paso | En Operación Umbral |
+| Paso | En Operación Linde |
 |---|---|
 | **Información crítica** | Que Orvalia sabe lo del foro; qué sistemas se están revisando; que se prepara una denuncia; quién forma el equipo |
-| **Amenazas** | Quien ofrece el acceso, que puede borrar rastros o cambiar de método; la persona que publicó los documentos, si es de dentro; cualquier filtración interna |
+| **Amenazas** | Quien ofrece el acceso, que puede borrar rastros o cambiar de método; la persona que publicó los documentos, si es de dentro; cualquier filtración interna. Por ejemplo: el foro puede registrar quién consulta el anuncio, y los documentos publicados pueden estar preparados para avisar a su autor cuando alguien los abre |
 | **Vulnerabilidades** | Una respuesta pública desde el perfil corporativo; comentarios sobre el caso en la oficina o en canales informales; el uso de cuentas personales del equipo; enviar material del caso a servicios externos para analizarlo |
 | **Riesgo** | Si el autor sabe que ha sido detectado, puede eliminar pruebas antes de la denuncia o adelantar la venta del acceso |
 | **Contramedidas** | Retrasar cualquier respuesta pública hasta que jurídica lo autorice; limitar el conocimiento del caso a quien lo necesita; usar solo equipos y cuentas de trabajo; no subir las capturas a servicios externos; etiquetar la nota de situación como TLP:AMBER+STRICT |

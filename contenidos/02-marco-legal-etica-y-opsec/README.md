@@ -14,7 +14,13 @@ Antes de preguntarse cómo se obtiene un dato, el analista tiene que poder respo
 
 Una acción puede superar la primera pregunta y fallar la segunda. Otra puede ser lícita y proporcionada y, aun así, arruinar la investigación por descuidada. El trabajo profesional exige las tres respuestas, y exige también poder demostrarlas después.
 
-Durante el tema se utiliza un expediente ficticio, [**Operación Umbral**](casos/operacion-umbral/README.md): una empresa de distribución descubre que alguien ofrece en un foro un supuesto acceso a su red y que circulan documentos internos suyos. La dirección quiere saber quién está detrás. El caso sirve para comprobar que casi todas las decisiones difíciles de la investigación se toman antes de consultar la primera fuente.
+### Conocer el ataque para impedirlo
+
+Un profesional de la ciberseguridad necesita saber cómo se preparan y se ejecutan los ataques. Sin ese conocimiento no podría anticiparlos, reconocer sus señales, valorar su alcance ni proponer defensas útiles. Por eso esta asignatura estudia técnicas que utilizan los adversarios, y por eso algunos ejemplos de este tema describen conductas prohibidas.
+
+Conocer una técnica, sin embargo, no autoriza a practicarla contra sistemas o personas ajenos. **El deber del analista es evitar que el ataque ocurra, no reproducirlo, facilitarlo ni fomentarlo.** Cuando un ataque se practica, se hace en entornos propios o preparados para ello, o con la autorización expresa y por escrito del titular del sistema. La frontera entre estudiar un ataque y cometerlo es exactamente lo que regulan las normas que se ven a continuación.
+
+Durante el tema se utiliza un expediente ficticio, [**Operación Linde**](casos/operacion-linde/README.md): una empresa de distribución descubre que alguien ofrece en un foro un supuesto acceso a su red y que circulan documentos internos suyos. La dirección quiere saber quién está detrás. El caso sirve para comprobar que casi todas las decisiones difíciles de la investigación se toman antes de consultar la primera fuente.
 
 > **Que un dato sea accesible no significa que cualquiera pueda recogerlo, cruzarlo o difundirlo para cualquier fin.**
 
@@ -204,6 +210,22 @@ La idea clave está en la definición: lo que compromete una operación rara vez
 | 4. Evaluar el riesgo | ¿Qué pasaría si lo supiera? | El objetivo borra rastros, cambia de infraestructura, toma represalias o publica la investigación |
 | 5. Aplicar contramedidas | ¿Qué reduce el riesgo de forma proporcionada? | Preferir fuentes pasivas, separar el trabajo de la vida personal, limitar quién conoce el caso, etiquetar la difusión |
 
+### Amenazas para una investigación: ejemplos
+
+El segundo paso del proceso es el que más se subestima. Quien investiga tiende a pensar en sí mismo como observador y olvida que también puede ser observado. Estas son amenazas habituales, descritas desde el punto de vista de quien tiene que prevenirlas:
+
+| Amenaza | Cómo se manifiesta | Qué la previene |
+|---|---|---|
+| **El objetivo vigila sus propios registros** | Un servidor, una web o un foro bajo control del adversario anota quién lo consulta. Una visita directa desde la red de la empresa le indica que esa empresa le está investigando | Preferir fuentes que ya han recogido la información; no acceder desde la red corporativa a infraestructura del adversario |
+| **Material que avisa al abrirse** | Un documento filtrado o un enlace pueden estar preparados para notificar a su autor cuándo, dónde y desde qué red se abren | Tratar todo material del caso como no fiable y abrirlo solo en el entorno que la organización tenga previsto para ello |
+| **Plataformas que informan de las visitas** | Algunas redes sociales muestran a los titulares de un perfil quién lo ha visitado | No usar nunca cuentas personales en una investigación |
+| **Ingeniería social dirigida al analista** | Alguien que se presenta como periodista, colega de otra empresa o proveedor pide detalles del caso «para ayudar» | Responder solo por los canales oficiales y aplicar la necesidad de conocer |
+| **Filtración interna** | Si el autor es de la plantilla, puede ver el correo, la incidencia o la reunión en la que se habla de él | Limitar quién conoce el caso y registrarlo en sistemas con acceso restringido |
+| **Exposición del analista** | El adversario identifica a quien le investiga y publica sus datos personales o le presiona | Separar identidades, no firmar públicamente los productos sensibles, apoyo de la organización |
+| **Información sembrada para engañar** | Publicaciones falsas preparadas para que el analista llegue a una conclusión equivocada o señale a un inocente | Corroborar con fuentes independientes, distinguir hechos de inferencias y mantener la humildad analítica |
+
+La última fila conecta con el Tema 1 y con el caso de Boston: un adversario que conoce los métodos del analista puede aprovechar sus prisas. La mejor defensa sigue siendo el método.
+
 ### Principios prácticos
 
 La OPSEC de un analista no depende de una herramienta concreta, sino de hábitos. Los que siguen son los que más problemas evitan:
@@ -293,22 +315,48 @@ Estas prácticas están desarrolladas en la norma ISO/IEC 27037, en la RFC 3227 
 
 ## Una vista completa
 
-Antes de ejecutar cualquier acción de obtención, el analista debería poder recorrer esta secuencia sin dudar en ningún punto:
+### El ciclo con sus controles
+
+Ley, ética y OPSEC no son una fase más del ciclo de inteligencia, ni un trámite que se resuelve al principio. Aparecen en todas las fases, cada vez con una pregunta distinta:
+
+| Fase del ciclo | Control legal | Control ético | Control de OPSEC | Qué queda registrado |
+|---|---|---|---|---|
+| **Dirección y planificación** | Quién investiga, con qué base y qué queda excluido | ¿Es legítima la petición o hay que reformularla? | Quién debe conocer la investigación | Requerimiento con alcance y exclusiones; evaluación de licitud |
+| **Obtención** | Sin acceso a sistemas protegidos ni credenciales ajenas | Lo necesario, por el medio menos intrusivo | Fuentes pasivas, medios de trabajo, sin avisar al objetivo | Bitácora y evidencias con su huella |
+| **Procesamiento** | Minimización y descarte de lo que no hace falta | No cruzar datos para ampliar el perfil de nadie | Material del caso solo en sistemas con acceso restringido | Qué se conservó, qué se descartó y por qué |
+| **Análisis y producción** | Exactitud de lo que se afirma | Distinguir hechos, inferencias y supuestos; no señalar sin base | No incluir en el producto más de lo que el destinatario necesita | Valoración con confianza y limitaciones |
+| **Difusión** | Solo a quien tiene derecho a recibirlo | Pensar en quién puede resultar perjudicado | Etiqueta TLP y canal adecuado | Destinatarios, etiqueta y fecha de entrega |
+| **Retroalimentación** | Plazo de conservación y borrado | Corregir los errores detectados | Revisar si algo se filtró y por dónde | Cierre del caso y material eliminado |
+
+### Antes de cada obtención
+
+En la fase de obtención conviene detenerse antes de cada acción y comprobar seis puntos, en este orden:
 
 ![Licitud de la obtención](https://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/hector-ae21/CIBINT/main/diagramas/02-licitud-de-la-obtencion.puml)
 
-```text
-¿responde a una pregunta del requerimiento?
-  → ¿hay base legal para tratar los datos personales que implica?
-    → ¿evita acceder a sistemas o contenidos protegidos?
-      → ¿es la forma menos intrusiva de obtenerlo?
-        → ¿expone la investigación, al analista o a terceros?
-          → ¿queda registrada en la bitácora?
-            → obtener
-```
+| # | Comprobación | Si la respuesta es no |
+|---:|---|---|
+| 1 | ¿Responde a una pregunta del requerimiento? | No se realiza |
+| 2 | Si implica datos personales, ¿hay base de licitud y se limita a lo necesario? | No se realiza o se replantea |
+| 3 | ¿Evita acceder a sistemas o contenidos protegidos? | Se descarta |
+| 4 | ¿Es la forma menos intrusiva de obtenerlo? | Se sustituye por la alternativa |
+| 5 | ¿Se realiza sin exponer la investigación, al analista ni a terceros? | Se aplican contramedidas o se replantea |
+| 6 | ¿Queda registrada en la bitácora? | Se registra antes de continuar |
 
-La [plantilla de evaluación de licitud](../../plantillas/plantilla-evaluacion-licitud.md) convierte esta secuencia en un documento de trabajo que puede adjuntarse al requerimiento.
+La [plantilla de evaluación de licitud](../../plantillas/plantilla-evaluacion-licitud.md) convierte estas comprobaciones en un documento de trabajo que puede adjuntarse al requerimiento.
+
+### Cuándo detenerse
+
+Hay situaciones en las que lo correcto no es decidir, sino parar y consultar:
+
+- aparece una credencial, un secreto o un dato sensible que no se esperaba;
+- la pregunta de inteligencia solo parece poder responderse entrando en un espacio cerrado o contactando con alguien;
+- la investigación empieza a centrarse en una persona concreta y no en la amenaza;
+- quien pide el trabajo presiona para obtener un nombre o un resultado en un plazo que no permite verificar;
+- no está claro si una acción es lícita.
+
+En esos casos se detiene la obtención, no se copia ni se reenvía nada, se deja constancia mínima en la bitácora y se consulta por el canal previsto: el responsable del equipo, la asesoría jurídica o el delegado de protección de datos en una organización; el canal privado de la asignatura en las prácticas.
 
 ## Continuación
 
-El siguiente tema entra en la obtención propiamente dicha, con los [fundamentos de OSINT y la investigación de personas y organizaciones](../03-osint-personas-y-organizaciones/README.md). Todo lo que allí se practique se hará dentro de los límites de este tema. Para las lecturas recomendadas, consulta [recursos.md](recursos.md).
+El siguiente tema entra en la obtención propiamente dicha, con los [fundamentos de OSINT y la investigación de personas y organizaciones](../03-osint-personas-y-organizaciones/README.md). Todo lo que allí se practique se hará dentro de los límites de este tema. Las lecturas recomendadas están en [recursos.md](recursos.md).

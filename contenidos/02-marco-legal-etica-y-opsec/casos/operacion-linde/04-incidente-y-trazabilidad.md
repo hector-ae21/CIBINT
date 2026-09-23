@@ -1,4 +1,4 @@
-# Operación Umbral · Incidente y trazabilidad
+# Operación Linde · Incidente y trazabilidad
 
 Este apartado corresponde a la sesión de taller. Trabaja sobre la [bitácora del primer día](datos/bitacora-borrador.csv), redactada por un miembro del equipo que actuó con buena intención y demasiada prisa.
 

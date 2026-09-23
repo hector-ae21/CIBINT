@@ -78,7 +78,7 @@ Para el analista, el caso tiene dos lecturas:
 
 ### Para comentar
 
-- En Operación Umbral, ¿qué rastros aparentemente inocuos del equipo de Orvalia podrían, sumados, delatar la investigación?
+- En Operación Linde, ¿qué rastros aparentemente inocuos del equipo de Orvalia podrían, sumados, delatar la investigación?
 - ¿Qué habría tenido que preguntarse Strava antes de publicar el mapa? Se puede responder con los cinco pasos del proceso de OPSEC.
 
 ### Fuentes

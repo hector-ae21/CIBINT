@@ -1,4 +1,4 @@
-# Operación Umbral · Evaluación de las acciones
+# Operación Linde · Evaluación de las acciones
 
 Con el alcance definido, el equipo revisa las catorce acciones que se han propuesto durante la mañana. Cada una se examina con las tres preguntas del tema: si es lícita, si es proporcionada y si es segura para la investigación.
 

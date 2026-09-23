@@ -1,6 +1,6 @@
-# Operación Umbral · Enunciado
+# Operación Linde · Enunciado
 
-Operación Umbral es un caso ficticio construido para trabajar los conceptos del Tema 2. Orvalia Distribución, sus dominios, su plantilla y los hechos descritos no representan a ninguna organización real. Los dominios y direcciones utilizados pertenecen a espacios reservados para documentación.
+Operación Linde es un caso ficticio construido para trabajar los conceptos del Tema 2. Orvalia Distribución, sus dominios, su plantilla y los hechos descritos no representan a ninguna organización real. Los dominios y direcciones utilizados pertenecen a espacios reservados para documentación.
 
 ## Situación
 
@@ -44,10 +44,10 @@ Algunas de estas propuestas son razonables tal como están. Otras necesitan cond
 
 | Referencia | Muestra | Contenido |
 |---|---|---|
-| UMB-PET | [peticiones.csv](datos/peticiones.csv) | Las cinco propuestas de la reunión, con su formulación literal |
-| UMB-ACC | [acciones-propuestas.csv](datos/acciones-propuestas.csv) | Catorce acciones de obtención que el equipo ha puesto sobre la mesa |
-| UMB-BIT | [bitacora-borrador.csv](datos/bitacora-borrador.csv) | Registro de trabajo del primer día, redactado deprisa por un miembro del equipo |
-| UMB-DIC | [diccionario de datos](datos/README.md) | Significado y límites de cada muestra |
+| LIN-PET | [peticiones.csv](datos/peticiones.csv) | Las cinco propuestas de la reunión, con su formulación literal |
+| LIN-ACC | [acciones-propuestas.csv](datos/acciones-propuestas.csv) | Catorce acciones de obtención que el equipo ha puesto sobre la mesa |
+| LIN-BIT | [bitacora-borrador.csv](datos/bitacora-borrador.csv) | Registro de trabajo del primer día, redactado deprisa por un miembro del equipo |
+| LIN-DIC | [diccionario de datos](datos/README.md) | Significado y límites de cada muestra |
 
 ## Condiciones del análisis
 

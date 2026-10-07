@@ -1,0 +1,38 @@
+@startuml
+title Infraestructura: relaciones observadas y límites
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam rectangle {
+  BackgroundColor #E9F6FB
+  BorderColor #0085CF
+  FontColor #3E3E3D
+}
+left to right direction
+
+rectangle "Inventario interno\nFunción y responsable declarados" as inventario
+rectangle "Nombre de servicio\nproveedores.darsena.example" as nombre
+rectangle "Nombre del proveedor\nacceso.nube.example" as proveedor
+rectangle "IP compartida\n198.51.100.24" as ip
+rectangle "Certificado\nNombres y fechas" as certificado
+rectangle "Servicio observado\nIP, puerto, protocolo y fecha" as servicio
+
+inventario --> nombre : declara uso
+nombre --> proveedor : CNAME + fecha
+proveedor --> ip : A + fecha
+certificado --> nombre : incluye en SAN
+ip --> servicio : observación del índice
+nombre --> servicio : nombre asociado + origen
+
+note bottom of ip
+Compartir IP no demuestra
+propiedad ni administración común.
+end note
+note bottom of certificado
+Una entrada CT no confirma
+despliegue ni servicio activo.
+end note
+@enduml

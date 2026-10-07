@@ -1,0 +1,7 @@
+fuente_id,tipo,referencia,fecha_publicacion,fecha_consulta,resumen,dependencia,limite
+PRI-F01,Web corporativa conocida,https://nayade.example/equipo,2026-09-10,2026-09-21T09:00:00Z,Declara a Marta Vega responsable de cuentas y enlaza @mvega_nayade y @nayade_oficial,Declaracion de Nayade,No autentica mensajes firmados con esos nombres
+PRI-F02,Programa de evento externo,https://evento.example/programa-2025,2025-11-06,2026-09-21T09:02:00Z,Incluye a Marta Vega de Nayade como ponente sobre servicios digitales,Organizador del evento,Corrobora una relacion anunciada en 2025 no su vigencia actual
+PRI-F03,Referencia societaria simulada,BORME-simulado-2024-017,2024-02-12,2026-09-21T09:04:00Z,Acto societario publicado de Nayade Servicios Digitales SL,Registro simulado para docencia,No verifica dominios ni cuentas sociales
+PRI-F04,Documento comercial previo,Documento interno OC-18,2026-08-14,2026-09-21T09:05:00Z,Identifica al proveedor y utiliza nayade.example como canal conocido,Relacion comercial de Velaria,Fuente interna no abierta y no confirma un cambio posterior
+PRI-F05,Pagina del canal propuesto,https://nayade-gestion.example/aviso,2026-09-20,2026-09-21T09:08:00Z,Utiliza el logotipo y dice que el nuevo canal esta autorizado,Enlaza PRI-S01 y reproduce su anuncio,No aporta prueba independiente de autorizacion
+PRI-F06,Archivo publico corporativo,https://nayade.example/noticias/2023/nueva-sede,2023-05-16,2026-09-21T09:10:00Z,Contiene la imagen IMG-01 de una inauguracion de sede,Archivo de Nayade,Es un uso anterior disponible no prueba quien tomo la fotografia

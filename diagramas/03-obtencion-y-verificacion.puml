@@ -1,0 +1,36 @@
+@startuml
+title Fuentes abiertas: de la pregunta a la valoración
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam activity {
+  BackgroundColor #E9F6FB
+  BorderColor #0085CF
+  FontColor #3E3E3D
+  DiamondBackgroundColor #FFFFFF
+  DiamondBorderColor #0085CF
+}
+
+start
+:Pregunta, alcance y referencias conocidas;
+:Elegir fuentes y consultas;
+:Registrar origen, fechas y contenido relevante;
+:Separar candidatos y localizar dependencias;
+:Contrastar con evidencia independiente;
+if (¿La evidencia permite responder?) then (sí)
+  :Distinguir hechos, valoración y límites;
+else (no)
+  :Registrar contradicción o laguna;
+  if (¿Otra obtención está justificada\ny dentro del alcance?) then (sí)
+    :Reformular el plan de búsqueda;
+    :Registrar nueva evidencia y contrastar;
+  else (no)
+    :Cerrar con la limitación explícita;
+  endif
+endif
+:Comunicar respuesta y próxima comprobación;
+stop
+@enduml

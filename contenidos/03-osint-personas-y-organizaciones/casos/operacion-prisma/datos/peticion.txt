@@ -1,0 +1,11 @@
+Referencia: PRI-ENC
+Recepción comunicada: 2026-09-21T08:40:00Z
+Destinatario: departamento de compras de Velaria Eventos
+Firma visible: Marta Vega | Responsable de cuentas | Náyade Servicios Digitales
+Petición: utilizar el nuevo canal de gestión de pagos desde esta semana.
+Dominio propuesto: nayade-gestion.example
+Perfil citado: @marta_nayade_pagos
+Argumento: el cambio ya se ha anunciado en redes y evita retrasos de tramitación.
+Contexto previo: la documentación comercial de Velaria utiliza nayade.example.
+Limitación: no se aportan cabeceras del mensaje ni documentación que autorice el cambio.
+Minimización: se omiten direcciones de correo y datos de pago; no son necesarios para el ejercicio.

@@ -1,0 +1,5 @@
+perfil_id,servicio,identificador,nombre_visible,organizacion_declarada,puesto_declarado,enlace_desde,fecha_consulta,limite
+PRI-P01,Red profesional simulada,@mvega_nayade,Marta Vega,Nayade Servicios Digitales,Responsable de cuentas,PRI-F01,2026-09-21T09:12:00Z,La declaracion del perfil y la web pueden proceder del mismo origen
+PRI-P02,Red profesional simulada,@marta_vega_estudio,Marta Vega,Estudio Ronda,Disenadora,No consta en el expediente,2026-09-21T09:13:00Z,Comparte nombre con PRI-P01 pero declara otra trayectoria
+PRI-P03,Red social simulada,@marta_nayade_pagos,Marta Vega,Nayade Servicios Digitales,Responsable de cuentas,PRI-S01,2026-09-21T09:14:00Z,No consta enlace desde el dominio conocido
+PRI-P04,Red social simulada,@nayade_oficial,Nayade Servicios Digitales,Nayade Servicios Digitales,Cuenta corporativa,PRI-F01,2026-09-21T09:15:00Z,El enlace corporativo no autentica cuentas con nombres parecidos

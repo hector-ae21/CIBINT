@@ -1,0 +1,7 @@
+servicio_id,ip,puerto,transporte,protocolo,nombre_asociado,origen_nombre,banner_resumido,observado_en,consulta_en,fuente
+DEL-S01,198.51.100.24,443,TCP,HTTPS,proveedores.darsena.example,Nombre usado en peticion y certificado,HTTP 200; Server nginx; titulo Portal de proveedores,2026-09-20T22:00:00Z,2026-09-21T08:30:00Z,Indice A
+DEL-S02,198.51.100.24,443,TCP,HTTPS,www.darsena.example,Nombre usado en peticion y certificado,HTTP 200; Server nginx; titulo Darsena Logistica,2026-09-20T22:02:00Z,2026-09-21T08:31:00Z,Indice A
+DEL-S03,203.0.113.18,443,TCP,HTTPS,legado.darsena.example,Nombre usado en peticion y certificado,HTTP 200; titulo Acceso portal legado,2026-05-15T10:05:00Z,2026-09-21T08:32:00Z,Indice A historico
+DEL-S04,203.0.113.60,3389,TCP,RDP,remoto.darsena.example,DNS pasivo DEL-D08,Servicio compatible con RDP; no consta autenticacion ni acceso,2026-09-19T18:25:00Z,2026-09-21T08:33:00Z,Indice B
+DEL-S05,198.51.100.24,443,TCP,HTTPS,tienda-ajena.example,Nombre usado en peticion,HTTP 200; titulo Tienda de otro cliente,2026-09-20T22:03:00Z,2026-09-21T08:34:00Z,Indice A
+DEL-S06,198.51.100.24,443,TCP,HTTPS,proveedores.darsena.example,Nombre usado en peticion y certificado,HTTP 200; Server nginx; titulo Portal de proveedores,2026-09-19T21:00:00Z,2026-09-21T08:35:00Z,Indice B

@@ -1,0 +1,6 @@
+publicacion_id,cuenta,referencia,fecha_publicacion,fecha_consulta,resumen,origen_declarado,imagen_id
+PRI-S01,@marta_nayade_pagos,https://social.example/marta_nayade_pagos/101,2026-09-20T16:00:00Z,2026-09-21T09:16:00Z,Anuncia nayade-gestion.example como nuevo canal y dice que IMG-01 muestra la reunion de aprobacion de ayer,No aporta origen externo,IMG-01
+PRI-S02,@gestion_sector,https://social.example/gestion_sector/202,2026-09-20T16:12:00Z,2026-09-21T09:17:00Z,Repite el anuncio del cambio y enlaza la publicacion original,PRI-S01,
+PRI-S03,@boletin_proveedores,https://social.example/boletin_proveedores/303,2026-09-20T17:05:00Z,2026-09-21T09:18:00Z,Comparte el anuncio con la frase cambio confirmado,PRI-S02,
+PRI-S04,@nayade_oficial,https://social.example/nayade_oficial/404,2026-09-18T09:00:00Z,2026-09-21T09:19:00Z,Indica que sus canales de atencion se mantienen en nayade.example,Comunicacion corporativa propia,
+PRI-S05,@nayade_oficial,https://social.example/nayade_oficial/505,2023-05-16T10:30:00Z,2026-09-21T09:20:00Z,Publica IMG-01 como fotografia de inauguracion de la sede,PRI-F06,IMG-01

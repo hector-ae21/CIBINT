@@ -1,0 +1,16 @@
+Referencia: DEL-H01
+Procedencia: muestra aportada asociada a DEL-S01; no es evidencia independiente.
+Nombre usado: proveedores.darsena.example
+Observado en: 2026-09-20T22:00:00Z
+Incorporado al expediente: 2026-09-21T08:30:00Z
+Limite: respuesta parcial y ficticia; no permite reproducir una conexion.
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: text/html
+Set-Cookie: PHPSESSID=muestra-docente; Secure; HttpOnly
+
+<html>
+<head><title>Portal de proveedores</title></head>
+<body><h1>Acceso de proveedores</h1></body>
+</html>

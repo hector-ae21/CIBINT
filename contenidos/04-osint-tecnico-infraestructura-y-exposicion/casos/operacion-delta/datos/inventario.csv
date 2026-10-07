@@ -1,0 +1,5 @@
+activo_id,nombre,funcion,relacion,responsable,estado_declarado,fecha_revision
+DEL-I01,www.darsena.example,Web corporativa,Servicio contratado,Comunicacion y proveedor Nube,Publicado y previsto,2026-09-18
+DEL-I02,proveedores.darsena.example,Portal de proveedores,Aplicacion de Dársena alojada por Nube,Sistemas,Publicado y previsto,2026-09-18
+DEL-I03,legado.darsena.example,Portal antiguo,Servicio propio,Sistemas,Retirado desde 2026-06-30,2026-07-02
+DEL-I04,correo.darsena.example,Correo corporativo,Servicio contratado,Proveedor Correo y Sistemas,Publicado y previsto,2026-09-18

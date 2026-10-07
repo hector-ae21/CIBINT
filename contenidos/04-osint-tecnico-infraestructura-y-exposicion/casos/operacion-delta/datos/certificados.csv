@@ -1,0 +1,6 @@
+certificado_id,entrada_id,nombres_san,emisor,valido_desde,valido_hasta,registrado_en,consulta_en,fuente
+DEL-C01,CT-001,www.darsena.example;proveedores.darsena.example,AC Docente,2026-09-01T00:00:00Z,2026-11-30T23:59:59Z,2026-09-01T00:05:00Z,2026-09-21T08:20:00Z,Registro CT simulado A
+DEL-C02,CT-002,pruebas.darsena.example,AC Docente,2026-07-01T00:00:00Z,2026-09-29T23:59:59Z,2026-07-01T00:05:00Z,2026-09-21T08:21:00Z,Registro CT simulado A
+DEL-C02,CT-003,pruebas.darsena.example,AC Docente,2026-07-01T00:00:00Z,2026-09-29T23:59:59Z,2026-07-01T00:06:00Z,2026-09-21T08:22:00Z,Registro CT simulado B
+DEL-C03,CT-004,legado.darsena.example,AC Docente,2026-03-01T00:00:00Z,2026-05-30T23:59:59Z,2026-03-01T00:05:00Z,2026-09-21T08:23:00Z,Registro CT simulado A
+DEL-C04,CT-005,*.darsena.example,AC Docente,2026-08-01T00:00:00Z,2026-10-30T23:59:59Z,2026-08-01T00:05:00Z,2026-09-21T08:24:00Z,Registro CT simulado A

@@ -1,0 +1,3 @@
+registro_id,recurso,tipo,registrador_o_asignatario,creacion,actualizacion,expiracion,nameservers,consulta_en,limite
+DEL-R01,darsena.example,Dominio RDAP simulado,Registrador Ejemplo,2016-04-08,2026-04-03,2027-04-08,ns1.dns.example;ns2.dns.example,2026-09-21T08:00:00Z,Titular no publicado y ninguna inferencia de actividad maliciosa
+DEL-R02,198.51.100.0/24,Rango RDAP simulado,Proveedor Nube,,,,,2026-09-21T08:01:00Z,Asignatario ficticio del rango no titular de cada aplicacion

@@ -1,0 +1,34 @@
+@startuml
+title De una observación técnica a una comprobación útil
+
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam roundcorner 14
+skinparam ArrowColor #58595B
+skinparam activity {
+  BackgroundColor #E9F6FB
+  BorderColor #0085CF
+  FontColor #3E3E3D
+  DiamondBackgroundColor #FFFFFF
+  DiamondBorderColor #0085CF
+}
+
+start
+:Conservar dato, fuente y fecha de observación;
+if (¿El recurso está dentro del alcance?) then (no)
+  :Descartar y registrar el motivo;
+  stop
+endif
+:Contrastar relación con inventario, DNS y certificados;
+if (¿La relación está confirmada?) then (no)
+  :Clasificar como candidato;
+else (sí)
+  :Clasificar como activo declarado o servicio contratado;
+endif
+:Separar observaciones históricas y recientes;
+:Identificar función, incertidumbre e impacto posible;
+:Priorizar la validación y asignar responsable;
+:Indicar qué comprobación interna permitiría cerrar el hallazgo;
+stop
+@enduml

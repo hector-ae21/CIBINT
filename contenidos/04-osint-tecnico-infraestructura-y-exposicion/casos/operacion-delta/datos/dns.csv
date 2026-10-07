@@ -1,0 +1,12 @@
+dns_id,nombre,tipo,valor,ttl_segundos,observado_en,fuente,consulta_en
+DEL-D01,www.darsena.example,CNAME,frontal.nube.example,300,2026-09-21T07:50:00Z,DNS pasivo A,2026-09-21T08:10:00Z
+DEL-D02,frontal.nube.example,A,198.51.100.24,300,2026-09-21T07:50:00Z,DNS pasivo A,2026-09-21T08:10:00Z
+DEL-D03,proveedores.darsena.example,CNAME,acceso.nube.example,300,2026-09-21T07:50:00Z,DNS pasivo A,2026-09-21T08:10:00Z
+DEL-D04,acceso.nube.example,A,198.51.100.24,300,2026-09-21T07:50:00Z,DNS pasivo A,2026-09-21T08:10:00Z
+DEL-D05,darsena.example,MX,10 correo.darsena.example,3600,2026-09-21T07:52:00Z,DNS pasivo A,2026-09-21T08:11:00Z
+DEL-D06,correo.darsena.example,A,192.0.2.40,3600,2026-09-21T07:52:00Z,DNS pasivo A,2026-09-21T08:11:00Z
+DEL-D07,legado.darsena.example,A,203.0.113.18,300,2026-05-15T10:00:00Z,DNS pasivo A historico,2026-09-21T08:12:00Z
+DEL-D08,remoto.darsena.example,A,203.0.113.60,300,2026-09-19T18:20:00Z,DNS pasivo B,2026-09-21T08:13:00Z
+DEL-D09,tienda-ajena.example,A,198.51.100.24,300,2026-09-21T07:50:00Z,DNS pasivo A,2026-09-21T08:14:00Z
+DEL-D10,darsena.example,NS,ns1.dns.example,3600,2026-09-21T07:52:00Z,DNS pasivo A,2026-09-21T08:15:00Z
+DEL-D11,darsena.example,NS,ns2.dns.example,3600,2026-09-21T07:52:00Z,DNS pasivo A,2026-09-21T08:15:00Z

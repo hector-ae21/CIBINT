@@ -9,9 +9,9 @@ Este repositorio reúne los contenidos que se mantienen entre cursos: fundamento
 ## Contenidos
 
 - [x] [01 · Fundamentos y ciclo de inteligencia](contenidos/01-fundamentos-y-ciclo-de-inteligencia/README.md)
-- [ ] [02 · Marco legal, ética y OPSEC del analista](contenidos/02-marco-legal-etica-y-opsec/README.md)
-- [ ] [03 · OSINT: personas y organizaciones](contenidos/03-osint-personas-y-organizaciones/README.md)
-- [ ] [04 · OSINT técnico: infraestructura y superficie de exposición](contenidos/04-osint-tecnico-infraestructura-y-exposicion/README.md)
+- [x] [02 · Marco legal, ética y OPSEC del analista](contenidos/02-marco-legal-etica-y-opsec/README.md)
+- [x] [03 · OSINT: personas y organizaciones](contenidos/03-osint-personas-y-organizaciones/README.md)
+- [x] [04 · OSINT técnico: infraestructura y superficie de exposición](contenidos/04-osint-tecnico-infraestructura-y-exposicion/README.md)
 - [ ] [05 · Fuentes cerradas y dark web](contenidos/05-fuentes-cerradas-y-dark-web/README.md)
 - [ ] [06 · Threat Intelligence y MITRE ATT&CK](contenidos/06-threat-intelligence-y-mitre-attck/README.md)
 - [ ] [07 · Análisis y elaboración de informes de inteligencia](contenidos/07-analisis-y-elaboracion-de-informes/README.md)
@@ -49,6 +49,7 @@ La casilla indica que el contenido está publicado y revisado, no que el estudia
 | [`contenidos/`](contenidos/) | Temario estable y casos guiados |
 | [`diagramas/`](diagramas/) | Fuentes PlantUML de los diagramas |
 | [`plantillas/`](plantillas/) | Documentos reutilizables para el trabajo analítico |
+| [`imagenes/`](imagenes/03-04-capturas.md) | Capturas de herramientas y referencias de procedencia |
 
 ## Convenciones
 

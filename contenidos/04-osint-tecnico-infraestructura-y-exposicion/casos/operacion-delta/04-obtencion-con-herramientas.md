@@ -1,5 +1,7 @@
 # Operación Delta · Obtención con herramientas
 
+**Cuándo hacerlo:** después de [De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención).
+
 Se realiza después de [elegir herramientas](02-eleccion-de-herramientas.md) e [interpretar las fuentes técnicas](03-registro-dns-y-certificados.md). Recupera el plan y utiliza la opción que mejor responda a la pregunta, no todas por obligación.
 
 ## Objetivo y preparación
@@ -73,7 +75,7 @@ Si elegiste SecurityTrails o urlscan.io, usa el dominio público de referencia d
 2. Para urlscan.io, prepara `page.domain:example.org` y acota el periodo si hace falta. Abre un resultado existente sin solicitar otro análisis.
 3. Conserva fecha de la observación, URL, referencia y relación con el dominio. En urlscan distingue página principal y recursos externos.
 4. Registra una restricción o falta de resultados como tal. No demuestra que el sitio nunca existiese.
-5. Aplica el criterio a DEL-D y DEL-S03: los resultados públicos no rellenan las lagunas ficticias de Dársena.
+5. Aplica el criterio a DEL-D y DEL-S03: los resultados públicos no rellenan las limitaciones ficticias de Dársena.
 
 ## Contrastar un informe de reputación
 
@@ -83,7 +85,7 @@ Conserva referencia y fecha del informe. Identifica una relación DNS o de certi
 
 ## Contrastar tecnologías
 
-Se retoma después de [Tecnologías y prioridades](06-tecnologias-y-prioridades.md).
+Esta comprobación aplica lo estudiado sobre tecnologías y prioridades.
 
 1. Parte de DEL-H01 y redacta qué señales contiene y qué no permiten confirmar.
 2. Para una comprobación real, utiliza una web propia o expresamente autorizada que indique el docente.
@@ -99,4 +101,8 @@ Si no existe una web autorizada para esa comprobación, el análisis de DEL-H01 
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
-Explica un cambio de herramienta o un resultado que no resolvió la pregunta. Continúa con [Servicios indexados](05-servicios-indexados.md) para interpretar temporalidad e independencia, y después con [Tecnologías y prioridades](06-tecnologias-y-prioridades.md).
+Explica un cambio de herramienta o un resultado que no resolvió la pregunta. Revisa las fechas y el origen de las observaciones antes de cerrar el registro.
+
+**Al terminar:** [continuar el Tema 4: Una vista completa](../../README.md#una-vista-completa).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

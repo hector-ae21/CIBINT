@@ -1,6 +1,8 @@
 # Operación Prisma · Uso ético y perspectiva del atacante
 
-Primera parte del [caso](README.md). Se resuelve con [peticion.txt](datos/peticion.txt) y las tablas del expediente. No requiere herramientas, instalación ni búsquedas.
+**Cuándo hacerlo:** después de [OSINT ético y uso malicioso de fuentes abiertas](../../README.md#osint-ético-y-uso-malicioso-de-fuentes-abiertas).
+
+Se resuelve con [peticion.txt](datos/peticion.txt) y las tablas del expediente. No requiere herramientas, instalación ni búsquedas.
 
 ## Qué podría aprovechar un atacante
 
@@ -38,4 +40,6 @@ Después elige dos datos del expediente y completa:
 
 La perspectiva del atacante debe terminar en una pregunta de verificación o una medida de protección. No convierte una hipótesis en acusación ni autoriza a ejecutar el engaño. La investigación de familiares no es necesaria para comprobar un canal profesional.
 
-Continúa en [De la pregunta a la búsqueda](01-pregunta-y-busqueda.md). La explicación general está en [OSINT ético y uso malicioso](../../README.md#osint-ético-y-uso-malicioso-de-fuentes-abiertas).
+**Al terminar:** [continuar el Tema 3: Fundamentos de OSINT y metodología de footprinting](../../README.md#fundamentos-de-osint-y-metodología-de-footprinting).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

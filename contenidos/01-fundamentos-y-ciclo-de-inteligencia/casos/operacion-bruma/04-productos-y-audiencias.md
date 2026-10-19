@@ -1,4 +1,6 @@
-# Operación Bruma · Productos para dos audiencias
+# Operación Bruma · Productos para dos destinatarios
+
+**Cuándo hacerlo:** después de [Productos y destinatarios](../../README.md#productos-y-destinatarios).
 
 La evidencia del [expediente](README.md) no cambia según quien reciba el resultado. Lo que cambia es la selección, el grado de detalle y la acción que debe facilitar el producto.
 
@@ -7,7 +9,7 @@ La evidencia del [expediente](README.md) no cambia según quien reciba el result
 | Elemento | Equipo de operaciones | Responsable de seguridad |
 |---|---|---|
 | Necesidad inmediata | Aplicar controles y localizar eventos relacionados | Decidir alcance de la respuesta y de la comunicación |
-| Detalle prioritario | Dominios, dirección observada, vigencia y acción técnica | Situación, posible impacto, confianza, medidas y lagunas |
+| Detalle prioritario | Dominios, dirección observada, vigencia y acción técnica | Situación, posible impacto, confianza, medidas y limitaciones |
 | Formato | Alerta técnica breve | Nota de situación |
 | Horizonte | Minutos u horas | Horas |
 
@@ -32,8 +34,10 @@ Se debe preparar una versión propia de ambos productos a partir de las muestras
 | Producto | Límite de extensión | Elementos obligatorios |
 |---|---:|---|
 | Alerta técnica | 6 líneas | Vigencia, indicadores, contexto mínimo, acción y límite |
-| Nota de situación | 150 palabras | Valoración, evidencia principal, impacto, confianza, recomendación y lagunas |
+| Nota de situación | 150 palabras | Valoración, evidencia principal, impacto, confianza, recomendación y limitaciones |
 
-Ambos productos deben ser compatibles entre sí y permitir remontar sus afirmaciones al expediente.
+Ambos productos deben ser compatibles entre sí y permitir relacionar cada afirmación con la evidencia del expediente.
 
-La explicación general continúa en [Productos y audiencias](../../README.md#productos-y-audiencias).
+**Al terminar:** [continuar el Tema 1: El trabajo del analista](../../README.md#el-trabajo-del-analista).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

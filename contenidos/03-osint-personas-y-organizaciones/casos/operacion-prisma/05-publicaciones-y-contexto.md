@@ -1,5 +1,7 @@
 # Operación Prisma · Publicaciones y contexto
 
+**Cuándo hacerlo:** después de [SOCMINT: investigación en redes sociales](../../README.md#socmint-investigación-en-redes-sociales).
+
 Compras ha recibido tres publicaciones que parecen confirmar el cambio. [publicaciones.csv](datos/publicaciones.csv) permite reconstruir de dónde procede cada una.
 
 ## Ejemplo resuelto
@@ -14,7 +16,7 @@ Hay tres publicaciones, pero solo un origen del anuncio. PRI-S03 añade una afir
 
 ## Trabajo guiado
 
-Reconstruye el uso de IMG-01 con PRI-F06 y PRI-S05. Después de interpretar la cronología, retoma [la verificación de una publicación o imagen](03-obtencion-con-herramientas.md#verificar-una-publicación-o-una-imagen) si elegiste búsqueda inversa. Distingue el resultado público de las fechas de las muestras ficticias.
+Reconstruye el uso de IMG-01 con PRI-F06 y PRI-S05. Resuelve la cronología con las fechas del expediente. La búsqueda inversa sobre una imagen pública se practicará al final.
 
 Completa una cronología que separe contenido antiguo y publicaciones recientes:
 
@@ -38,6 +40,8 @@ Responde:
 
 La imagen ya se utilizaba en 2023. Eso debilita su presentación como evidencia de una reunión reciente, pero no permite afirmar que no se celebró ninguna reunión. PRI-S04 es anterior al anuncio: obliga a verificar el cambio, sin resolver por sí solo qué ocurrió después.
 
-Registra por separado fecha del supuesto hecho, publicación y consulta. Si no conoces una de ellas, déjala como laguna. No la sustituyas por la fecha de la captura.
+Registra por separado fecha del supuesto hecho, publicación y consulta. Si no conoces una de ellas, escribe «no consta» y explica esa limitación. No la sustituyas por la fecha de la captura.
 
-Continúa en [Organización y valoración](06-organizacion-y-valoracion.md). La explicación general está en [SOCMINT](../../README.md#socmint-investigación-en-redes-sociales).
+**Al terminar:** [continuar el Tema 3: Investigación de organizaciones y verificación de fuentes](../../README.md#investigación-de-organizaciones-y-verificación-de-fuentes).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

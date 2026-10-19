@@ -38,6 +38,6 @@ La lista mezcla a propósito acciones adecuadas, acciones que necesitan condicio
 | `resultado` | Qué se obtuvo |
 | `siguiente_paso` | Qué pensaba hacer después |
 
-La bitácora se escribió deprisa durante el primer día. Contiene errores de registro y, sobre todo, decisiones que no deberían haberse tomado. Se utiliza en el apartado [4 · Incidente y trazabilidad](../04-incidente-y-trazabilidad.md).
+La bitácora se escribió deprisa durante el primer día. Contiene errores de registro y, sobre todo, decisiones que no deberían haberse tomado. Se utiliza en el apartado [4 · Incidente y registro de la investigación](../04-incidente-y-trazabilidad.md).
 
 La entrada `B05` indica entre corchetes que se copió un dato sensible. El dato no se reproduce en el material, igual que no debería reproducirse en ninguna bitácora real.

@@ -6,7 +6,7 @@ Selección breve para ampliar aspectos concretos del tema. Las normas se enlazan
 
 | Norma | Qué consultar | Para qué sirve |
 |---|---|---|
-| [Reglamento (UE) 2016/679, general de protección de datos (RGPD)](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679) | Arts. 4, 5, 6, 9, 10, 14, 33 y 34; considerandos 47 y 49 | Definiciones, principios, bases de licitud y obligaciones ante una violación de seguridad |
+| [Reglamento (UE) 2016/679, general de protección de datos (RGPD)](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679) | Arts. 4, 5, 6, 9, 10, 14, 33 y 34; considerandos 47 y 49 | Definiciones, principios, bases legales y obligaciones ante una violación de seguridad |
 | [Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673) | Arts. 19 y 87 a 91 | Datos de contacto profesional y derechos digitales en el ámbito laboral |
 | [Ley Orgánica 10/1995, del Código Penal](https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444) | Arts. 172 ter, 197, 197 bis, 197 ter y 401 | Límites penales de la obtención |
 | [Ley 5/2014, de Seguridad Privada](https://www.boe.es/buscar/act.php?id=BOE-A-2014-3649) | Art. 48 | Qué es investigación privada y quién puede realizarla |

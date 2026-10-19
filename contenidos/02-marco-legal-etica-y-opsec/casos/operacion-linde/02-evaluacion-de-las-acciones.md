@@ -1,5 +1,7 @@
 # Operación Linde · Evaluación de las acciones
 
+**Cuándo hacerlo:** después de [Ética profesional: lo que la ley no resuelve](../../README.md#ética-profesional-lo-que-la-ley-no-resuelve).
+
 Con el alcance definido, el equipo revisa las catorce acciones que se han propuesto durante la mañana. Cada una se examina con las tres preguntas del tema: si es lícita, si es proporcionada y si es segura para la investigación.
 
 ## Cuatro decisiones posibles
@@ -60,4 +62,6 @@ Tres indicaciones para resolverlo:
 - **OB11** no plantea un problema jurídico evidente. Conviene pensar qué efecto tendría sobre la investigación y sobre la denuncia.
 - Para cada acción descartada, se debe proponer, si existe, una alternativa que cubra la misma necesidad de forma adecuada.
 
-La explicación general continúa en [Los límites penales](../../README.md#los-límites-penales) y [Ética profesional](../../README.md#ética-profesional-lo-que-la-ley-no-resuelve).
+**Al terminar:** [continuar el Tema 2: Seguridad operacional del analista](../../README.md#seguridad-operacional-del-analista).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

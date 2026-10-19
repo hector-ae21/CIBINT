@@ -1,5 +1,7 @@
 # Operación Delta · Enunciado
 
+[Volver al Tema 4](../../README.md)
+
 Caso ficticio para trabajar el Tema 4. Dársena y los proveedores mencionados son inventados. Los dominios `.example` y los rangos IP de las muestras están reservados para documentación. No representan servicios que haya que consultar.
 
 ## Situación
@@ -31,7 +33,6 @@ Dársena Logística quiere revisar su exposición antes de renovar el servicio d
 | DEL-S | [servicios.csv](datos/servicios.csv) | Observaciones de servicios ya indexados |
 | DEL-H | [respuesta-http.txt](datos/respuesta-http.txt) | Respuesta parcial aportada del portal de proveedores |
 | DEL-DIC | [Diccionario de datos](datos/README.md) | Significado y límites de las muestras |
-| DEL-OBT | [Obtención con herramientas](04-obtencion-con-herramientas.md) | Consultas públicas y registro de práctica |
 
 ## Condiciones del análisis
 
@@ -44,16 +45,16 @@ Dársena Logística quiere revisar su exposición antes de renovar el servicio d
 
 ## Apartados del caso
 
-| Apartado | Propósito |
-|---|---|
-| [0 · Perspectiva del atacante](00-perspectiva-del-atacante.md) | comprobaciones defensivas |
-| [1 · Alcance e inventario](01-alcance-e-inventario.md) | activos, proveedor y terceros |
-| [2 · Elección de herramientas](02-eleccion-de-herramientas.md) | comparar sin consultar ni instalar |
-| [3 · Registro, DNS y certificados](03-registro-dns-y-certificados.md) | relaciones y fechas |
-| [4 · Obtención con herramientas](04-obtencion-con-herramientas.md) | aplicar la elección |
-| [5 · Servicios indexados](05-servicios-indexados.md) | interpretar observaciones |
-| [6 · Tecnologías y prioridades](06-tecnologias-y-prioridades.md) | Cierre: comprobaciones para sistemas |
+Los ejercicios están en archivos separados. El orden de lectura lo marca el tema: se abre un ejercicio después de la explicación indicada y, al terminar, se regresa al apartado siguiente. El índice siguiente marca el recorrido de estudio.
 
-Las consultas públicas conservan su objetivo real y no se atribuyen a la empresa ficticia.
+| Orden de lectura | Ejercicio | Cuándo abrirlo |
+|---|---|---|
+| 1 | [Perspectiva del atacante](00-perspectiva-del-atacante.md) | Después de [Mirar la exposición desde el lado del atacante](../../README.md#mirar-la-exposición-desde-el-lado-del-atacante) |
+| 2 | [Alcance e inventario](01-alcance-e-inventario.md) | Después de [Footprinting técnico: construir el mapa externo](../../README.md#footprinting-técnico-construir-el-mapa-externo) |
+| 3 | [Registro, DNS y certificados](03-registro-dns-y-certificados.md) | Después de [WHOIS, DNS y certificados](../../README.md#whois-dns-y-certificados) |
+| 4 | [Servicios indexados](05-servicios-indexados.md) | Después de [Motores de indexación de dispositivos expuestos](../../README.md#motores-de-indexación-de-dispositivos-expuestos) |
+| 5 | [Tecnologías y prioridades](06-tecnologias-y-prioridades.md) | Después de [Fingerprinting de tecnologías y servicios](../../README.md#fingerprinting-de-tecnologías-y-servicios) |
+| 6 | [Elección de herramientas](02-eleccion-de-herramientas.md) | Después de [Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección) |
+| 7 | [Obtención con herramientas](04-obtencion-con-herramientas.md) | Después de [De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención) |
 
-La explicación general está en el [Tema 4](../../README.md).
+[Volver al Tema 4](../../README.md) · [Definiciones de este tema](../../definiciones.md)

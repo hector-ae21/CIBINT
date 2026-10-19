@@ -1,8 +1,24 @@
 # Herramientas OSINT para personas y organizaciones
 
+[Volver al tema](README.md#herramientas-disponibles-y-criterios-de-elección) · [Definiciones de este tema](definiciones.md)
+
 Una herramienta puede localizar contenido, relacionar datos, conservar evidencias o vigilar cambios. Son funciones diferentes. Antes de elegirla hay que decidir qué pregunta se quiere responder y qué clase de resultado hace falta.
 
-Este apartado presenta herramientas que existen y explica cómo valorar su utilidad. Para la primera lectura bastan las explicaciones y las capturas. La elección se trabaja en [Operación Prisma · Elección de herramientas](casos/operacion-prisma/02-eleccion-de-herramientas.md); su uso aparece después, en [Obtención con herramientas](casos/operacion-prisma/03-obtencion-con-herramientas.md).
+Este catálogo amplía las herramientas de la explicación principal. Se puede consultar una ficha concreta sin leer la página completa. Las consultas se realizan en el ejercicio final del caso.
+
+## Herramientas por función
+
+- [Google: operadores y búsquedas combinadas](#google-operadores-y-búsquedas-combinadas)
+- [Intelligence X: localizar referencias en un índice y archivo](#intelligence-x-localizar-referencias-en-un-índice-y-archivo)
+- [OpenCorporates: distinguir sociedades con nombres parecidos](#opencorporates-distinguir-sociedades-con-nombres-parecidos)
+- [OpenSanctions: contrastar coincidencias y listas de origen](#opensanctions-contrastar-coincidencias-y-listas-de-origen)
+- [Maltego: relacionar entidades y fuentes](#maltego-relacionar-entidades-y-fuentes)
+- [Babel X y Babel Street Insights: buscar y seguir información multilingüe](#babel-x-y-babel-street-insights-buscar-y-seguir-información-multilingüe)
+- [Hunchly: conservar el recorrido y las evidencias web](#hunchly-conservar-el-recorrido-y-las-evidencias-web)
+- [Google Lens y TinEye: contrastar imágenes](#google-lens-y-tineye-contrastar-imágenes)
+- [Wayback Machine: consultar versiones anteriores](#wayback-machine-consultar-versiones-anteriores)
+- [Buscadores, BORME y OSINT Framework: localizar fuentes concretas](#buscadores-borme-y-osint-framework-localizar-fuentes-concretas)
+- [Comparar antes de elegir](#comparar-antes-de-elegir)
 
 ## Google: operadores y búsquedas combinadas
 
@@ -39,7 +55,7 @@ Una fecha filtrada no demuestra cuándo sucedió el hecho: hay que leer el docum
 
 Para una relación profesional se combinan nombre y organización, por ejemplo `"Marta Vega" "Náyade"`, y se comprueba cada candidato por separado. Este ejemplo es ficticio y sirve para preparar consultas; la obtención usa el objetivo público definido en el caso.
 
-**Vínculo con Prisma:** preparar dos consultas distintas en [Pregunta y búsqueda](casos/operacion-prisma/01-pregunta-y-busqueda.md), justificar los operadores y registrar su uso en [Buscar y comparar versiones](casos/operacion-prisma/03-obtencion-con-herramientas.md#buscar-y-comparar-versiones).
+[Volver a la explicación del Tema 3](README.md#buscar-con-precisión) · [Índice del catálogo](#herramientas-por-función)
 
 ## Intelligence X: localizar referencias en un índice y archivo
 
@@ -61,14 +77,14 @@ La [referencia de selectores](https://help.intelx.io/get-started/selector/) deta
 1. Define qué referencia necesitas encontrar y el identificador autorizado.
 2. Elige el selector más acotado que responda a la pregunta.
 3. Revisa los filtros disponibles de fecha y fuente; registra los utilizados.
-4. Examina un resultado pertinente: procedencia, identificador del documento, contexto y fechas disponibles.
+4. Examina un resultado relevante: procedencia, identificador del documento, contexto y fechas disponibles.
 5. Contrasta la referencia con una fuente conocida. Registra si el contenido no puede consultarse por las condiciones de acceso.
 
-Un dominio mencionado en un documento no prueba que la organización lo publicase. Una aparición en datos filtrados tampoco demuestra que una contraseña siga siendo válida ni autoriza a probarla. El material puede contener datos personales o secretos: para este tema se utilizan referencias públicas pertinentes y no se descargan colecciones de credenciales.
+Un dominio mencionado en un documento no prueba que la organización lo publicase. Una aparición en datos filtrados tampoco demuestra que una contraseña siga siendo válida ni autoriza a probarla. El material puede contener datos personales o secretos: para este tema se utilizan referencias públicas relevantes y no se descargan colecciones de credenciales.
 
 **Cuándo encaja:** buscar una referencia histórica difícil de localizar con un buscador general. **Cuándo no basta:** autenticar una instrucción de pago o atribuir una cuenta a una persona. **Acceso:** cobertura y contenido visible dependen de la cuenta.
 
-**Vínculo con Prisma:** comparar Intelligence X con Google y Wayback para localizar una referencia de un canal. Si el expediente ya responde, no hace falta nueva obtención. La propuesta se anota en [Elección de herramientas](casos/operacion-prisma/02-eleccion-de-herramientas.md) y su ejecución en [Obtención](casos/operacion-prisma/03-obtencion-con-herramientas.md#intelligence-x-referencias-documentales).
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## OpenCorporates: distinguir sociedades con nombres parecidos
 
@@ -80,11 +96,13 @@ Un dominio mencionado en un documento no prueba que la organización lo publicas
 | Jurisdicción | Distingue registros de países o territorios diferentes |
 | Número de registro | Ayuda a identificar una sociedad de forma más precisa que su nombre |
 | Estado y fechas disponibles | Sitúan temporalmente el dato |
-| Procedencia | Permite remontarse al registro de origen |
+| Procedencia | Permite consultar el registro de origen |
 
 Para buscar, introduce la denominación, acota jurisdicción y abre las fichas candidatas. Compara número de registro y fuente antes de unir resultados. Si el portal exige acceso para una función, consulta la información pública del registro correspondiente; no trates la restricción como inexistencia de la sociedad.
 
-En Prisma sirve para plantear qué dato societario haría falta contrastar con PRI-F03. No se busca la empresa ficticia. El ejemplo real de [suplantación de proveedor](README.md#ejemplos-reales-nombre-sociedad-y-canal) muestra por qué la denominación aislada puede resultar engañosa. Encontrar una sociedad no autentica su web ni sus mensajes.
+En Prisma sirve para plantear qué dato legal de la empresa haría falta contrastar con PRI-F03. No se busca la empresa ficticia. El ejemplo real de [suplantación de proveedor](README.md#ejemplos-reales-nombre-sociedad-y-canal) muestra por qué la denominación aislada puede resultar engañosa. Encontrar una sociedad no autentica su web ni sus mensajes.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## OpenSanctions: contrastar coincidencias y listas de origen
 
@@ -94,7 +112,7 @@ Una búsqueda devuelve candidatos. La documentación separa [estructura de entid
 
 | Comprobación | Motivo |
 |---|---|
-| Nombre y alias | Pueden existir variantes y homónimos |
+| Nombre y alias | Pueden existir variantes y personas con el mismo nombre |
 | Identificadores y jurisdicción | Permiten separar candidatos |
 | Conjunto y categoría | Indican por qué aparece la entidad |
 | Fuente de origen y fecha | Permiten verificar el dato en su contexto |
@@ -102,6 +120,8 @@ Una búsqueda devuelve candidatos. La documentación separa [estructura de entid
 El procedimiento es buscar el nombre autorizado, abrir el candidato, revisar categoría y procedencia y comprobar si los identificadores concuerdan. Se conserva el mínimo dato relevante. Las condiciones de uso y acceso se consultan en la documentación del servicio.
 
 Para Prisma solo tendría sentido si el requerimiento incluyese una comprobación específica de esta clase. El encargo de cambio de canal no la exige. En [Elección de herramientas](casos/operacion-prisma/02-eleccion-de-herramientas.md) también se aprende a descartar una herramienta porque no responde a la pregunta.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Maltego: relacionar entidades y fuentes
 
@@ -134,9 +154,11 @@ El menú ofrece proveedores y transformaciones. No significa que todas sean apro
 | Ampliar una pista con una fuente autorizada | Ejecutar una transformación concreta | Revisar qué consulta realmente y qué transmite |
 | Preparar una valoración | Mostrar evidencias y candidatos separados | Un grafo vistoso no demuestra identidad ni autoría |
 
-En Prisma se pueden representar estas relaciones: «la página enlaza al perfil», «el perfil declara un puesto» y «el anuncio propone un canal». Las tres tienen distinto valor probatorio. Unirlas sin etiquetar borraría esa diferencia.
+En Prisma se pueden representar estas relaciones: «la página enlaza al perfil», «el perfil declara un puesto» y «el anuncio propone un canal». Las tres tienen distinto valor como evidencia. Unirlas sin etiquetar borraría esa diferencia.
 
-**Antes de usarla:** determina si necesitas obtener datos nuevos o solo ordenar los que ya tienes. **Vínculo con el caso:** [elección](casos/operacion-prisma/02-eleccion-de-herramientas.md) y [construcción del grafo](casos/operacion-prisma/03-obtencion-con-herramientas.md#maltego-construir-y-revisar-relaciones).
+**Antes de usarla:** determina si necesitas obtener datos nuevos o solo ordenar los que ya tienes.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Babel X y Babel Street Insights: buscar y seguir información multilingüe
 
@@ -160,13 +182,15 @@ En esta vista se distinguen filtros, entidades y enlaces entre organizaciones. L
 
 Para Prisma, una petición de tres publicaciones en una sola lengua no justifica por sí misma contratar una plataforma. Si el aviso circulase en varios países y se necesitase seguimiento continuado, habría que comparar cobertura, consultas, acceso y exportación con una búsqueda manual.
 
-El plan de consulta debe incluir nombres o variantes necesarios, periodo, lenguas relevantes, tipos de fuente y criterios para excluir homónimos. Una coincidencia de texto o una traducción automática no verifica una identidad. Tampoco se debe asumir que todo dato disponible dentro de una plataforma procede de fuentes abiertas: la [oferta actual](https://www.babelstreet.com/insights-investigator-agentic-ai-risk-intelligence) combina tipos de datos y capacidades que deben revisarse según el acceso contratado.
+El plan de consulta debe incluir nombres o variantes necesarios, periodo, lenguas relevantes, tipos de fuente y criterios para excluir personas con el mismo nombre. Una coincidencia de texto o una traducción automática no verifica una identidad. Tampoco se debe asumir que todo dato disponible dentro de una plataforma procede de fuentes abiertas: la [oferta actual](https://www.babelstreet.com/insights-investigator-agentic-ai-risk-intelligence) combina tipos de datos y capacidades que deben revisarse según el acceso contratado.
 
-**Acceso:** plataforma comercial; no se exige contratarla. Si existe acceso institucional, se utiliza para una consulta acotada. Si no existe, se explica la elección y se ejecuta una alternativa accesible, dejando constancia del cambio. **Vínculo con el caso:** [comparación de opciones](casos/operacion-prisma/02-eleccion-de-herramientas.md) y [consulta posterior](casos/operacion-prisma/03-obtencion-con-herramientas.md#babel-street-consulta-y-alternativa).
+**Acceso:** plataforma comercial; no se exige contratarla. Si existe acceso institucional, se utiliza para una consulta acotada. Si no existe, se explica la elección y se ejecuta una alternativa accesible, dejando constancia del cambio.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Hunchly: conservar el recorrido y las evidencias web
 
-Hunchly ayuda a conservar páginas durante la investigación y a relacionarlas con un expediente. Su función principal es la trazabilidad: dirección, tiempo de captura, contenido y referencias. La [presentación oficial](https://hunch.ly/) describe la conservación y organización del material obtenido.
+Hunchly ayuda a conservar páginas durante la investigación y a relacionarlas con un expediente. Su función principal es la registro de la investigación: dirección, tiempo de captura, contenido y referencias. La [presentación oficial](https://hunch.ly/) describe la conservación y organización del material obtenido.
 
 | Lo que aporta | Lo que no sustituye |
 |---|---|
@@ -178,7 +202,7 @@ En Prisma sería útil si el anuncio pudiera desaparecer y hubiera que conservar
 
 La [documentación del formato MHTML](https://docs.maltego.com/en/support/solutions/articles/15000061288-the-mhtml-file-format) explica uno de los mecanismos de conservación. Una captura conserva una representación de la página; no garantiza que haya recogido todo contenido dinámico ni constituye, por sí sola, verificación del hecho.
 
-**Vínculo con el caso:** elegir entre conservación y obtención en el [apartado 2](casos/operacion-prisma/02-eleccion-de-herramientas.md); registrar evidencias en el [apartado 3](casos/operacion-prisma/03-obtencion-con-herramientas.md#conservar-el-resultado).
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Google Lens y TinEye: contrastar imágenes
 
@@ -188,29 +212,31 @@ Encajan cuando se pregunta si una imagen se ha reutilizado, no cuando se pretend
 
 En Prisma, IMG-01 se presenta como imagen de una reunión reciente. La pregunta es si existe un uso anterior. El expediente ya aporta esa relación para el análisis sin Internet. Más adelante se practica el procedimiento con una imagen pública indicada, sin subir documentos privados.
 
-**Vínculo con el caso:** [elección de herramienta](casos/operacion-prisma/02-eleccion-de-herramientas.md) y [verificación de publicaciones](casos/operacion-prisma/05-publicaciones-y-contexto.md).
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Wayback Machine: consultar versiones anteriores
 
 [Wayback Machine](https://web.archive.org/) permite consultar capturas archivadas de páginas. Sirve para comparar el contenido disponible en dos momentos: un canal de contacto, un aviso, una descripción de servicios o enlaces corporativos. La [guía del Internet Archive](https://help.archive.org/help/using-the-wayback-machine/) explica la selección de versiones.
 
-El resultado se registra con la URL archivada y la fecha de captura. Esa fecha no necesariamente coincide con la publicación del contenido. Un archivo incompleto o una página sin capturas dejan una laguna, no prueban inexistencia.
+El resultado se registra con la URL archivada y la fecha de captura. Esa fecha no necesariamente coincide con la publicación del contenido. Un archivo incompleto o una página sin capturas dejan una limitación, no prueban inexistencia.
 
 En Prisma ayuda a formular la comprobación de un cambio de canal. Primero se decide qué versión sería necesaria; después se consulta una página pública real para practicar el procedimiento.
 
-**Vínculo con el caso:** [obtención](casos/operacion-prisma/03-obtencion-con-herramientas.md#buscar-y-comparar-versiones) y [valoración final](casos/operacion-prisma/06-organizacion-y-valoracion.md).
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Buscadores, BORME y OSINT Framework: localizar fuentes concretas
 
-Un buscador permite acotar por frase, dominio y formato. El [BORME](https://www.boe.es/diario_borme/) es una fuente para actos societarios publicados, no una herramienta que autentique mensajes. [OSINT Framework](https://osintframework.com/) es un directorio de recursos: ayuda a localizar opciones, pero no ejecuta ni valida las consultas.
+Un buscador permite acotar por frase, dominio y formato. El [BORME](https://www.boe.es/diario_borme/) es una fuente para actos legales de las sociedades publicados, no una herramienta que autentique mensajes. [OSINT Framework](https://osintframework.com/) es un directorio de recursos: ayuda a localizar opciones, pero no ejecuta ni valida las consultas.
 
 | Necesidad | Elección razonable | Comprobación |
 |---|---|---|
 | Aviso en un dominio conocido | Buscador y página original | URL, fecha y origen |
-| Acto societario | BORME | Denominación, fecha y tipo de acto |
+| Acto legal de una sociedad | BORME | Denominación, fecha y tipo de acto |
 | Encontrar una herramienta para una pregunta nueva | OSINT Framework | Fuente, requisitos y adecuación al alcance |
 
 Para un expediente pequeño estas opciones pueden resultar más proporcionadas que una plataforma amplia. La elección se justifica por la pregunta y los recursos disponibles.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Comparar antes de elegir
 
@@ -218,7 +244,7 @@ Para un expediente pequeño estas opciones pueden resultar más proporcionadas q
 |---|---|---|
 | ¿Dónde aparece esta información? | Búsqueda | Buscador, Babel Street |
 | ¿Hay una referencia en un archivo especializado? | Índice documental | Intelligence X |
-| ¿Qué sociedad concreta se menciona? | Datos societarios | OpenCorporates, BORME |
+| ¿Qué sociedad concreta se menciona? | Datos legales de la empresa | OpenCorporates, BORME |
 | ¿Una coincidencia corresponde a una lista relevante? | Contraste de entidades | OpenSanctions y fuente de origen |
 | ¿Qué relaciones están documentadas? | Análisis de enlaces | Maltego |
 | ¿Qué versión existía antes? | Archivo web | Wayback Machine |
@@ -226,3 +252,5 @@ Para un expediente pequeño estas opciones pueden resultar más proporcionadas q
 | ¿Cómo conservo lo observado? | Captura de evidencias | Hunchly |
 
 La [procedencia de las imágenes](../../imagenes/03-04-capturas.md) permite comprobar sus fuentes. Los objetivos que aparecen en las capturas ilustran la interfaz; no forman parte del alcance de las prácticas.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)

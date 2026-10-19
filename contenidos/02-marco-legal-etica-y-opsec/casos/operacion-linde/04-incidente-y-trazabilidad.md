@@ -1,4 +1,6 @@
-# Operación Linde · Incidente y trazabilidad
+# Operación Linde · Incidente y registro de la investigación
+
+**Cuándo hacerlo:** después de [Registro de la investigación: poder demostrar lo que se hizo](../../README.md#registro-de-la-investigación-poder-demostrar-lo-que-se-hizo).
 
 Este apartado corresponde a la sesión de taller. Trabaja sobre la [bitácora del primer día](datos/bitacora-borrador.csv), redactada por un miembro del equipo que actuó con buena intención y demasiada prisa.
 
@@ -61,4 +63,6 @@ Para cerrar el taller, se debe describir paso a paso cómo se conservaría corre
 
 La descripción es metodológica. No es necesario ni procede realizarla sobre ninguna publicación real.
 
-La explicación general continúa en [Trazabilidad](../../README.md#trazabilidad-poder-demostrar-lo-que-se-hizo).
+**Al terminar:** [continuar el Tema 2: Una vista completa](../../README.md#una-vista-completa).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

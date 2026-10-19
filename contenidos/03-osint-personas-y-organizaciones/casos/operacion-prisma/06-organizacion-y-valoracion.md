@@ -1,5 +1,7 @@
 # Operación Prisma · Organización y valoración
 
+**Cuándo hacerlo:** después de [Investigación de organizaciones y verificación de fuentes](../../README.md#investigación-de-organizaciones-y-verificación-de-fuentes).
+
 El último paso es responder a compras con lo que el expediente permite sostener. Se utilizan [fuentes.csv](datos/fuentes.csv), los perfiles y las publicaciones, sin ampliar la investigación a personas.
 
 ## Ejemplo resuelto
@@ -16,11 +18,11 @@ Una nota posible:
 
 ## Trabajo guiado
 
-Explica qué aportan PRI-F03 y PRI-F06 antes de utilizarlas. Si elegiste archivo web, vuelve a [Buscar y comparar versiones](03-obtencion-con-herramientas.md#buscar-y-comparar-versiones); la obtención pública ilustra el procedimiento y no modifica las evidencias ficticias.
+Explica qué aportan PRI-F03 y PRI-F06 antes de utilizarlas. Las consultas de archivo web se practicarán al final y no cambian las evidencias ficticias.
 
 1. Evalúa PRI-F02 y PRI-F05 con la [plantilla de fuentes](../../../../plantillas/plantilla-evaluacion-fuentes.md). Distingue fiabilidad de fuente y credibilidad de la afirmación concreta.
 2. Explica por qué PRI-F03 no autentica el canal propuesto.
-3. Plantea dos explicaciones: cambio legítimo aún no corroborado y uso no autorizado de la identidad del proveedor. Señala evidencia y lagunas para cada una.
+3. Plantea dos explicaciones: cambio legítimo aún no confirmado y uso no autorizado de la identidad del proveedor. Señala evidencia y limitaciones para cada una.
 4. Redacta tu propia nota de hasta 200 palabras, con al menos tres referencias y una próxima comprobación.
 
 | Explicación | Evidencia compatible | Evidencia que la debilita | Qué falta comprobar |
@@ -30,6 +32,8 @@ Explica qué aportan PRI-F03 y PRI-F06 antes de utilizarlas. Si elegiste archivo
 
 ## Comprobación
 
-La nota debe permitir decidir sin convertir sospechas en hechos. El dato societario sostiene una existencia documentada en una fecha, no la autenticidad de un mensaje. La próxima comprobación se dirige al proveedor mediante el canal que compras ya tiene validado, no mediante los datos de la petición dudosa.
+La nota debe permitir decidir sin convertir sospechas en hechos. El dato legal de la empresa sostiene una existencia documentada en una fecha, no la autenticidad de un mensaje. La próxima comprobación se dirige al proveedor mediante el canal que compras ya tiene validado, no mediante los datos de la petición dudosa.
 
-Vuelve a [Una vista completa del Tema 3](../../README.md#una-vista-completa).
+**Al terminar:** [continuar el Tema 3: De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

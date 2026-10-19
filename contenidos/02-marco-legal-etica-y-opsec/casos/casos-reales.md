@@ -34,7 +34,7 @@ La autoridad austriaca declaró también en 2023 que la empresa había infringid
 Las autoridades coincidieron en lo esencial:
 
 - Las fotografías eran **datos personales** aunque estuvieran publicadas. Y al usarlas para identificar a personas mediante reconocimiento facial, pasaban a ser **datos biométricos**, una categoría especial del artículo 9.
-- La empresa carecía de **base de licitud**. El interés comercial en construir una base de datos no prevalecía sobre los derechos de millones de personas que nunca esperaron que su foto acabara en ella.
+- La empresa carecía de **base legal**. El interés comercial en construir una base de datos no prevalecía sobre los derechos de millones de personas que nunca esperaron que su foto acabara en ella.
 - Los afectados **no fueron informados**, pese a que los datos no se habían obtenido de ellos.
 
 Para un analista, la lección es directa. Que una información esté a un clic no resuelve ninguna de las preguntas del tema. Recoger de forma sistemática lo que está publicado sobre personas, guardarlo y hacerlo buscable es un tratamiento que necesita finalidad, base legal y límites.

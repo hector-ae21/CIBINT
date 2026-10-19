@@ -1,5 +1,7 @@
 # Operación Bruma · Requerimiento y preguntas
 
+**Cuándo hacerlo:** después de [El requerimiento de inteligencia](../../README.md#el-requerimiento-de-inteligencia).
+
 La petición inicial del [enunciado](README.md) expresa una preocupación, pero todavía no define con precisión el trabajo analítico.
 
 ## De la petición al requerimiento
@@ -27,7 +29,7 @@ Las preguntas descomponen el requerimiento sin convertirlo todavía en una lista
 | 1 | ¿Qué elementos comunes permiten relacionar los mensajes? | Determinar si procede tratarlos como una misma campaña |
 | 2 | ¿Qué usuarios, cuentas o servicios podrían verse afectados? | Priorizar la respuesta y la comunicación |
 | 3 | ¿Qué medidas reducen el riesgo inmediato con la evidencia disponible? | Seleccionar acciones proporcionadas |
-| 4 | ¿Qué lagunas impiden elevar la confianza de la valoración? | Encargar obtención adicional y limitar las conclusiones |
+| 4 | ¿Qué limitaciones impiden elevar la confianza de la valoración? | Encargar obtención adicional y limitar las conclusiones |
 
 ## Trabajo guiado
 
@@ -38,8 +40,10 @@ Se debe revisar cada pregunta y completar el plan mínimo:
 | Elementos comunes | | | |
 | Posible afectación | | | |
 | Medidas inmediatas | | | |
-| Lagunas relevantes | | | |
+| Limitaciones relevantes | | | |
 
 El ejercicio debe mantener el plazo y las exclusiones del requerimiento. Añadir más fuentes o técnicas no mejora el plan si no contribuye a una de las decisiones definidas.
 
-La explicación general continúa en [El requerimiento de inteligencia](../../README.md#el-requerimiento-de-inteligencia).
+**Al terminar:** [continuar el Tema 1: El ciclo de inteligencia](../../README.md#el-ciclo-de-inteligencia).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

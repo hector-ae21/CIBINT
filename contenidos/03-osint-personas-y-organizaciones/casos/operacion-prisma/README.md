@@ -1,5 +1,7 @@
 # Operación Prisma · Enunciado
 
+[Volver al Tema 3](../../README.md)
+
 Caso ficticio para trabajar el Tema 3. Las organizaciones, personas, cuentas y hechos son inventados. Los dominios pertenecen al espacio `.example`, reservado para documentación; las direcciones de las muestras son referencias, no enlaces que haya que visitar.
 
 ## Situación
@@ -27,11 +29,10 @@ La relación comercial previa utiliza `nayade.example`. El responsable de compra
 | Referencia | Muestra | Contenido |
 |---|---|---|
 | PRI-ENC | [peticion.txt](datos/peticion.txt) | Resumen de la petición; no incluye datos de pago |
-| PRI-F | [fuentes.csv](datos/fuentes.csv) | Documentación conocida, página de equipo, evento y referencias societarias |
+| PRI-F | [fuentes.csv](datos/fuentes.csv) | Documentación conocida, página de equipo, evento y referencias legales de la empresa |
 | PRI-P | [perfiles.csv](datos/perfiles.csv) | Cuatro perfiles y los datos profesionales relevantes |
 | PRI-S | [publicaciones.csv](datos/publicaciones.csv) | Anuncio, republicaciones, aviso corporativo e imagen anterior |
 | PRI-DIC | [Diccionario de datos](datos/README.md) | Campos y límites de las muestras |
-| PRI-OBT | [Obtención con herramientas](03-obtencion-con-herramientas.md) | Consultas reales y registro de consultas y evidencias |
 
 ## Condiciones del análisis
 
@@ -45,16 +46,16 @@ La relación comercial previa utiliza `nayade.example`. El responsable de compra
 
 ## Apartados del caso
 
-| Apartado | Propósito |
-|---|---|
-| [0 · Uso ético y perspectiva del atacante](00-uso-etico-y-perspectiva-del-atacante.md) | finalidad y límites |
-| [1 · Pregunta y plan de búsqueda](01-pregunta-y-busqueda.md) | preparar consultas sin ejecutarlas |
-| [2 · Elección de herramientas](02-eleccion-de-herramientas.md) | comparar opciones con el expediente |
-| [3 · Obtención con herramientas](03-obtencion-con-herramientas.md) | aplicar la elección y registrar resultados |
-| [4 · Identidad y huella profesional](04-identidad-y-huella.md) | separar candidatos y corroborar |
-| [5 · Publicaciones y contexto](05-publicaciones-y-contexto.md) | origen, fechas y dependencias |
-| [6 · Organización y valoración](06-organizacion-y-valoracion.md) | Cierre: contrastar explicaciones y responder a compras |
+Los ejercicios están en archivos separados. El orden de lectura lo marca el tema: se abre un ejercicio después de la explicación indicada y, al terminar, se regresa al apartado siguiente. El índice siguiente marca el recorrido de estudio.
 
-Las consultas públicas conservan su objetivo real y no se atribuyen a la empresa ficticia.
+| Orden de lectura | Ejercicio | Cuándo abrirlo |
+|---|---|---|
+| 1 | [Uso ético y perspectiva del atacante](00-uso-etico-y-perspectiva-del-atacante.md) | Después de [OSINT ético y uso malicioso de fuentes abiertas](../../README.md#osint-ético-y-uso-malicioso-de-fuentes-abiertas) |
+| 2 | [Pregunta y plan de búsqueda](01-pregunta-y-busqueda.md) | Después de [Obtención, interacción y registro](../../README.md#obtención-interacción-y-registro) |
+| 3 | [Elección de herramientas](02-eleccion-de-herramientas.md) | Después de [Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección) |
+| 4 | [Identidad y huella profesional](04-identidad-y-huella.md) | Después de [Investigación de personas: identidad y huella digital](../../README.md#investigación-de-personas-identidad-y-huella-digital) |
+| 5 | [Publicaciones y contexto](05-publicaciones-y-contexto.md) | Después de [SOCMINT: investigación en redes sociales](../../README.md#socmint-investigación-en-redes-sociales) |
+| 6 | [Organización y valoración](06-organizacion-y-valoracion.md) | Después de [Investigación de organizaciones y verificación de fuentes](../../README.md#investigación-de-organizaciones-y-verificación-de-fuentes) |
+| 7 | [Obtención con herramientas](03-obtencion-con-herramientas.md) | Después de [De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención) |
 
-La explicación general está en el [Tema 3](../../README.md).
+[Volver al Tema 3](../../README.md) · [Definiciones de este tema](../../definiciones.md)

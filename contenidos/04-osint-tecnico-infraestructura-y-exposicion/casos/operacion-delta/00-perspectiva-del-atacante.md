@@ -1,6 +1,8 @@
 # Operación Delta · Perspectiva del atacante
 
-Primera parte del [caso](README.md). Se utilizan [inventario.csv](datos/inventario.csv), [certificados.csv](datos/certificados.csv) y [servicios.csv](datos/servicios.csv), sin instalación ni consultas.
+**Cuándo hacerlo:** después de [Mirar la exposición desde el lado del atacante](../../README.md#mirar-la-exposición-desde-el-lado-del-atacante).
+
+Se utilizan [inventario.csv](datos/inventario.csv), [certificados.csv](datos/certificados.csv) y [servicios.csv](datos/servicios.csv), sin instalación ni consultas.
 
 ## De la pista a una pregunta defensiva
 
@@ -33,4 +35,6 @@ Clasifica estas acciones:
 
 Para cada una escribe finalidad, alcance y decisión. La consulta de fuentes abiertas puede tener uso malicioso o defensivo según el propósito y las acciones; no cambia de naturaleza porque la herramienta se anuncie como OSINT.
 
-Continúa en [Alcance e inventario](01-alcance-e-inventario.md). La teoría está en [Mirar la exposición desde el lado del atacante](../../README.md#mirar-la-exposición-desde-el-lado-del-atacante).
+**Al terminar:** [continuar el Tema 4: Superficie de ataque externa: concepto y alcance](../../README.md#superficie-de-ataque-externa-concepto-y-alcance).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

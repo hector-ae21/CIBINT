@@ -1,6 +1,10 @@
 # Fuentes cerradas y dark web
 
-## Índice
+[Índice de la asignatura](../../README.md) · [Definiciones de este tema](definiciones.md)
+
+Este tema está pendiente de desarrollo. Los contenidos previstos corresponden a los epígrafes de la guía docente de Ciberinteligencia. Los términos se explican en el archivo de definiciones.
+
+## Contenidos previstos
 
 - Surface web, deep web y dark web: diferencias
 - Acceso seguro y búsqueda de credenciales filtradas

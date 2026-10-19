@@ -1,5 +1,21 @@
 # Fundamentos y ciclo de inteligencia
 
+[Índice de la asignatura](../../README.md) · [Definiciones de este tema](definiciones.md)
+
+## Cómo leer este tema
+
+La explicación sigue el orden de este índice. Los ejercicios se abren desde el apartado que los prepara y terminan con un enlace para continuar la lectura.
+
+1. [Una primera aproximación](#una-primera-aproximación)
+2. [De los datos a la inteligencia](#de-los-datos-a-la-inteligencia)
+3. [El requerimiento de inteligencia](#el-requerimiento-de-inteligencia)
+4. [El ciclo de inteligencia](#el-ciclo-de-inteligencia)
+5. [Tipos de inteligencia](#tipos-de-inteligencia)
+6. [Productos y destinatarios](#productos-y-destinatarios)
+7. [El trabajo del analista](#el-trabajo-del-analista)
+8. [Una vista completa](#una-vista-completa)
+9. [Continuación](#continuación)
+
 ## Una primera aproximación
 
 La actividad de un equipo de seguridad genera continuamente alertas, registros, dominios, noticias y avisos de usuarios. Estos elementos permiten observar una situación, pero rara vez ofrecen por separado una respuesta suficiente.
@@ -8,8 +24,8 @@ La ciberinteligencia ayuda a ordenar ese material, interpretarlo dentro de un co
 
 | Punto de partida | Pregunta que incorpora el análisis | Resultado buscado |
 |---|---|---|
-| Se observa algo relevante | ¿Qué significa dentro de esta situación? | Una explicación sustentada |
-| Existen varias explicaciones posibles | ¿Qué evidencia apoya o debilita cada una? | Una valoración con incertidumbre explícita |
+| Se observa algo relevante | ¿Qué significa dentro de esta situación? | Una explicación apoyada en evidencias |
+| Existen varias explicaciones posibles | ¿Qué evidencia apoya o debilita cada una? | Una valoración que explica qué no se sabe |
 | Alguien debe actuar | ¿Qué necesita saber, con qué detalle y para cuándo? | Un producto útil y oportuno |
 
 Durante este tema utilizaremos un mismo ejemplo: [**Operación Bruma**](casos/operacion-bruma/README.md), un expediente ficticio en el que una universidad recibe varios correos que imitan el acceso a su campus virtual. El enunciado reúne la situación, las condiciones del análisis y las muestras de datos disponibles.
@@ -33,7 +49,7 @@ La ciberinteligencia cubre la distancia entre ambas columnas: transforma observa
 |---|---|---|
 | **Dato** | Una observación aislada | `198.51.100.42` aparece en un registro a las 08:14 |
 | **Información** | Datos ordenados y puestos en relación | Los dos dominios observados resolvían a esa dirección y aparecen en 12 mensajes |
-| **Inteligencia** | Una valoración contextualizada que apoya una decisión | Es probable que los mensajes formen parte de una misma campaña; procede contener los dominios mientras continúa el análisis |
+| **Inteligencia** | Una valoración que explica el contexto y ayuda a decidir | Es probable que los mensajes formen parte de una misma campaña; procede contener los dominios mientras continúa el análisis |
 
 El paso de una columna a la siguiente añade contexto, pero también exige interpretación. Una relación observada no demuestra por sí sola causalidad o autoría.
 
@@ -55,7 +71,7 @@ Una lista de indicadores puede ser útil, pero todavía no es un producto de int
 
 El documento breve [*The Work of a Nation: The Intelligence Cycle*](https://www.cia.gov/static/c050e9d29b6a04b639f050d6555e35c6/The-Work-of-a-Nation.pdf), de la CIA, presenta esta transformación como el paso de información en bruto a inteligencia terminada para apoyar decisiones.
 
-La distinción puede aplicarse sobre las muestras del expediente en [Operación Bruma · Del dato a la inteligencia](casos/operacion-bruma/01-datos-informacion-inteligencia.md). El apartado combina un ejemplo resuelto con un ejercicio breve de análisis.
+**Aplicación al caso:** [Del dato a la inteligencia](casos/operacion-bruma/01-datos-informacion-inteligencia.md). Al terminar, vuelve a [El requerimiento de inteligencia](#el-requerimiento-de-inteligencia).
 
 ## El requerimiento de inteligencia
 
@@ -84,7 +100,7 @@ El requerimiento acotado puede descomponerse en preguntas de inteligencia:
 
 Una pregunta de inteligencia indica qué debe poder afirmarse al final. Las consultas concretas a buscadores, registros o conjuntos de datos vendrán después, durante la obtención.
 
-El [requerimiento de Operación Bruma](casos/operacion-bruma/02-requerimiento-y-preguntas.md) muestra cómo convertir la petición inicial en un encargo acotado y en preguntas que puedan responderse con evidencia.
+**Aplicación al caso:** [Requerimiento y preguntas](casos/operacion-bruma/02-requerimiento-y-preguntas.md). Al terminar, vuelve a [El ciclo de inteligencia](#el-ciclo-de-inteligencia).
 
 ## El ciclo de inteligencia
 
@@ -105,7 +121,7 @@ La representación ordena el proceso, pero no obliga a recorrerlo en línea rect
 
 En el modelo tradicional algunas fuentes integran la retroalimentación en dirección y planificación. En la asignatura se muestra como fase explícita para recordar que entregar un informe no cierra necesariamente el trabajo. La lectura breve de la CIA enlazada en la sección anterior permite comparar ambas representaciones.
 
-En [Operación Bruma · Aplicación del ciclo](casos/operacion-bruma/03-aplicacion-del-ciclo.md), cada fase se relaciona con una tarea y un resultado del expediente. El ejercicio incluye un retorno entre fases para evitar una interpretación puramente lineal.
+**Aplicación al caso:** [Aplicación del ciclo](casos/operacion-bruma/03-aplicacion-del-ciclo.md). Al terminar, vuelve a [Tipos de inteligencia](#tipos-de-inteligencia).
 
 ## Tipos de inteligencia
 
@@ -118,11 +134,11 @@ La misma situación puede observarse a distintas alturas. La clasificación ayud
 | **Estratégico** | Tendencias, impacto y prioridades a medio o largo plazo | Dirección y responsables de riesgo | Evolución del fraude dirigido al sector educativo y capacidad necesaria para afrontarlo |
 | **Operacional** | Campañas, actores, intención y evolución | Responsables de seguridad y respuesta | Alcance de la campaña, objetivos probables y relación entre oleadas |
 | **Táctico** | Comportamientos y formas de actuación | Equipos de defensa y respuesta | Patrón de suplantación, señuelos y técnicas observadas |
-| **Técnico** | Artefactos concretos y de vigencia corta | Operación de seguridad y herramientas | Dominios, direcciones, URL y reglas de detección |
+| **Técnico** | Datos técnicos concretos y de vigencia corta | Operación de seguridad y herramientas | Dominios, direcciones, URL y reglas de detección |
 
 Estas categorías no son compartimentos cerrados. Un indicador técnico puede revelar un patrón táctico; varios patrones pueden relacionarse con una campaña; el análisis de distintas campañas puede sostener una decisión estratégica.
 
-## Productos y audiencias
+## Productos y destinatarios
 
 La calidad de un análisis también depende de cómo llega a quien debe utilizarlo. Operación Bruma podría producir varios resultados a partir de la misma evidencia:
 
@@ -130,28 +146,28 @@ La calidad de un análisis también depende de cómo llega a quien debe utilizar
 |---|---|---|---|
 | Alerta | Operaciones de seguridad | Indicadores, alcance, acción y vigencia | Inmediato |
 | Nota de situación | Responsable de seguridad | Qué ocurre, impacto, confianza y próximos pasos | Horas |
-| Perfil de campaña | Equipo de inteligencia | Infraestructura, comportamiento, hipótesis y lagunas | Días |
+| Perfil de campaña | Equipo de inteligencia | Infraestructura, comportamiento, hipótesis y limitaciones | Días |
 | Evaluación estratégica | Dirección | Tendencia, exposición, escenarios y prioridades | Semanas o meses |
 
 Un producto útil combina:
 
 | Relevancia | Evidencia | Incertidumbre | Oportunidad |
 |---|---|---|---|
-| Responde a la decisión real | Permite remontarse a fuentes y fechas | Expone límites, contradicciones y confianza | Llega cuando todavía puede cambiar una decisión |
+| Responde a la decisión real | Permite localizar las fuentes y sus fechas | Expone límites, contradicciones y confianza | Llega cuando todavía puede cambiar una decisión |
 
-El apartado [Productos para dos audiencias](casos/operacion-bruma/04-productos-y-audiencias.md) utiliza la misma evidencia para preparar una alerta técnica y una nota de situación. Cambia la selección del contenido, no los hechos que la sostienen.
+**Aplicación al caso:** [Productos para dos destinatarios](casos/operacion-bruma/04-productos-y-audiencias.md). Al terminar, vuelve a [El trabajo del analista](#el-trabajo-del-analista).
 
 ## El trabajo del analista
 
-El analista conecta las fases y conserva el razonamiento que las une.
+El analista conecta las fases y deja por escrito por qué pasa de una a otra. Los términos «inferencia», «hipótesis», «confianza» y «limitación» se explican en las [definiciones de este tema](definiciones.md).
 
 | Actividad | Pregunta que guía el trabajo | Evidencia del proceso |
 |---|---|---|
 | Entender la necesidad | ¿Qué decisión debe apoyarse? | Requerimiento validado |
 | Diseñar la investigación | ¿Qué necesito y qué puedo utilizar? | Alcance y plan de fuentes |
 | Valorar la información | ¿Qué fiabilidad, relación y vigencia tiene? | Registro de fuentes y bitácora |
-| Contrastar explicaciones | ¿Qué apoya o debilita cada hipótesis? | Matriz de evidencias y lagunas |
-| Comunicar | ¿Qué necesita saber esta audiencia ahora? | Producto con conclusiones y limitaciones |
+| Contrastar explicaciones | ¿Qué apoya o debilita cada hipótesis? | Matriz de evidencias y limitaciones |
+| Comunicar | ¿Qué necesita saber esta persona o equipo destinatario ahora? | Producto con conclusiones y limitaciones |
 | Revisar | ¿Qué cambió después de la entrega? | Retroalimentación y nueva versión |
 
 La redacción debe permitir reconocer qué se observó y qué se dedujo:
@@ -161,7 +177,7 @@ La redacción debe permitir reconocer qué se observó y qué se dedujo:
 | **Hecho** | «Doce mensajes contienen uno de los dos dominios identificados» |
 | **Inferencia** | «La infraestructura común sugiere coordinación» |
 | **Supuesto** | «La muestra facilitada representa los mensajes recibidos» |
-| **Laguna** | «No se dispone de todas las cabeceras» |
+| **Limitación** | «No se dispone de todas las cabeceras» |
 | **Valoración** | «Es probable que se trate de una misma campaña» |
 | **Recomendación** | «Se propone bloquear temporalmente los dominios y conservar los mensajes» |
 

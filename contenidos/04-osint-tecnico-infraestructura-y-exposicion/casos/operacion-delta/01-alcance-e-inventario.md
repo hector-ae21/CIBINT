@@ -1,5 +1,7 @@
 # Operación Delta · Alcance e inventario
 
+**Cuándo hacerlo:** después de [Footprinting técnico: construir el mapa externo](../../README.md#footprinting-técnico-construir-el-mapa-externo).
+
 El [enunciado](README.md) pide revisar la exposición de Dársena. No autoriza a examinar todos los sistemas que compartan proveedor o IP con la empresa.
 
 ## Ejemplo resuelto
@@ -40,4 +42,6 @@ Después valora estas acciones:
 
 Analizar el histórico y proponer una validación interna encaja en el encargo. Solicitar un escaneo nuevo o visitar sistemas ajenos queda fuera. Los nombres de pruebas y acceso remoto tienen relación candidata con Dársena, pero falta un responsable y un uso confirmado.
 
-Continúa en [Elección de herramientas](02-eleccion-de-herramientas.md). La explicación general está en [Superficie de ataque externa](../../README.md#superficie-de-ataque-externa-concepto-y-alcance).
+**Al terminar:** [continuar el Tema 4: WHOIS, DNS y certificados](../../README.md#whois-dns-y-certificados).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

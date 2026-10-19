@@ -1,10 +1,12 @@
 # Operación Bruma · Del dato a la inteligencia
 
+**Cuándo hacerlo:** después de [De los datos a la inteligencia](../../README.md#de-los-datos-a-la-inteligencia).
+
 Este apartado utiliza el [expediente del caso](README.md) para distinguir observaciones, relaciones comprobables y valoraciones orientadas a una decisión.
 
 ## Ejemplo resuelto
 
-| Capa | Formulación | Trazabilidad |
+| Capa | Formulación | Registro de la investigación |
 |---|---|---|
 | **Dato** | El mensaje M03 fue recibido a las 07:57 y contiene un enlace a `campus-boreal.example` | Fila M03 de `mensajes.csv` |
 | **Información** | Los dominios de los doce mensajes con enlace resolvían a la misma dirección a las 08:14 | Relación entre `mensajes.csv` y `resolucion-dns.csv` |
@@ -42,4 +44,6 @@ El resultado se recogerá en una tabla de trabajo:
 | Información | | | |
 | Inteligencia | | | |
 
-La explicación general continúa en [De los datos a la inteligencia](../../README.md#de-los-datos-a-la-inteligencia).
+**Al terminar:** [continuar el Tema 1: El requerimiento de inteligencia](../../README.md#el-requerimiento-de-inteligencia).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

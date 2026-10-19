@@ -22,7 +22,7 @@
 | Historial | ¿Ha resultado fiable anteriormente? | Alto / medio / bajo / desconocido |
 | Proximidad | ¿Es fuente primaria, secundaria o terciaria? | |
 | Independencia | ¿Depende de otra fuente ya registrada? | Sí / no / desconocido |
-| Corroboración | ¿Existen evidencias independientes compatibles? | Alta / parcial / ninguna |
+| Confirmación | ¿Existen evidencias independientes compatibles? | Alta / parcial / ninguna |
 | Actualidad | ¿La fecha es adecuada para la pregunta? | Sí / no / con reservas |
 | Sesgo o interés | ¿Puede tener motivos para distorsionar u omitir? | |
 | Integridad | ¿El contenido está completo y sin alteraciones apreciables? | Sí / no / desconocido |

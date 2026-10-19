@@ -1,5 +1,7 @@
 # Operación Delta · Registro, DNS y certificados
 
+**Cuándo hacerlo:** después de [WHOIS, DNS y certificados](../../README.md#whois-dns-y-certificados).
+
 Los datos de registro, [DNS](datos/dns.csv) y [certificados](datos/certificados.csv) responden a preguntas distintas. Conviene dibujar relaciones indicando qué fuente sostiene cada enlace.
 
 ## Ejemplo resuelto
@@ -17,7 +19,7 @@ El mapa sostiene una relación de servicio y un certificado que incluye dos nomb
 
 ## Trabajo guiado
 
-Completa las relaciones con las muestras entregadas, conservando fuente y fecha. Este primer análisis se resuelve sin consultas. Aplica la opción elegida en [Obtención con herramientas](04-obtencion-con-herramientas.md) y compara el procedimiento con el expediente.
+Completa las relaciones con las muestras entregadas, conservando fuente y fecha. Este primer análisis se resuelve sin consultas. Las consultas reales se practicarán al terminar de interpretar las demás fuentes.
 
 | Nombre | Inventario | DNS y fecha | Certificado y entrada | Estado que puede afirmarse |
 |---|---|---|---|---|
@@ -38,6 +40,8 @@ Responde con referencias:
 
 Dos entradas de DEL-C02 siguen representando un certificado. El comodín no enumera nombres. Para pruebas solo se dispone de la entrada CT: no hay DNS ni observación de servicio en el expediente. La caducidad de un certificado no confirma el cierre del servicio, que podría continuar con otro certificado o configuración.
 
-Conserva las relaciones históricas en pasado. Las consultas públicas posteriores no completan datos faltantes de Dársena: indica esas lagunas y quién podría resolverlas.
+Conserva las relaciones históricas en pasado. Las consultas públicas posteriores no completan datos faltantes de Dársena: indica esas limitaciones y quién podría resolverlas.
 
-Continúa en [Obtención con herramientas](04-obtencion-con-herramientas.md). La explicación general está en [WHOIS, DNS y certificados](../../README.md#whois-dns-y-certificados).
+**Al terminar:** [continuar el Tema 4: Motores de indexación de dispositivos expuestos](../../README.md#motores-de-indexación-de-dispositivos-expuestos).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

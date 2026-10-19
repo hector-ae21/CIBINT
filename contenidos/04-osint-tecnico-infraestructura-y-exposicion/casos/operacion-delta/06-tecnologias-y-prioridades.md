@@ -1,5 +1,7 @@
 # Operación Delta · Tecnologías y prioridades
 
+**Cuándo hacerlo:** después de [Fingerprinting de tecnologías y servicios](../../README.md#fingerprinting-de-tecnologías-y-servicios).
+
 La [respuesta HTTP](datos/respuesta-http.txt) contiene señales que ayudan a interpretar el portal. El producto final debe convertir observaciones en comprobaciones concretas para sistemas.
 
 ## Ejemplo resuelto
@@ -14,7 +16,7 @@ DEL-H01 amplía DEL-S01; no se cuenta como otra fuente independiente. No se disp
 
 ## Trabajo guiado
 
-Interpreta primero las señales de DEL-H01. Después retoma [Contrastar tecnologías](04-obtencion-con-herramientas.md#contrastar-tecnologías) si elegiste DevTools o Wappalyzer sobre una web propia o autorizada. Conserva la señal literal y distingue detección de tecnología confirmada.
+Interpreta primero las señales de DEL-H01. Conserva la señal literal y distingue una tecnología posible de una confirmada. La comparación con una web propia o autorizada se realizará en la práctica final.
 
 1. Redacta una frase sobre las tecnologías posibles del portal, con referencia y límite.
 2. Elige tres comprobaciones y ordénalas. Explica por qué una precede a otra.
@@ -35,4 +37,8 @@ Interpreta primero las señales de DEL-H01. Después retoma [Contrastar tecnolog
 
 El orden puede variar si se justifica con necesidad, fecha, función y posible impacto. Lo que no puede variar es el límite de la evidencia: pruebas sigue siendo un candidato CT; legado tiene observaciones históricas; el acceso remoto requiere validación, no se declara comprometido.
 
-Utiliza la [bitácora](../../../../plantillas/plantilla-bitacora-investigacion.md) y la [plantilla de informe](../../../../plantillas/plantilla-informe-inteligencia.md) para conservar el trabajo. Vuelve a [Una vista completa del Tema 4](../../README.md#una-vista-completa).
+Utiliza la [bitácora](../../../../plantillas/plantilla-bitacora-investigacion.md) y la [plantilla de informe](../../../../plantillas/plantilla-informe-inteligencia.md) para conservar el trabajo.
+
+**Al terminar:** [continuar el Tema 4: Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

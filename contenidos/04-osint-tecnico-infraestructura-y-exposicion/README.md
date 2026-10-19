@@ -1,5 +1,23 @@
 # OSINT técnico: infraestructura y superficie de exposición
 
+[Índice de la asignatura](../../README.md)
+
+## Cómo leer este tema
+
+Esta página contiene la explicación principal. Los ejercicios de **Operación Delta** se abren al terminar la explicación correspondiente y están en archivos separados. Cada ejercicio indica qué hay que haber leído y dónde retomar el tema. El catálogo de herramientas y las referencias se consultan cuando haga falta ampliar una explicación. Los términos se explican en [Definiciones de este tema](definiciones.md).
+
+1. [Una primera aproximación](#una-primera-aproximación)
+2. [Mirar la exposición desde el lado del atacante](#mirar-la-exposición-desde-el-lado-del-atacante)
+3. [Superficie de ataque externa: concepto y alcance](#superficie-de-ataque-externa-concepto-y-alcance)
+4. [Footprinting técnico: construir el mapa externo](#footprinting-técnico-construir-el-mapa-externo)
+5. [WHOIS, DNS y certificados](#whois-dns-y-certificados)
+6. [Motores de indexación de dispositivos expuestos](#motores-de-indexación-de-dispositivos-expuestos)
+7. [Fingerprinting de tecnologías y servicios](#fingerprinting-de-tecnologías-y-servicios)
+8. [Herramientas disponibles y criterios de elección](#herramientas-disponibles-y-criterios-de-elección)
+9. [De la elección a la obtención](#de-la-elección-a-la-obtención)
+10. [Una vista completa](#una-vista-completa)
+11. [Continuación](#continuación)
+
 ## Una primera aproximación
 
 Una empresa conoce su web y su correo, pero en fuentes públicas también aparecen un portal antiguo, un nombre de pruebas y un servicio que nadie recuerda haber publicado. ¿Son activos actuales? ¿Los administra la empresa o un proveedor? ¿Cuál merece revisarse primero?
@@ -13,7 +31,7 @@ El OSINT técnico ayuda a reconstruir qué infraestructura se observa desde fuer
 | Un índice conserva una página de acceso antigua | ¿Sigue publicada y es necesaria? | Priorizar una comprobación interna autorizada |
 | Una respuesta anuncia un producto | ¿El dato corresponde al servidor, a un intermediario o a una plantilla? | Verificar la tecnología antes de valorar vulnerabilidades |
 
-Trabajaremos con [**Operación Delta**](casos/operacion-delta/README.md), una revisión ficticia de la exposición de Dársena Logística. Primero se interpreta el expediente y se eligen herramientas. Después se practica la obtención sobre un objetivo público autorizado, manteniendo separadas sus evidencias.
+Trabajaremos con **Operación Delta**, una revisión ficticia de la exposición de Dársena Logística. Primero se interpreta el expediente y se eligen herramientas. Después se practica la obtención sobre un objetivo público autorizado, manteniendo separadas sus evidencias.
 
 ## Mirar la exposición desde el lado del atacante
 
@@ -23,12 +41,12 @@ Un atacante busca puntos que le permitan reducir esfuerzo: servicios olvidados, 
 |---|---|---|
 | Nombre de acceso remoto | Localizar una función de administración | ¿Es necesario, quién lo gestiona y con qué controles? |
 | Portal de legado | Encontrar un activo que pudo quedar fuera del mantenimiento | ¿Se retiró realmente y hay evidencia de cierre? |
-| Certificado con un nombre de pruebas | Detectar un candidato no inventariado | ¿Se utilizó y quién lo conoce? |
+| Certificado con un nombre de pruebas | Detectar un posible activo que no aparece en el inventario | ¿Se utilizó y quién lo conoce? |
 | Banner de producto | Orientar la búsqueda de debilidades | ¿La señal refleja la tecnología y versión actuales? |
 
-El uso ético conserva autorización, alcance y trazabilidad. El uso malicioso busca aprovechar o perjudicar. Observar una pista para prevenir un riesgo no exige probar accesos ni explotar el servicio. Se mantiene la distinción entre dato, inferencia y acción propuesta.
+El uso ético respeta la autorización y el alcance, y deja constancia del origen de los datos y de los pasos seguidos. El uso malicioso busca aprovechar o perjudicar. Observar una pista para prevenir un riesgo no exige probar accesos ni explotar el servicio. Se distingue lo observado, su interpretación y la acción que se propone.
 
-**Caso:** abre [Delta · Perspectiva del atacante](casos/operacion-delta/00-perspectiva-del-atacante.md). Trabaja solo con las observaciones facilitadas.
+**Aplicación al caso:** [Delta · Perspectiva del atacante](casos/operacion-delta/00-perspectiva-del-atacante.md). Al terminar, vuelve a [Superficie de ataque externa: concepto y alcance](#superficie-de-ataque-externa-concepto-y-alcance).
 
 ## Superficie de ataque externa: concepto y alcance
 
@@ -45,7 +63,7 @@ La **superficie de ataque externa** reúne los puntos accesibles desde fuera que
 
 Un servicio público puede ser necesario y estar bien protegido. También puede existir una exposición innecesaria sin una vulnerabilidad confirmada. **Encontrar un puerto o una página de acceso no demuestra una intrusión.**
 
-### Definir las fronteras
+### Definir qué entra en el análisis
 
 | Dentro de Operación Delta | Fuera del alcance |
 |---|---|
@@ -70,29 +88,21 @@ Que una herramienta esté disponible no cambia el alcance. La documentación de 
 
 ![Relaciones de infraestructura y sus límites](../../imagenes/04-relaciones-de-infraestructura.svg)
 
-El primer apartado del caso, [Alcance e inventario](casos/operacion-delta/01-alcance-e-inventario.md), separa activos conocidos, candidatos y servicios de terceros.
+El alcance y estas relaciones se aplican juntos al terminar el apartado siguiente.
 
 ## Footprinting técnico: construir el mapa externo
 
-El **footprinting técnico** reconoce nombres, direcciones, proveedores y servicios que pueden relacionarse con una organización desde fuentes permitidas. Continúa la huella corporativa del Tema 3: parte de dominios conocidos y construye relaciones documentadas, sin asumir que todo resultado pertenece al objetivo.
+El **footprinting técnico**, o reconocimiento de la huella técnica, identifica nombres, direcciones, proveedores y servicios que pueden relacionarse con una organización desde fuentes permitidas. Continúa la huella corporativa del Tema 3: parte de dominios conocidos y construye relaciones documentadas, sin asumir que todo resultado pertenece al objetivo.
 
 | Paso | Dato que se registra | Pregunta |
 |---|---|---|
 | Referencia inicial | Dominio y fuente que lo relaciona con la organización | ¿Por qué entra en el alcance? |
 | Nombres y registro | RDAP, DNS y fechas | ¿Qué se declaró o respondió? |
-| Certificados | Nombres, emisor, validez y entrada CT | ¿Qué relación está documentada? |
+| Certificados | Nombres, emisor, validez y entrada en registros de transparencia de certificados (CT) | ¿Qué relación está documentada? |
 | Servicios | IP, puerto, protocolo y fecha del índice | ¿Qué observó la fuente? |
 | Contraste | Inventario, función y responsable | ¿Es un activo propio, un servicio contratado o un candidato? |
 
-Una ampliación desde dominio a IP y desde IP a otros dominios puede incorporar terceros. Cada salto necesita fuente, fecha y justificación. El resultado es un mapa acotado; no una lista de todo lo que comparte alojamiento. Aplica esta distinción en [Alcance e inventario](casos/operacion-delta/01-alcance-e-inventario.md).
-
-## Herramientas disponibles y criterios de elección
-
-Maltego representa relaciones; SpiderFoot y Amass permiten plantear obtenciones más amplias; Shodan y Censys consultan servicios ya indexados. RDAP, DNS y CT responden a preguntas concretas. La herramienta adecuada depende de qué dato falta, no de cuántas funciones ofrezca.
-
-Consulta [Herramientas OSINT para infraestructura](herramientas.md), con explicaciones, ejemplos y capturas referenciadas. Antes de elegir hay que conocer fuente, salida, fecha, acceso y posible contacto con el objetivo.
-
-**Caso:** completa [Delta · Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md), sin ejecutar consultas. Después interpreta los registros aportados en el apartado siguiente: la elección puede revisarse al comprender mejor los datos.
+**Aplicación al caso:** [Delta · Alcance e inventario](casos/operacion-delta/01-alcance-e-inventario.md). Al terminar, vuelve a [WHOIS, DNS y certificados](#whois-dns-y-certificados).
 
 ## WHOIS, DNS y certificados
 
@@ -109,7 +119,7 @@ WHOIS es el mecanismo tradicional para consultar datos de registro. **RDAP** (*R
 | Fecha de actualización | Cambio en el registro | Cambio de propietario sin conocer qué se modificó |
 | Fecha de expiración | Fecha prevista en el registro | Que el dominio vaya a dejar de funcionar ese día |
 | Servidores de nombres | Infraestructura delegada para DNS | Propiedad del contenido web |
-| Titular publicado, oculto o redactado | Información disponible según la política aplicable | Que ocultar datos indique una actividad maliciosa |
+| Titular visible, oculto o con datos suprimidos | Información disponible según la política aplicable | Que ocultar datos indique una actividad maliciosa |
 
 El registro de una IP o un rango suele señalar al proveedor que recibió la asignación, no al cliente que utiliza un servicio. Registrar el contacto técnico tampoco demuestra autoría.
 
@@ -133,7 +143,7 @@ El **TTL** indica cuánto tiempo puede conservarse un registro en caché. No dic
 
 **Ejemplo real: caída de Facebook, 4 de octubre de 2021.** Su informe técnico explicó que una interrupción de la red troncal provocó la retirada de anuncios BGP —las rutas que permiten llegar a una red— y volvió inaccesibles sus servidores DNS, aunque estos seguían funcionando. Una observación externa de fallo DNS no revelaba por sí sola toda la causa interna. [Informe del equipo de ingeniería, 5 de octubre de 2021](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/).
 
-Aplicación: si una consulta no obtiene respuesta, registra hora, tipo de fallo y fuente. No lo conviertas en «el dominio nunca existió» ni «el servicio fue retirado». En Delta se separan las observaciones históricas de las lagunas actuales.
+Aplicación: si una consulta no obtiene respuesta, registra hora, tipo de fallo y fuente. No lo conviertas en «el dominio nunca existió» ni «el servicio fue retirado». En Delta se separan las observaciones históricas de las limitaciones actuales.
 
 Ejemplo del expediente:
 
@@ -147,15 +157,13 @@ La secuencia relaciona el portal con un servicio del proveedor en esa fecha. No 
 Para una demostración sobre un nombre expresamente autorizado, PowerShell permite consultar DNS con [`Resolve-DnsName`](https://learn.microsoft.com/en-us/powershell/module/dnsclient/resolve-dnsname):
 
 ```powershell
-
 # Sustituir únicamente por un nombre autorizado para la demostración.
-
 # El dominio ficticio del caso no proporciona las respuestas del expediente.
 Resolve-DnsName -Name proveedores.darsena.example -Type CNAME -DnsOnly
 Resolve-DnsName -Name darsena.example -Type MX -DnsOnly
 ```
 
-Estas son consultas de red, no una lectura de DNS pasivo. En Operación Delta se usa [dns.csv](casos/operacion-delta/datos/dns.csv).
+Estas son consultas de red, no una lectura de DNS pasivo. En Operación Delta se utilizan las muestras DNS entregadas; no se ejecutan consultas sobre los nombres ficticios.
 
 ### Certificados y registros públicos
 
@@ -171,7 +179,7 @@ Un certificado TLS contiene una clave pública, emisor, fechas de validez y nomb
 
 La [RFC 5280](https://www.rfc-editor.org/rfc/rfc5280) describe el formato y sus extensiones. Un certificado con varios nombres puede ser una pista de gestión conjunta; hay que valorar si corresponde a un servicio compartido.
 
-**Certificate Transparency (CT)** registra públicamente certificados o precertificados. Los registros permiten detectar nombres que quizá no figuran en el inventario y consultar antecedentes sin conectar con esos nombres. Encontrar una entrada no prueba que el certificado llegara a desplegarse ni que el servicio siga funcionando. La [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162) describe el modelo de registros; las herramientas pueden consultar datos de distintas versiones del protocolo.
+Los **registros de transparencia de certificados (CT, del inglés Certificate Transparency)** recogen públicamente certificados o precertificados. Permiten detectar nombres que quizá no figuran en el inventario y consultar antecedentes sin conectar con esos nombres. Encontrar una entrada no prueba que el certificado llegara a desplegarse ni que el servicio siga funcionando. La [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162) describe el modelo de registros; las herramientas pueden consultar datos de distintas versiones del protocolo.
 
 En un buscador como crt.sh se puede plantear una búsqueda por dominio. La [respuesta de ejemplo para www.example.org](https://crt.sh/?q=www.example.org&output=json) muestra entradas en JSON. `%.darsena.example` ilustra una búsqueda de nombres bajo el dominio; al ser ficticio no se esperan resultados reales. Se revisan nombres y fechas, se agrupan duplicados y se conserva la referencia de cada entrada relevante.
 
@@ -179,15 +187,7 @@ En un buscador como crt.sh se puede plantear una búsqueda por dominio. La [resp
 
 El 29 de agosto de 2011 Google informó de intentos de interceptar conexiones de sus usuarios utilizando un certificado fraudulento emitido por DigiNotar. El certificado se utilizaba para hacer pasar un destino por un servicio legítimo; Google anunció medidas para retirar la confianza en la entidad emisora. [Comunicado original de Google](https://security.googleblog.com/2011/08/update-on-attempted-man-in-middle.html).
 
-Este incidente es anterior al despliegue actual de CT; no se presenta como una detección realizada con crt.sh. Ilustra un límite: que un certificado contenga un nombre no prueba por sí solo legitimidad ni quién administra un servicio. En una revisión se contrasta emisor, fechas, confianza y otras fuentes; para Delta se aplica al [análisis de certificados](casos/operacion-delta/03-registro-dns-y-certificados.md).
-
-En [Registro, DNS y certificados](casos/operacion-delta/03-registro-dns-y-certificados.md) se comparan un nombre de pruebas, un portal actual y una referencia histórica.
-
-## De la elección a la obtención
-
-Se ejecuta una consulta porque responde a una pregunta y está dentro del alcance. El resultado se conserva con la herramienta, la referencia, la fecha de consulta y la fecha del dato. Si una plataforma necesita acceso que no está disponible, se documenta la alternativa; no se interpreta la restricción como ausencia del servicio.
-
-**Caso:** continúa en [Delta · Obtención con herramientas](casos/operacion-delta/04-obtencion-con-herramientas.md). Usa el plan elegido y vuelve después a la explicación de índices y tecnologías para revisar las conclusiones.
+**Aplicación al caso:** [Delta · Registro, DNS y certificados](casos/operacion-delta/03-registro-dns-y-certificados.md). Al terminar, vuelve a [Motores de indexación de dispositivos expuestos](#motores-de-indexación-de-dispositivos-expuestos).
 
 ## Motores de indexación de dispositivos expuestos
 
@@ -227,7 +227,7 @@ Cloudflare había explicado el 27 de febrero la exposición de memcached por UDP
 | Exposición e incidente son hechos distintos | Un resultado del índice no demuestra que el servidor participase en el ataque |
 | Las fuentes tienen fecha | No trasladar una cifra o configuración de 2018 al estado actual |
 
-En Delta, DEL-S04 justifica una comprobación del servicio remoto y de su responsable; no prueba acceso no autorizado. Se interpreta en [Servicios indexados](casos/operacion-delta/05-servicios-indexados.md).
+En Delta, DEL-S04 justifica una comprobación del servicio remoto y de su responsable; no prueba acceso no autorizado.
 
 | Campo mínimo | Por qué se conserva |
 |---|---|
@@ -238,15 +238,15 @@ En Delta, DEL-S04 justifica una comprobación del servicio remoto y de su respon
 | Fecha de consulta | Indica cuándo obtuvimos el registro |
 | Fuente y referencia | Permite reconstruir el hallazgo |
 
-Un registro antiguo puede justificar una revisión, pero se redacta en pasado. Que un índice no encuentre el servicio no acredita su ausencia. Dos índices pueden corroborar una exposición en fechas distintas y aun así no demostrar el estado actual.
+Un registro antiguo puede justificar una revisión, pero se redacta en pasado. Que un índice no encuentre el servicio no acredita su ausencia. Dos índices pueden confirmar una exposición en fechas distintas y aun así no demostrar el estado actual.
 
-El apartado [Servicios indexados](casos/operacion-delta/05-servicios-indexados.md) compara una exposición antigua con un servicio observado más recientemente.
+**Aplicación al caso:** [Delta · Servicios indexados](casos/operacion-delta/05-servicios-indexados.md). Al terminar, vuelve a [Fingerprinting de tecnologías y servicios](#fingerprinting-de-tecnologías-y-servicios).
 
 ## Fingerprinting de tecnologías y servicios
 
 ### Qué significa identificar una tecnología
 
-*Fingerprinting* consiste en inferir tecnologías a partir de señales observables. Una cabecera, una cookie, el título de una página, rutas de archivos o una respuesta de protocolo pueden orientar la identificación. Cada señal tiene límites.
+*Fingerprinting* significa identificar posibles tecnologías a partir de señales visibles. Una cabecera, una cookie, el título de una página, rutas de archivos o una respuesta de protocolo pueden orientar la identificación. Cada señal tiene límites.
 
 | Señal | Hipótesis posible | Explicación alternativa |
 |---|---|---|
@@ -256,7 +256,7 @@ El apartado [Servicios indexados](casos/operacion-delta/05-servicios-indexados.m
 | Puerto 22 | Podría ofrecer SSH | El puerto por sí solo no confirma el protocolo |
 | Versión declarada en un banner | El servicio anuncia esa versión | Puede ser un dato alterado o no reflejar parches aplicados |
 
-La [referencia de la cabecera Server de MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Server) explica qué comunica ese campo. El análisis debe distinguir componente frontal, aplicación y sistema operativo.
+La [referencia de la cabecera Server de MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Server) explica qué comunica ese campo. El análisis debe distinguir intermediario que recibe la conexión, aplicación y sistema operativo.
 
 ### De la señal a una conclusión útil
 
@@ -293,7 +293,34 @@ Las extensiones de detección también infieren a partir de señales y pueden en
 
 La prioridad combina relación con la organización, actualidad, función e impacto posible. No se asigna gravedad técnica solo porque el nombre contenga `admin` o porque aparezca una versión.
 
-En [Tecnologías y prioridades](casos/operacion-delta/06-tecnologias-y-prioridades.md) se prepara una nota con hallazgo, evidencia, límite, responsable y próxima comprobación.
+**Aplicación al caso:** [Delta · Tecnologías y prioridades](casos/operacion-delta/06-tecnologias-y-prioridades.md). Al terminar, vuelve a [Herramientas disponibles y criterios de elección](#herramientas-disponibles-y-criterios-de-elección).
+
+## Herramientas disponibles y criterios de elección
+
+Una vez comprendidas las fuentes, se puede elegir qué herramienta utilizar para cada pregunta. Antes de consultar hay que conocer qué dato se envía, a quién, qué resultado se espera y si se produce una conexión con el sistema estudiado.
+
+| Pregunta | Primera opción | Limitación principal |
+|---|---|---|
+| ¿Qué datos de registro constan? | RDAP mediante ICANN Lookup | No identifica al autor del contenido |
+| ¿A qué destino apunta un nombre? | DNS | La respuesta tiene fecha y puede haber destinos compartidos |
+| ¿Qué nombres aparecen en certificados? | crt.sh y registros CT | No confirma que el servicio esté activo |
+| ¿Qué servicio observó un tercero? | Shodan o Censys | La observación puede ser antigua |
+| ¿Cómo cambió el destino de un nombre? | SecurityTrails | El histórico depende de lo observado y del acceso |
+| ¿Qué página vio un tercero? | Resultados existentes de urlscan.io | No describe el estado actual |
+| ¿Qué relaciones aparecen en un informe? | VirusTotal | Hay que comprobar qué procesamiento provoca la consulta |
+| ¿Cómo organizo las relaciones del expediente? | Maltego | Cada enlace necesita fuente y fecha |
+| ¿Cómo repito muchas consultas? | SpiderFoot o Amass | Los módulos y las fuentes determinan el contacto que se produce |
+| ¿Qué señales de tecnología contiene una web? | DevTools o Wappalyzer | La señal puede proceder de un intermediario |
+
+Para el caso bastan esta tabla y las muestras. El [catálogo de herramientas](herramientas.md) amplía las opciones con ejemplos y capturas. Una configuración automática se revisa antes de ejecutarla; conocer una marca no basta para decidir qué acciones realizará.
+
+**Aplicación al caso:** [Delta · Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md). Al terminar, vuelve a [De la elección a la obtención](#de-la-elección-a-la-obtención).
+
+## De la elección a la obtención
+
+Se ejecuta una consulta porque responde a una pregunta y está dentro del alcance. El resultado se conserva con la herramienta, la referencia, la fecha de consulta y la fecha del dato. Si una plataforma necesita acceso que no está disponible, se documenta la alternativa; no se interpreta la restricción como ausencia del servicio.
+
+**Aplicación al caso:** [Delta · Obtención con herramientas](casos/operacion-delta/04-obtencion-con-herramientas.md). Al terminar, vuelve a [Una vista completa](#una-vista-completa).
 
 ## Una vista completa
 
@@ -317,3 +344,5 @@ Las [plantillas de evaluación de fuentes](../../plantillas/plantilla-evaluacion
 ## Continuación
 
 El siguiente tema introduce las [fuentes cerradas y la dark web](../05-fuentes-cerradas-y-dark-web/README.md), con sus condiciones de acceso y riesgos específicos. Las referencias de este tema están en [recursos.md](recursos.md).
+
+[Volver al índice de este tema](#cómo-leer-este-tema) · [Índice de la asignatura](../../README.md)

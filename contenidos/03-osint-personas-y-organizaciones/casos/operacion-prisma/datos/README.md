@@ -19,7 +19,7 @@ Resume la petición recibida y el contexto previo. La firma es visible, no una i
 | `dependencia` | Origen conocido; ayuda a evaluar independencia |
 | `limite` | Restricción al utilizar la información |
 
-PRI-F03 es una referencia societaria inventada, no un documento auténtico del BORME. PRI-F04 es documentación interna aportada: se utiliza como punto de partida conocido, no se presenta como hallazgo OSINT.
+PRI-F03 es una referencia legal de la empresa inventada, no un documento auténtico del BORME. PRI-F04 es documentación interna aportada: se utiliza como punto de partida conocido, no se presenta como hallazgo OSINT.
 
 ## `perfiles.csv`
 

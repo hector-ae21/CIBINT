@@ -23,7 +23,7 @@ start
 if (¿La evidencia permite responder?) then (sí)
   :Distinguir hechos, valoración y límites;
 else (no)
-  :Registrar contradicción o laguna;
+  :Registrar contradicción o límite;
   if (¿Otra obtención está justificada\ny dentro del alcance?) then (sí)
     :Reformular el plan de búsqueda;
     :Registrar nueva evidencia y contrastar;

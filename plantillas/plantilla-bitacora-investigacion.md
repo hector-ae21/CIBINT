@@ -38,9 +38,9 @@
 |---|---|---|---|---|
 | | | | | Abierta / debilitada / reforzada / descartada |
 
-## Lagunas de información
+## Limitaciones e información pendiente
 
-| Laguna | Relevancia | Acción posible | Estado |
+| Limitación | Relevancia | Acción posible | Estado |
 |---|---|---|---|
 | | | | Pendiente / no resoluble / resuelta |
 

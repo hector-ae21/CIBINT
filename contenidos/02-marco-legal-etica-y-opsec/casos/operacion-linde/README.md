@@ -64,6 +64,6 @@ Algunas de estas propuestas son razonables tal como están. Otras necesitan cond
 | [1 · De la petición al alcance](01-de-la-peticion-al-alcance.md) | Qué parte de la petición puede atenderse y con qué base | Marco legal de la investigación |
 | [2 · Evaluación de las acciones](02-evaluacion-de-las-acciones.md) | Licitud, proporcionalidad y seguridad de cada acción propuesta | Marco legal · Ética |
 | [3 · Exposición e identidad](03-exposicion-e-identidad.md) | Qué puede delatar la investigación y dónde está la línea con las identidades ficticias | Ética, OPSEC e identidad |
-| [4 · Incidente y trazabilidad](04-incidente-y-trazabilidad.md) | Qué hacer cuando aparece información sensible y cómo dejar constancia | Taller de OPSEC y trazabilidad |
+| [4 · Incidente y registro de la investigación](04-incidente-y-trazabilidad.md) | Qué hacer cuando aparece información sensible y cómo dejar constancia | Taller de OPSEC y registro de la investigación |
 
 La explicación general está en el [Tema 2](../../README.md).

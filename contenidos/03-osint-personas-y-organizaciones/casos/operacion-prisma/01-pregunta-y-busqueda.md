@@ -1,4 +1,6 @@
-# Operación Prisma · De la pregunta a la búsqueda
+# Operación Prisma · Pregunta y plan de búsqueda
+
+**Cuándo hacerlo:** después de [Obtención, interacción y registro](../../README.md#obtención-interacción-y-registro).
 
 El [enunciado](README.md) pide apoyar una decisión de compras. Antes de revisar perfiles hay que decidir qué queremos comprobar y con qué límites.
 
@@ -23,7 +25,7 @@ Completa el plan sin salir del requerimiento:
 | ¿Qué perfil profesional enlaza la empresa? | | | |
 | ¿Qué origen tiene el anuncio del cambio? | | | |
 | ¿La imagen acredita una reunión reciente? | | | |
-| ¿Qué aporta la referencia societaria? | | | |
+| ¿Qué aporta la referencia legal de la empresa? | | | |
 
 Después clasifica las acciones:
 
@@ -39,4 +41,6 @@ Después clasifica las acciones:
 
 El plan debe conservar al menos una fuente que pueda contradecir la petición. Las acciones de contacto y las búsquedas personales quedan fuera del alcance. Anota una consulta o revisión sin resultado útil: también forma parte de la [bitácora](../../../../plantillas/plantilla-bitacora-investigacion.md).
 
-Continúa en [Elección de herramientas](02-eleccion-de-herramientas.md). La explicación general está en [Metodología de footprinting](../../README.md#fundamentos-de-osint-y-metodología-de-footprinting).
+**Al terminar:** [continuar el Tema 3: Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

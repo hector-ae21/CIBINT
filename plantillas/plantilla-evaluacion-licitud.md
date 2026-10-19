@@ -1,4 +1,4 @@
-# Evaluación de licitud de la obtención
+# Evaluación legal de la obtención
 
 > Se completa antes de ejecutar una acción de obtención, o un grupo de acciones del mismo tipo. Se adjunta al requerimiento y se conserva con la bitácora. El enunciado de la actividad puede exigir campos adicionales.
 
@@ -19,7 +19,7 @@
 | ¿La acción implica datos de personas identificables? | Sí / no |
 | ¿Qué datos, en concreto? | |
 | ¿Incluye categorías especiales (art. 9 RGPD) o datos penales (art. 10 RGPD)? | Sí / no; si es sí, se detiene y se consulta |
-| Base de licitud | |
+| Base legal | |
 | ¿Por qué es necesario este tratamiento para la pregunta? | |
 | ¿Qué datos se excluyen o se descartan al obtenerlos? | |
 | ¿Se informa a los afectados? Si no, ¿por qué? | |

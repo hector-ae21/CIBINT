@@ -77,4 +77,4 @@ Las observaciones HTTPS de la misma IP pueden corresponder a sitios distintos se
 
 ## `respuesta-http.txt`
 
-DEL-H01 amplía la muestra de DEL-S01. No es una corroboración independiente. `PHPSESSID=muestra-docente` es texto ficticio sin valor de sesión; se incluye para discutir señales de tecnología, no para utilizarlo.
+DEL-H01 amplía la muestra de DEL-S01. No es una confirmación independiente. `PHPSESSID=muestra-docente` es texto ficticio sin valor de sesión; se incluye para discutir señales de tecnología, no para utilizarlo.

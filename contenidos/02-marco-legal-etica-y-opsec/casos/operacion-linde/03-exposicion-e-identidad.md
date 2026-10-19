@@ -1,5 +1,7 @@
 # Operación Linde · Exposición e identidad
 
+**Cuándo hacerlo:** después de [Riesgos personales del analista](../../README.md#riesgos-personales-del-analista).
+
 El martes por la mañana, la directora general pregunta si no sería más rápido que alguien del equipo «entrara en ese foro como uno más» para averiguar algo. La pregunta obliga a hablar de dos cosas a la vez: qué puede delatar la investigación y hasta dónde puede llegar el equipo para protegerla.
 
 ## Qué debe proteger la investigación
@@ -50,4 +52,6 @@ Se debe redactar la respuesta que el responsable de seguridad enviaría a la dir
 | No usa jerga | La entiende alguien sin formación técnica |
 | No promete lo que el equipo no puede cumplir | No se compromete a identificar a nadie |
 
-La explicación general continúa en [Seguridad operacional del analista](../../README.md#seguridad-operacional-del-analista) e [Identidad de investigación](../../README.md#identidad-de-investigación).
+**Al terminar:** [continuar el Tema 2: Registro de la investigación: poder demostrar lo que se hizo](../../README.md#registro-de-la-investigación-poder-demostrar-lo-que-se-hizo).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

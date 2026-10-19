@@ -1,5 +1,22 @@
 # OSINT: personas y organizaciones
 
+[Índice de la asignatura](../../README.md)
+
+## Cómo leer este tema
+
+Esta página contiene la explicación principal. Los ejercicios de **Operación Prisma** se abren al terminar la explicación correspondiente y están en archivos separados. Cada ejercicio indica qué hay que haber leído y dónde retomar el tema. El catálogo de herramientas y las referencias se consultan cuando haga falta ampliar una explicación. Los términos se explican en [Definiciones de este tema](definiciones.md).
+
+1. [Una primera aproximación](#una-primera-aproximación)
+2. [OSINT ético y uso malicioso de fuentes abiertas](#osint-ético-y-uso-malicioso-de-fuentes-abiertas)
+3. [Fundamentos de OSINT y metodología de footprinting](#fundamentos-de-osint-y-metodología-de-footprinting)
+4. [Herramientas disponibles y criterios de elección](#herramientas-disponibles-y-criterios-de-elección)
+5. [Investigación de personas: identidad y huella digital](#investigación-de-personas-identidad-y-huella-digital)
+6. [SOCMINT: investigación en redes sociales](#socmint-investigación-en-redes-sociales)
+7. [Investigación de organizaciones y verificación de fuentes](#investigación-de-organizaciones-y-verificación-de-fuentes)
+8. [De la elección a la obtención](#de-la-elección-a-la-obtención)
+9. [Una vista completa](#una-vista-completa)
+10. [Continuación](#continuación)
+
 ## Una primera aproximación
 
 Una empresa recibe una petición para cambiar el canal de gestión de pagos de un proveedor. El mensaje utiliza su logotipo, cita el nombre de una persona de su equipo y enlaza a una página que parece oficial. ¿Basta con que esos elementos coincidan para aceptar la petición?
@@ -11,15 +28,15 @@ El trabajo con fuentes abiertas permite comprobar relaciones, fechas y contradic
 | Lo que encontramos | Qué debemos comprobar | Qué puede aportar |
 |---|---|---|
 | Una página con el logotipo de una empresa | Quién controla la página y desde dónde se enlaza | Una posible relación con la organización |
-| Un perfil que declara un puesto | Si existe corroboración y si el dato sigue vigente | Una relación profesional con reservas |
-| Varias noticias con la misma afirmación | Si proceden de fuentes distintas o copian una sola | Corroboración o simple repetición |
+| Un perfil que declara un puesto | Si existe confirmación y si el dato sigue vigente | Una relación profesional con reservas |
+| Varias noticias con la misma afirmación | Si proceden de fuentes distintas o copian una sola | Confirmación o simple repetición |
 | Una captura de una publicación | Su origen, fecha y contexto | Evidencia limitada de un contenido |
 
-El caso [**Operación Prisma**](casos/operacion-prisma/README.md) aplica estos conceptos a una petición que Velaria Eventos recibe de su supuesto proveedor Náyade Servicios Digitales. Sus documentos permiten preparar preguntas, comparar herramientas y valorar evidencias.
+El caso **Operación Prisma** aplica estos conceptos a una petición que Velaria Eventos recibe de su supuesto proveedor Náyade Servicios Digitales. Sus documentos permiten preparar preguntas, comparar herramientas y valorar evidencias.
 
 ## OSINT ético y uso malicioso de fuentes abiertas
 
-Los mismos datos públicos pueden utilizarse para proteger una organización o para perjudicarla. En este tema llamamos **OSINT ético** a la obtención y análisis con una finalidad legítima, dentro del alcance permitido y con minimización de datos. Hablamos de **uso malicioso** cuando esa información se aprovecha para suplantar, acosar, engañar o preparar un ataque.
+Los mismos datos públicos pueden utilizarse para proteger una organización o para perjudicarla. En este tema llamamos **OSINT ético** a la obtención y análisis con una finalidad legítima, dentro del alcance permitido y recogiendo solo los datos necesarios. Hablamos de **uso malicioso** cuando esa información se aprovecha para suplantar, acosar, engañar o preparar un ataque.
 
 La diferencia no está en que una herramienta sea buena o mala. Importan la finalidad, la autorización, la forma de obtener los datos y el uso del resultado. Que un dato sea público no autoriza cualquier tratamiento, como se explicó en el Tema 2.
 
@@ -34,7 +51,7 @@ La diferencia no está en que una herramienta sea buena o mala. Importan la fina
 
 Ejemplo: un nombre y un cargo hacen plausible una firma; la defensa no consiste en recopilar la vida de esa persona, sino en comprobar si el mensaje procede de un canal validado y si el cambio está autorizado.
 
-**Caso:** abre [Prisma · Uso ético y perspectiva del atacante](casos/operacion-prisma/00-uso-etico-y-perspectiva-del-atacante.md). Clasifica las acciones con las muestras del expediente, sin instalar herramientas ni buscar en Internet.
+**Aplicación al caso:** [Prisma · Uso ético y perspectiva del atacante](casos/operacion-prisma/00-uso-etico-y-perspectiva-del-atacante.md). Al terminar, vuelve a [Fundamentos de OSINT y metodología de footprinting](#fundamentos-de-osint-y-metodología-de-footprinting).
 
 ## Fundamentos de OSINT y metodología de footprinting
 
@@ -47,7 +64,7 @@ El Tema 1 enseñó a formular el requerimiento y el Tema 2 fijó los límites de
 | ¿Cuál es el dominio conocido del proveedor? | Documentación previa de la relación comercial y web corporativa | Una página nueva puede copiar la identidad visual |
 | ¿Qué relación profesional consta para la firmante? | Página de equipo, perfil profesional y programa de un evento | No investigar su vida personal |
 | ¿Hay un cambio de canal anunciado? | Avisos corporativos y publicaciones originales | Un repost no confirma que el cambio esté autorizado |
-| ¿La empresa existe con ese nombre? | Documentación societaria y registros públicos | Existir como sociedad no autentica el mensaje |
+| ¿La empresa existe con ese nombre? | Documentación legal de la empresa y registros públicos | Existir como sociedad no autentica el mensaje |
 
 Una consulta útil tiene un propósito que se puede escribir en una línea. Si no permite resolver una pregunta del requerimiento, se descarta.
 
@@ -55,7 +72,7 @@ Una consulta útil tiene un propósito que se puede escribir en una línea. Si n
 
 *Footprinting* es reconocer la huella pública de un objetivo: nombres, dominios, documentos, canales y relaciones que pueden observarse desde fuera. En este tema interesa la huella de la organización y las relaciones profesionales necesarias para entenderla. El Tema 4 tratará su infraestructura técnica.
 
-No consiste en recopilar todo lo que aparezca. El resultado es un mapa de referencias pertinentes, cada una con su origen, fecha y relación con la pregunta. Una pista puede ampliar el mapa; para convertirse en un hecho necesita contraste.
+No consiste en recopilar todo lo que aparezca. El resultado es un mapa de referencias relevantes, cada una con su origen, fecha y relación con la pregunta. Una pista puede ampliar el mapa; para convertirse en un hecho necesita contraste.
 
 | Huella | Datos que pueden aparecer | Pregunta que ayuda a responder | Límite |
 |---|---|---|---|
@@ -111,30 +128,35 @@ El expediente contiene muestras ficticias. La obtención utiliza el objetivo pú
 | Resultado | Declara `nayade.example` y enlaza al perfil `@nayade_oficial` |
 | Decisión siguiente | Comparar con el dominio de la petición; no atribuir todavía su autoría |
 
-El primer apartado del caso, [De la pregunta a la búsqueda](casos/operacion-prisma/01-pregunta-y-busqueda.md), permite preparar el plan antes de revisar todas las muestras.
+**Aplicación al caso:** [Prisma · Pregunta y plan de búsqueda](casos/operacion-prisma/01-pregunta-y-busqueda.md). Al terminar, vuelve a [Herramientas disponibles y criterios de elección](#herramientas-disponibles-y-criterios-de-elección).
 
 ## Herramientas disponibles y criterios de elección
 
-Las plataformas OSINT tienen funciones distintas. Maltego permite organizar y ampliar relaciones; Babel X y la oferta actual de Babel Street ayudan a buscar y seguir información multilingüe; Hunchly conserva evidencias. Lens, TinEye, Wayback y fuentes como BORME responden a preguntas más concretas.
+La herramienta se elige según la pregunta. Para unas pocas publicaciones puede bastar una revisión manual; un volumen mayor puede necesitar una plataforma. Hay que distinguir tres tareas: localizar información, relacionarla y conservarla. Una herramienta puede ayudar en varias tareas, pero su resultado siempre necesita interpretación.
 
-Consulta [Herramientas OSINT para personas y organizaciones](herramientas.md). Cada apartado explica qué hace la herramienta, qué devuelve, cuándo resulta útil y qué límites tiene. Las capturas proceden de documentación publicada y llevan su referencia.
+| Necesidad | Opciones | Qué revisar en el resultado |
+|---|---|---|
+| Localizar un aviso o documento | Google, Intelligence X | Página de origen, fecha y contexto de la mención |
+| Consultar una versión anterior | Wayback Machine | Fecha de captura y cambios del contenido |
+| Comprobar usos de una imagen | Google Lens, TinEye | Coincidencia real, fecha y contexto anterior |
+| Distinguir sociedades | BORME, OpenCorporates | Nombre legal, país o registro correspondiente y número de registro |
+| Ordenar relaciones | Maltego | Qué fuente respalda cada enlace y en qué fecha |
+| Seguir muchas menciones en varios idiomas | Babel Street | Fuentes cubiertas, filtros y acceso disponible |
+| Guardar páginas y el recorrido de consulta | Hunchly | Contenido conservado, dirección y fecha |
+| Consultar listas de sanciones cuando el encargo lo pida | OpenSanctions | Categoría, identificadores y lista de origen |
+
+Esta tabla basta para preparar la elección del caso. El [catálogo de herramientas](herramientas.md) amplía cada opción con ejemplos y capturas; se consulta cuando haga falta más detalle.
 
 | Para elegir | Pregunta |
 |---|---|
 | Necesidad | ¿Qué afirmación necesito comprobar? |
-| Fuente | ¿La herramienta consulta una fuente pertinente? |
+| Fuente | ¿La herramienta consulta una fuente relevante? |
 | Resultado | ¿Devuelve contenido, una relación, una fecha o una captura? |
 | Alcance | ¿Qué datos enviará y qué acciones realizará? |
 | Recursos | ¿Tengo acceso y compensa su uso para este volumen? |
-| Verificación | ¿Puedo remontarme al origen del resultado? |
+| Verificación | ¿Puedo localizar el origen del resultado? |
 
-**Caso:** completa [Prisma · Elección de herramientas](casos/operacion-prisma/02-eleccion-de-herramientas.md). Compara opciones, descarta una y justifica la mejor para cada pregunta. Este apartado se resuelve sin consultas.
-
-## De la elección a la obtención
-
-Una herramienta elegida debe producir un resultado verificable. En la siguiente parte se registra la consulta, la fuente, la fecha, el contenido relevante y el límite. Si la opción elegida no está disponible, se explica el cambio y se utiliza una alternativa que responda a la misma pregunta.
-
-**Caso:** continúa en [Prisma · Obtención con herramientas](casos/operacion-prisma/03-obtencion-con-herramientas.md). Aquí se utiliza la elección anterior. Después se vuelve a la teoría para revisar identidades, publicaciones y fuentes; más resultados no significan mejores conclusiones.
+**Aplicación al caso:** [Prisma · Elección de herramientas](casos/operacion-prisma/02-eleccion-de-herramientas.md). Al terminar, vuelve a [Investigación de personas: identidad y huella digital](#investigación-de-personas-identidad-y-huella-digital).
 
 ## Investigación de personas: identidad y huella digital
 
@@ -146,8 +168,8 @@ Una identidad digital es la representación con la que alguien aparece en un ser
 |---|---|---|---|
 | Nombre | Texto que sirve para nombrar | «Marta Vega» | Puede repetirse entre personas y cuentas |
 | Alias o identificador | Referencia de una cuenta dentro de un servicio | `@marta_nayade_pagos` | Se conserva junto con plataforma y URL; no es un identificador universal |
-| Cuenta | Objeto creado en una plataforma | PRI-P03 | Puede cambiar de nombre, ser compartida o quedar comprometida |
-| Persona | Individuo al que se atribuye una actividad | La profesional mencionada en la petición | Su relación con una cuenta requiere evidencia |
+| Cuenta | Perfil creado en una plataforma | PRI-P03 | Puede cambiar de nombre, ser compartida o quedar comprometida |
+| Persona | Individuo al que se atribuye una actividad | La profesional mencionada en la petición | Su relación con una cuenta necesita evidencia |
 | Identidad digital | Forma en que una cuenta o conjunto de cuentas se presenta | Nombre, foto y puesto declarados en PRI-P03 | La presentación puede ser correcta, inventada o copiada |
 | Huella digital | Rastros publicados por el sujeto o por terceros | Perfil, programa del evento y menciones fechadas | Se separan por procedencia, fecha y candidato |
 
@@ -181,7 +203,7 @@ No se suman coincidencias como si cada una aportara una prueba independiente. Un
 
 Para comprobar una firma profesional puede bastar con el nombre, puesto, organización, enlace y fecha relevantes. No hacen falta dirección personal, familiares, aficiones, horarios ni un historial completo de publicaciones. Tampoco se intenta averiguar la identidad civil de un alias.
 
-El caso propone redactar una conclusión acotada en [Identidad y huella profesional](casos/operacion-prisma/04-identidad-y-huella.md). El objetivo es comprobar relaciones útiles para la petición, dentro de los límites del Tema 2.
+**Aplicación al caso:** [Prisma · Identidad y huella profesional](casos/operacion-prisma/04-identidad-y-huella.md). Al terminar, vuelve a [SOCMINT: investigación en redes sociales](#socmint-investigación-en-redes-sociales).
 
 ## SOCMINT: investigación en redes sociales
 
@@ -189,13 +211,13 @@ El caso propone redactar una conclusión acotada en [Identidad y huella profesio
 
 ### Una cuenta, una publicación y una afirmación
 
-Son tres objetos distintos. Una cuenta auténtica puede publicar información errónea. Una cuenta falsa puede copiar información correcta. Una publicación real puede reutilizar una imagen fuera de contexto.
+Son tres elementos distintos. Una cuenta auténtica puede publicar información errónea. Una cuenta falsa puede copiar información correcta. Una publicación real puede reutilizar una imagen fuera de contexto.
 
 | Objeto | Qué es | Ejemplo del expediente | Qué se verifica |
 |---|---|---|---|
 | Cuenta | Perfil desde el que se difunde contenido | PRI-P03, perfil que declara gestionar pagos | Identificador, enlaces y relación con el proveedor |
 | Publicación | Pieza concreta, con contenido y fecha | PRI-S01, anuncio del cambio | URL original, fecha, edición y material incorporado |
-| Afirmación | Proposición que puede ser verdadera o falsa | «El proveedor ha autorizado el nuevo canal» | Evidencia de la autorización, con origen y fecha |
+| Afirmación | Idea que puede comprobarse como verdadera o falsa | «El proveedor ha autorizado el nuevo canal» | Evidencia de la autorización, con origen y fecha |
 
 El expediente acredita que una cuenta publicó un anuncio; no acredita por ello que el proveedor autorizase el cambio. Cada afirmación de una misma publicación se evalúa por separado: una imagen puede ser auténtica y su descripción incorrecta.
 
@@ -205,7 +227,7 @@ Para verificar una publicación conviene reconstruir una secuencia sencilla:
 2. Registrar autor o cuenta, enlace, fecha de publicación y fecha de consulta.
 3. Distinguir el contenido original de comentarios, recortes y republicaciones.
 4. Comparar la fecha del contenido mostrado con la fecha del hecho que se afirma.
-5. Buscar corroboración que no dependa de esa misma publicación.
+5. Buscar confirmación que no dependa de esa misma publicación.
 6. Escribir qué se confirma y qué sigue pendiente.
 
 La [guía de verificación de Bellingcat](https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/) muestra cómo imágenes y vídeos auténticos pueden circular con una explicación equivocada. La búsqueda inversa de imágenes ayuda a localizar usos anteriores; no identifica por sí sola al autor ni garantiza encontrar la primera publicación. Solo se emplea con imágenes que se puedan compartir con el servicio elegido.
@@ -226,11 +248,11 @@ Una búsqueda de texto parte de palabras. La **búsqueda inversa** parte de una 
 3. Consulta Lens o TinEye. Si hay rótulos o bordes, compara también un recorte; conserva el original.
 4. Abre la página que contiene cada coincidencia útil. El resultado del buscador no basta.
 5. Separa fecha de publicación, fecha atribuida al hecho y fecha de consulta. «Más antigua encontrada» no significa «primera publicación de la historia».
-6. Describe qué relación se sostiene y qué queda pendiente. No encontrar coincidencias deja una laguna.
+6. Describe qué relación se sostiene y qué queda pendiente. No encontrar coincidencias deja una limitación.
 
 **Ejemplo real: un vídeo de 2012 presentado como combates de 2016.** Bellingcat documentó en su guía del 30 de junio de 2017 que imágenes de unas maniobras militares rusas de 2012 se difundieron como combates cerca de Svitlodarsk en diciembre de 2016. La búsqueda inversa descrita no encontraba fácilmente el original: también hicieron falta pistas del contenido y búsqueda contextual. [Fuente y ejemplos del análisis](https://www.bellingcat.com/resources/how-tos/2017/06/30/advanced-guide-verifying-video-content/).
 
-Este ejemplo enseña dos límites: una grabación auténtica puede acompañar una afirmación falsa y una búsqueda inversa sin coincidencias no valida esa afirmación. En Prisma, PRI-F06 y PRI-S05 permiten comprobar el uso anterior de IMG-01. Continúa con [Publicaciones y contexto](casos/operacion-prisma/05-publicaciones-y-contexto.md).
+Este ejemplo enseña dos límites: una grabación auténtica puede acompañar una afirmación falsa y una búsqueda inversa sin coincidencias no valida esa afirmación. En Prisma, PRI-F06 y PRI-S05 permiten comprobar el uso anterior de IMG-01. El apartado de aplicación aparece al terminar la explicación de fechas y relaciones.
 
 ### Leer fechas y relaciones
 
@@ -245,7 +267,7 @@ Este ejemplo enseña dos límites: una grabación auténtica puede acompañar un
 
 Conservar la zona horaria evita cronologías falsas. `09:10Z` significa 09:10 UTC; una interfaz puede mostrar otra hora según su configuración. Si la fecha original se desconoce, se escribe «no consta».
 
-En el caso, un anuncio y dos republicaciones apuntan al mismo canal. La [verificación de las publicaciones](casos/operacion-prisma/05-publicaciones-y-contexto.md) permite comprobar por qué esas tres piezas no son tres confirmaciones.
+**Aplicación al caso:** [Prisma · Publicaciones y contexto](casos/operacion-prisma/05-publicaciones-y-contexto.md). Al terminar, vuelve a [Investigación de organizaciones y verificación de fuentes](#investigación-de-organizaciones-y-verificación-de-fuentes).
 
 ## Investigación de organizaciones y verificación de fuentes
 
@@ -255,8 +277,8 @@ Una organización puede tener nombre legal, marca comercial, varias filiales, do
 
 | Campo | Fuente posible | Precaución |
 |---|---|---|
-| Nombre legal y marca | Aviso legal y documentación societaria | Dos marcas parecidas pueden ser entidades distintas |
-| Existencia y actos societarios | Registros y boletines oficiales | Un acto publicado tiene fecha; no describe toda la situación actual |
+| Nombre legal y marca | Aviso legal y documentación legal de la empresa | Dos marcas parecidas pueden ser entidades distintas |
+| Existencia y actos legales de las sociedades | Registros y boletines oficiales | Un acto publicado tiene fecha; no describe toda la situación actual |
 | Dominio y canales conocidos | Documentación previa y enlaces corporativos | Una marca en el título de una página no prueba control |
 | Servicios declarados | Catálogo y documentos corporativos | Son afirmaciones de la organización |
 | Relaciones profesionales | Página de equipo y fuentes externas fechadas | Una mención antigua no acredita un puesto actual |
@@ -280,14 +302,14 @@ Los hechos de estos ejemplos proceden de las fuentes enlazadas. Su aplicación a
 
 ### Fiabilidad de la fuente y credibilidad de la información
 
-La fiabilidad trata de la fuente: su acceso al hecho, historial e intereses. La credibilidad trata de una afirmación concreta: coherencia, fecha y corroboración. Se evalúan por separado con la [plantilla de evaluación de fuentes](../../plantillas/plantilla-evaluacion-fuentes.md).
+La fiabilidad trata de la fuente: su acceso al hecho, historial e intereses. La credibilidad trata de una afirmación concreta: coherencia, fecha y confirmación. Se evalúan por separado con la [plantilla de evaluación de fuentes](../../plantillas/plantilla-evaluacion-fuentes.md).
 
 | Fuente del caso | Qué puede sostener | Reserva |
 |---|---|---|
 | Documentación previa del proveedor | Canal utilizado en la relación comercial | Puede requerir actualización |
 | Web corporativa | Lo que la organización declara públicamente | No es independiente de sus propios perfiles |
 | Programa de un evento | La relación anunciada en la fecha del evento | No acredita un puesto meses después |
-| Perfil sin enlace corporativo | Lo que la cuenta afirma | Relación no corroborada |
+| Perfil sin enlace corporativo | Lo que la cuenta afirma | Relación no confirmada |
 | Republicación de un anuncio | Que ese anuncio circuló | No verifica su contenido |
 
 Una fuente primaria está cerca del hecho o del dato original. Una secundaria lo interpreta o resume. Esa distinción no garantiza calidad: el autor de un anuncio engañoso también es fuente primaria de lo que publicó.
@@ -296,12 +318,18 @@ Para cada hallazgo conviene escribir una frase comprobable y su referencia:
 
 | Redacción | Valoración |
 |---|---|
-| «El perfil es falso» | Conclusión demasiado amplia si solo falta corroboración |
+| «El perfil es falso» | Conclusión demasiado amplia si solo falta confirmación |
 | «PRI-P03 no aparece enlazado en PRI-F01 y no se ha confirmado su relación con el proveedor» | Expresa la observación y su límite |
 | «Tres fuentes confirman el cambio» | Incorrecto si dos copian el mismo anuncio |
 | «PRI-S02 y PRI-S03 dependen de PRI-S01; no aportan confirmación independiente» | Describe la procedencia real |
 
-El [contraste de organizaciones y fuentes](casos/operacion-prisma/06-organizacion-y-valoracion.md) termina en una nota breve para el responsable de compras. No necesita una atribución personal para recomendar que el cambio quede pendiente de verificación.
+**Aplicación al caso:** [Prisma · Organización y valoración](casos/operacion-prisma/06-organizacion-y-valoracion.md). Al terminar, vuelve a [De la elección a la obtención](#de-la-elección-a-la-obtención).
+
+## De la elección a la obtención
+
+Una herramienta elegida debe producir un resultado verificable. En la siguiente parte se registra la consulta, la fuente, la fecha, el contenido relevante y el límite. Si la opción elegida no está disponible, se explica el cambio y se utiliza una alternativa que responda a la misma pregunta.
+
+**Aplicación al caso:** [Prisma · Obtención con herramientas](casos/operacion-prisma/03-obtencion-con-herramientas.md). Al terminar, vuelve a [Una vista completa](#una-vista-completa).
 
 ## Una vista completa
 
@@ -312,7 +340,7 @@ pregunta y alcance
       → candidatos separados
         → origen, fechas y contexto
           → contraste independiente
-            → hechos, valoración y lagunas
+            → hechos, valoración y limitaciones
               → decisión y siguiente comprobación
 ```
 
@@ -329,3 +357,5 @@ La [bitácora](../../plantillas/plantilla-bitacora-investigacion.md) conserva el
 ## Continuación
 
 El siguiente tema estudia la [infraestructura y la superficie de exposición](../04-osint-tecnico-infraestructura-y-exposicion/README.md): dominios, DNS, certificados y servicios observados desde fuera. La selección de lecturas de este tema está en [recursos.md](recursos.md).
+
+[Volver al índice de este tema](#cómo-leer-este-tema) · [Índice de la asignatura](../../README.md)

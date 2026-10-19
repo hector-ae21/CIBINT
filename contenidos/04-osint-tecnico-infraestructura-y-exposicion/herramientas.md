@@ -1,8 +1,24 @@
 # Herramientas OSINT para infraestructura
 
+[Volver al tema](README.md#herramientas-disponibles-y-criterios-de-elección) · [Definiciones de este tema](definiciones.md)
+
 Un dominio, una IP, una entrada de certificado y un servicio observado responden a preguntas diferentes. La elección de herramienta depende del dato necesario, de su fecha y de cómo se obtiene.
 
-Primero se comparan opciones en [Operación Delta · Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md), sin realizar consultas. La ejecución aparece después, en [Obtención con herramientas](casos/operacion-delta/04-obtencion-con-herramientas.md).
+Este catálogo amplía las herramientas de la explicación principal. Las consultas se realizan en el ejercicio final del caso, después de interpretar las muestras.
+
+## Herramientas por función
+
+- [Maltego: mapear relaciones de infraestructura](#maltego-mapear-relaciones-de-infraestructura)
+- [SpiderFoot: automatizar obtención mediante módulos](#spiderfoot-automatizar-obtención-mediante-módulos)
+- [OWASP Amass: descubrir y relacionar activos](#owasp-amass-descubrir-y-relacionar-activos)
+- [Shodan: consultar observaciones de servicios](#shodan-consultar-observaciones-de-servicios)
+- [Censys: consultar hosts, sitios y certificados](#censys-consultar-hosts-sitios-y-certificados)
+- [ICANN Lookup, DNS y crt.sh: resolver preguntas acotadas](#icann-lookup-dns-y-crtsh-resolver-preguntas-acotadas)
+- [Wappalyzer y DevTools: reconocer señales de tecnología](#wappalyzer-y-devtools-reconocer-señales-de-tecnología)
+- [SecurityTrails: comparar DNS actual e histórico](#securitytrails-comparar-dns-actual-e-histórico)
+- [urlscan.io: leer observaciones archivadas de páginas web](#urlscanio-leer-observaciones-archivadas-de-páginas-web)
+- [VirusTotal: interpretar informes y relaciones de dominios](#virustotal-interpretar-informes-y-relaciones-de-dominios)
+- [Elegir por la pregunta](#elegir-por-la-pregunta)
 
 ## Maltego: mapear relaciones de infraestructura
 
@@ -17,6 +33,8 @@ En la captura, un dominio se relaciona con varios nombres. La forma del grafo no
 En Delta permite reunir DEL-D03 → DEL-D04 y separar `tienda-ajena.example`, aunque comparta IP. Antes de ampliar el mapa se revisan los datos que recibiría el proveedor de la transformación y si la consulta contacta con el objetivo. Una transformación no hereda autorización por aparecer en el menú.
 
 **Cuándo encaja:** cuando interesa comparar relaciones y procedencias. **Límite:** el mapa organiza evidencias, no sustituye la validación del activo.
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## SpiderFoot: automatizar obtención mediante módulos
 
@@ -34,6 +52,8 @@ Su utilidad está en ejecutar de forma repetible un conjunto de consultas. Su ri
 
 En Delta sería candidato si hubiera muchos nombres que contrastar con fuentes autorizadas. Para un único certificado puede resultar innecesario. No se ejecuta una configuración general sobre el dominio ficticio: primero se explica qué módulos responderían a la pregunta y cuáles quedarían excluidos. La instalación y sintaxis se comprueban en la versión disponible, sin asumir que una guía antigua sigue vigente.
 
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## OWASP Amass: descubrir y relacionar activos
 
 [OWASP Amass](https://github.com/owasp-amass/amass) se orienta al descubrimiento de activos y al mapa de superficie externa. Puede ayudar a reunir nombres y relaciones a partir de distintas fuentes. Se diferencia de un índice de servicios: su propósito es construir y ampliar un inventario, no solo mostrar una ficha ya recogida.
@@ -41,6 +61,8 @@ En Delta sería candidato si hubiera muchos nombres que contrastar con fuentes a
 Hay que comprobar en la versión utilizada qué operaciones realizan las opciones elegidas. El alcance, las fuentes y las posibles interacciones se fijan antes de ejecutar. No se proporcionan comandos tomados de versiones anteriores como si fueran actuales.
 
 En Delta encajaría para una revisión más amplia de nombres, si la empresa la autorizara. Para interpretar DEL-C02 basta con CT; no hace falta ampliar a un reconocimiento general. Esta comparación se trabaja en [Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md).
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Shodan: consultar observaciones de servicios
 
@@ -64,7 +86,9 @@ Los marcadores se sustituyen antes de ejecutar. La [referencia de filtros](https
 
 Fuente: Shodan, [misma guía de navegación](https://help.shodan.io/the-basics/navigating-the-website). La imagen permite diferenciar resultados conservados de una nueva obtención. La exportación y sus formatos dependen del acceso.
 
-En Delta ayuda a interpretar DEL-S04. Consultar datos existentes no equivale a solicitar un escaneo nuevo: esta última acción queda fuera del encargo. **Vínculo con el caso:** [obtención](casos/operacion-delta/04-obtencion-con-herramientas.md#consultar-servicios-indexados) y [lectura posterior](casos/operacion-delta/05-servicios-indexados.md).
+En Delta ayuda a interpretar DEL-S04. Consultar datos existentes no equivale a solicitar un escaneo nuevo: esta última acción queda fuera del encargo.
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## Censys: consultar hosts, sitios y certificados
 
@@ -94,6 +118,8 @@ La agrupación obliga a que las condiciones correspondan al mismo servicio. Sin 
 
 En Delta permite comparar DEL-S01 y DEL-S06 por procedencia y fecha. El acceso o una exportación real preparada por el docente determina qué se puede consultar; no se exige contratar un plan.
 
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## ICANN Lookup, DNS y crt.sh: resolver preguntas acotadas
 
 | Recurso | Qué aporta | Qué no acredita |
@@ -108,6 +134,8 @@ Para DNS se conservan nombre, tipo, valor, TTL y hora. Para CT se conserva entra
 
 El enlace de ejemplo devuelve JSON para `www.example.org`. Permite leer campos como `id`, `name_value`, `not_before`, `not_after` y `serial_number` sin depender de la página de inicio. La fecha de incorporación al registro se conserva si el detalle la facilita; no se sustituye por el inicio de validez del certificado. La interfaz web ofrece otra presentación de los datos; si limita consultas, se registra la limitación o se utiliza una salida fechada ya aportada.
 
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## Wappalyzer y DevTools: reconocer señales de tecnología
 
 [Wappalyzer](https://www.wappalyzer.com/apps/) infiere tecnologías a partir de señales. Las herramientas de desarrollo del navegador permiten leer directamente peticiones, cabeceras y respuesta HTML; la [guía de DevTools](https://developer.chrome.com/docs/devtools/network/) muestra dónde se encuentran esos datos.
@@ -115,6 +143,8 @@ El enlace de ejemplo devuelve JSON para `www.example.org`. Permite leer campos c
 La detección se contrasta con una señal concreta: cabecera, nombre de cookie, elemento HTML o ruta. Un intermediario puede cambiar las cabeceras y una aplicación puede imitar una señal. Detectar un producto no confirma versión, configuración ni vulnerabilidad.
 
 En Delta se empieza con DEL-H01, sin abrir el servicio ficticio. Más adelante se examina una web propia o expresamente autorizada. Abrir la web contacta con el servicio; no es lectura de un índice pasivo.
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## SecurityTrails: comparar DNS actual e histórico
 
@@ -130,6 +160,8 @@ En Delta se empieza con DEL-H01, sin abrir el servicio ficticio. Más adelante s
 Procedimiento: consulta el dominio autorizado, selecciona el tipo de registro y compara observaciones fechadas. Anota qué cambio sostiene el histórico y contrástalo con inventario o certificado. Si hay varias IP, no presupongas una migración completa sin más datos. La cobertura, el histórico visible y la API dependen del acceso; no se incluye una clave en el registro del estudiante.
 
 En Delta encaja para la pregunta «¿qué destino tuvo legado antes de su retirada?». DEL-D ya proporciona una muestra ficticia: se interpreta sin intentar obtener datos de `darsena.example`. Compara esta herramienta con DNS actual en [Elección](casos/operacion-delta/02-eleccion-de-herramientas.md) y registra el uso sobre un objetivo real en [Históricos y páginas archivadas](casos/operacion-delta/04-obtencion-con-herramientas.md#históricos-y-páginas-archivadas).
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
 ## urlscan.io: leer observaciones archivadas de páginas web
 
@@ -150,6 +182,8 @@ Para leer una ficha, conserva identificador y fecha, revisa URL inicial y destin
 
 En Delta ayuda a interpretar una página histórica como DEL-S03 y las señales de DEL-H01. Se aplica en [Históricos y páginas archivadas](casos/operacion-delta/04-obtencion-con-herramientas.md#históricos-y-páginas-archivadas). Una URL con tokens o datos internos no se envía a un servicio público.
 
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## VirusTotal: interpretar informes y relaciones de dominios
 
 [VirusTotal](https://docs.virustotal.com/docs/searching) reúne informes y relaciones sobre archivos, URL, dominios e IP. La [referencia de dominios](https://docs.virustotal.com/reference/domains-object) describe datos como registro, resoluciones y certificados. Algunas funciones pertenecen a servicios de pago.
@@ -167,6 +201,8 @@ Para este caso se puede interpretar un informe ya preparado por el docente, con 
 
 En Delta encaja para comparar relaciones y reputación como contexto, sin convertir DEL-S04 en una intrusión. La configuración y el modo de consulta se justifican en [Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md); las evidencias se conservan en [Obtención](casos/operacion-delta/04-obtencion-con-herramientas.md#contrastar-un-informe-de-reputación).
 
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## Elegir por la pregunta
 
 | Pregunta | Primera opción posible | Cuándo ampliar |
@@ -182,3 +218,5 @@ En Delta encaja para comparar relaciones y reputación como contexto, sin conver
 | ¿Cómo automatizo una obtención amplia? | SpiderFoot o Amass | Solo con alcance y configuración revisados |
 
 Los [créditos de las capturas](../../imagenes/03-04-capturas.md) identifican publicación e imagen de origen. La elección razonada precede a la ejecución.
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)

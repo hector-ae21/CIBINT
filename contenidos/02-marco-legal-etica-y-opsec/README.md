@@ -1,5 +1,26 @@
 # Marco legal, ética y OPSEC del analista
 
+[Índice de la asignatura](../../README.md) · [Definiciones de este tema](definiciones.md)
+
+## Cómo leer este tema
+
+La explicación sigue el orden de este índice. Los ejercicios se abren desde el apartado que los prepara y terminan con un enlace para continuar la lectura.
+
+1. [Una primera aproximación](#una-primera-aproximación)
+2. [Quién investiga cambia el marco](#quién-investiga-cambia-el-marco)
+3. [Protección de datos: lo público sigue siendo dato personal](#protección-de-datos-lo-público-sigue-siendo-dato-personal)
+4. [Los límites penales](#los-límites-penales)
+5. [Investigar a personas por encargo](#investigar-a-personas-por-encargo)
+6. [Condiciones de uso de las plataformas](#condiciones-de-uso-de-las-plataformas)
+7. [Compartir lo que se sabe](#compartir-lo-que-se-sabe)
+8. [Ética profesional: lo que la ley no resuelve](#ética-profesional-lo-que-la-ley-no-resuelve)
+9. [Seguridad operacional del analista](#seguridad-operacional-del-analista)
+10. [Identidad de investigación](#identidad-de-investigación)
+11. [Riesgos personales del analista](#riesgos-personales-del-analista)
+12. [Registro de la investigación: poder demostrar lo que se hizo](#registro-de-la-investigación-poder-demostrar-lo-que-se-hizo)
+13. [Una vista completa](#una-vista-completa)
+14. [Continuación](#continuación)
+
 ## Una primera aproximación
 
 En el Tema 1 la obtención aparecía como una fase más del ciclo: reunir datos de fuentes autorizadas. Este tema se ocupa de la palabra que quedaba en segundo plano, *autorizadas*.
@@ -30,7 +51,7 @@ No existe una única «ley del OSINT». Las normas que se aplican dependen, sobr
 
 | Quién investiga | Marco principal en España | Consecuencia práctica |
 |---|---|---|
-| Una empresa u organización privada, sobre su propia seguridad | Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD) | Necesita una base de licitud para cada tratamiento de datos personales y debe respetar sus principios |
+| Una empresa u organización privada, sobre su propia seguridad | Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD) | Necesita una base legal para cada tratamiento de datos personales y debe respetar sus principios |
 | Autoridades competentes en la prevención, investigación y persecución de delitos | Ley Orgánica 7/2021, de protección de datos tratados con fines penales | El RGPD cede ante una norma específica, con garantías propias |
 | Un despacho de detectives, por encargo de un tercero | Ley 5/2014, de Seguridad Privada, además del RGPD | La investigación sobre personas por cuenta ajena es una actividad reservada y limitada |
 | Un equipo universitario o de investigación | RGPD, normativa de la institución y, en su caso, comité de ética | La finalidad de investigación no exime de minimizar ni de proteger a los afectados |
@@ -63,7 +84,7 @@ El artículo 5 del RGPD enumera los principios que debe cumplir todo tratamiento
 
 El requerimiento del Tema 1 resulta ser, además, una herramienta de cumplimiento: al fijar la decisión, el objeto y las exclusiones, delimita qué datos son necesarios y cuáles no.
 
-### La base de licitud: el interés legítimo
+### La base legal: el interés legítimo
 
 Una organización privada que investiga amenazas contra sí misma no suele contar con el consentimiento de los afectados, ni lo necesita. La base habitual es el **interés legítimo** del artículo 6.1.f del RGPD, que exige tres cosas: un interés real y lícito, que el tratamiento sea necesario para satisfacerlo y que no prevalezcan los derechos de las personas afectadas.
 
@@ -131,7 +152,7 @@ Que algo no sea delito no significa que sea adecuado. Una organización que basa
 
 ## Compartir lo que se sabe
 
-La licitud no termina en la obtención. La difusión también tiene reglas, y la más extendida en la comunidad de ciberseguridad es el **Traffic Light Protocol (TLP)**, mantenido por FIRST. Su versión 2.0 es la vigente desde agosto de 2022.
+La obligación de actuar dentro de la ley continúa al compartir los resultados. La difusión también tiene reglas, y la más extendida en la comunidad de ciberseguridad es el **Traffic Light Protocol (TLP)**, mantenido por FIRST. Su versión 2.0 es la vigente desde agosto de 2022.
 
 | Etiqueta | Quién puede recibir la información |
 |---|---|
@@ -143,7 +164,9 @@ La licitud no termina en la obtención. La difusión también tiene reglas, y la
 
 El TLP no es una norma jurídica, sino un acuerdo profesional. Etiquetar bien un producto de inteligencia protege a las fuentes, a las víctimas y a la propia investigación, y encaja con la fase de difusión vista en el Tema 1.
 
-Para el sector privado español, el equipo de respuesta de referencia es el **INCIBE-CERT** (art. 11 del Real Decreto-ley 12/2018). La Directiva (UE) 2022/2555, conocida como NIS2, amplía las obligaciones de gestión y notificación de incidentes; en el momento de redactar este tema su transposición en España sigue en tramitación, por lo que conviene comprobar su estado antes de citarla como derecho vigente.
+Para el sector privado español, el equipo de respuesta de referencia es el **INCIBE-CERT** (art. 11 del Real Decreto-ley 12/2018). La Directiva (UE) 2022/2555, conocida como NIS2, trata la gestión y la notificación de incidentes. Para aplicar sus obligaciones a una organización concreta hay que consultar las normas españolas vigentes y comprobar qué entidades y situaciones incluyen.
+
+**Aplicación al caso:** [De la petición al alcance](casos/operacion-linde/01-de-la-peticion-al-alcance.md). Al terminar, vuelve a [Ética profesional: lo que la ley no resuelve](#ética-profesional-lo-que-la-ley-no-resuelve).
 
 ## Ética profesional: lo que la ley no resuelve
 
@@ -156,17 +179,17 @@ El **Informe Menlo** (Departamento de Seguridad Nacional de EE. UU., 2012) adapt
 | Principio | Pregunta que plantea al analista |
 |---|---|
 | Respeto por las personas | ¿Trato a los afectados como sujetos con derechos o solo como fuentes de datos? |
-| Beneficencia | ¿He identificado los daños posibles y he hecho lo razonable para reducirlos? |
+| Beneficencia: reducir el daño y procurar un beneficio | ¿He identificado los daños posibles y he hecho lo razonable para reducirlos? |
 | Justicia | ¿Recaen los costes de mi trabajo sobre quienes no obtienen ningún beneficio de él? |
 | Respeto por la ley y el interés público | ¿Puedo explicar públicamente por qué hice lo que hice? |
 
-El **Protocolo de Berkeley sobre investigaciones digitales de fuentes abiertas** (Naciones Unidas y Universidad de California en Berkeley, 2022) es hoy la referencia metodológica más citada en el ámbito OSINT. Organiza sus principios en tres grupos:
+El **Protocolo de Berkeley sobre investigaciones digitales de fuentes abiertas** (Naciones Unidas y Universidad de California en Berkeley, 2022) es una referencia para organizar investigaciones con fuentes abiertas. Organiza sus principios en tres grupos:
 
 | Grupo | Principios |
 |---|---|
-| Profesionales | Rendición de cuentas, competencia, objetividad, legalidad y conciencia de la seguridad |
-| Metodológicos | Exactitud, minimización de datos, preservación y seguridad desde el diseño |
-| Éticos | Dignidad, humildad, inclusividad, independencia y transparencia |
+| Profesionales | Responsabilidad por lo que se hace, preparación profesional, objetividad, respeto a la ley y atención a la seguridad |
+| Metodológicos | Exactitud, uso de los datos necesarios, conservación de evidencias y seguridad desde el principio |
+| Éticos | Dignidad, reconocimiento de los propios límites, inclusión, independencia y transparencia |
 
 El principio de **humildad** merece una mención aparte porque es el más fácil de olvidar: reconocer lo que no se sabe, consultar cuando hace falta y, si se comete un error, corregirlo o comunicarlo a quien pueda limitar el daño (párr. 35).
 
@@ -190,11 +213,13 @@ Cuando no está claro si una acción es adecuada, estas preguntas ayudan a decid
 
 Si la respuesta a cualquiera de ellas incomoda, lo profesional es detenerse y consultar.
 
+**Aplicación al caso:** [Evaluación de las acciones](casos/operacion-linde/02-evaluacion-de-las-acciones.md). Al terminar, vuelve a [Seguridad operacional del analista](#seguridad-operacional-del-analista).
+
 ## Seguridad operacional del analista
 
 ### Qué es la OPSEC
 
-La seguridad operacional (OPSEC, por *Operations Security*) es, según la definición que recoge el NIST, un proceso sistemático para impedir que un adversario obtenga información sobre capacidades e intenciones, identificando, controlando y protegiendo **indicios generalmente no clasificados** de la planificación y ejecución de actividades sensibles.
+La **seguridad operacional**, u **OPSEC** por *Operations Security*, protege la investigación y a quienes participan en ella. Consiste en identificar qué detalles pueden revelar lo que se está haciendo, quién podría aprovecharlos y cómo reducir esa exposición. La definición del NIST recoge esta misma idea: proteger los indicios que permitirían conocer las capacidades e intenciones de una organización.
 
 El concepto nació durante la guerra de Vietnam. El estudio *Purple Dragon*, publicado por la Agencia de Seguridad Nacional estadounidense y desclasificado después, explica cómo el adversario anticipaba operaciones aéreas a partir de información aparentemente inocua. De ahí surgió un método en cinco pasos que se sigue enseñando hoy.
 
@@ -222,7 +247,7 @@ El segundo paso del proceso es el que más se subestima. Quien investiga tiende 
 | **Ingeniería social dirigida al analista** | Alguien que se presenta como periodista, colega de otra empresa o proveedor pide detalles del caso «para ayudar» | Responder solo por los canales oficiales y aplicar la necesidad de conocer |
 | **Filtración interna** | Si el autor es de la plantilla, puede ver el correo, la incidencia o la reunión en la que se habla de él | Limitar quién conoce el caso y registrarlo en sistemas con acceso restringido |
 | **Exposición del analista** | El adversario identifica a quien le investiga y publica sus datos personales o le presiona | Separar identidades, no firmar públicamente los productos sensibles, apoyo de la organización |
-| **Información sembrada para engañar** | Publicaciones falsas preparadas para que el analista llegue a una conclusión equivocada o señale a un inocente | Corroborar con fuentes independientes, distinguir hechos de inferencias y mantener la humildad analítica |
+| **Información sembrada para engañar** | Publicaciones falsas preparadas para que el analista llegue a una conclusión equivocada o señale a un inocente | Confirmar con fuentes independientes, distinguir hechos de inferencias y mantener la humildad analítica |
 
 La última fila conecta con el Tema 1 y con el caso de Boston: un adversario que conoce los métodos del analista puede aprovechar sus prisas. La mejor defensa sigue siendo el método.
 
@@ -268,7 +293,7 @@ En las prácticas de la asignatura:
 - no se contacta con personas ni con organizaciones del caso;
 - si una pregunta de inteligencia solo puede responderse entrando en un espacio cerrado, esa pregunta queda fuera del alcance y se hace constar como limitación.
 
-Esa última regla no es solo una precaución docente. Es exactamente lo que haría un equipo profesional que no dispone de una autorización específica: reconocer la laguna y, si procede, trasladar el asunto a quien tiene competencia para investigarlo.
+Esa última regla no es solo una precaución docente. Es exactamente lo que haría un equipo profesional que no dispone de una autorización específica: explicar la limitación y, si procede, trasladar el asunto a quien está autorizado para investigarlo.
 
 ### En la práctica profesional
 
@@ -287,7 +312,9 @@ La investigación también tiene costes para quien la hace.
 
 El último riesgo suele subestimarse en ciberseguridad. El Protocolo de Berkeley dedica atención específica al daño psicosocial y al trauma secundario que puede sufrir quien analiza material gráfico o traumático, y pide a las organizaciones que lo prevengan (párrs. 78 y 123). Encontrar contenido perturbador durante una investigación no es un fallo personal; seguir trabajando como si no hubiera pasado nada puede serlo.
 
-## Trazabilidad: poder demostrar lo que se hizo
+**Aplicación al caso:** [Exposición e identidad](casos/operacion-linde/03-exposicion-e-identidad.md). Al terminar, vuelve a [Registro de la investigación: poder demostrar lo que se hizo](#registro-de-la-investigación-poder-demostrar-lo-que-se-hizo).
+
+## Registro de la investigación: poder demostrar lo que se hizo
 
 La responsabilidad proactiva del RGPD, la exactitud del Protocolo de Berkeley y la credibilidad de cualquier conclusión dependen de lo mismo: **poder reconstruir qué se hizo, cuándo, con qué fuente y por qué**.
 
@@ -311,7 +338,9 @@ Cuando algo debe conservarse como evidencia, como una publicación que puede des
 | Anotar quién ha accedido a la evidencia y cuándo | Mantener la cadena de custodia |
 | Guardar la evidencia en un lugar con acceso restringido | Cumplir el principio de integridad y confidencialidad |
 
-Estas prácticas están desarrolladas en la norma ISO/IEC 27037, en la RFC 3227 y, en España, en la norma UNE 71506. Una organización que prevé llevar un asunto a los tribunales debe implicar desde el principio a su asesoría jurídica y, si procede, a un perito; la trazabilidad de una práctica docente no sustituye a una cadena de custodia forense.
+Estas prácticas están desarrolladas en la norma ISO/IEC 27037, en la RFC 3227 y, en España, en la norma UNE 71506. Una organización que prevé llevar un asunto a los tribunales debe implicar desde el principio a su asesoría jurídica y, si procede, a un perito; la registro de la investigación de una práctica docente no sustituye a una cadena de custodia forense.
+
+**Aplicación al caso:** [Incidente y registro de la investigación](casos/operacion-linde/04-incidente-y-trazabilidad.md). Al terminar, vuelve a [Una vista completa](#una-vista-completa).
 
 ## Una vista completa
 
@@ -321,7 +350,7 @@ Ley, ética y OPSEC no son una fase más del ciclo de inteligencia, ni un trámi
 
 | Fase del ciclo | Control legal | Control ético | Control de OPSEC | Qué queda registrado |
 |---|---|---|---|---|
-| **Dirección y planificación** | Quién investiga, con qué base y qué queda excluido | ¿Es legítima la petición o hay que reformularla? | Quién debe conocer la investigación | Requerimiento con alcance y exclusiones; evaluación de licitud |
+| **Dirección y planificación** | Quién investiga, con qué base y qué queda excluido | ¿Es legítima la petición o hay que reformularla? | Quién debe conocer la investigación | Requerimiento con alcance y exclusiones; evaluación legal |
 | **Obtención** | Sin acceso a sistemas protegidos ni credenciales ajenas | Lo necesario, por el medio menos intrusivo | Fuentes pasivas, medios de trabajo, sin avisar al objetivo | Bitácora y evidencias con su huella |
 | **Procesamiento** | Minimización y descarte de lo que no hace falta | No cruzar datos para ampliar el perfil de nadie | Material del caso solo en sistemas con acceso restringido | Qué se conservó, qué se descartó y por qué |
 | **Análisis y producción** | Exactitud de lo que se afirma | Distinguir hechos, inferencias y supuestos; no señalar sin base | No incluir en el producto más de lo que el destinatario necesita | Valoración con confianza y limitaciones |
@@ -337,13 +366,13 @@ En la fase de obtención conviene detenerse antes de cada acción y comprobar se
 | # | Comprobación | Si la respuesta es no |
 |---:|---|---|
 | 1 | ¿Responde a una pregunta del requerimiento? | No se realiza |
-| 2 | Si implica datos personales, ¿hay base de licitud y se limita a lo necesario? | No se realiza o se replantea |
+| 2 | Si implica datos personales, ¿hay base legal y se limita a lo necesario? | No se realiza o se replantea |
 | 3 | ¿Evita acceder a sistemas o contenidos protegidos? | Se descarta |
 | 4 | ¿Es la forma menos intrusiva de obtenerlo? | Se sustituye por la alternativa |
 | 5 | ¿Se realiza sin exponer la investigación, al analista ni a terceros? | Se aplican contramedidas o se replantea |
 | 6 | ¿Queda registrada en la bitácora? | Se registra antes de continuar |
 
-La [plantilla de evaluación de licitud](../../plantillas/plantilla-evaluacion-licitud.md) convierte estas comprobaciones en un documento de trabajo que puede adjuntarse al requerimiento.
+La [plantilla de evaluación legal](../../plantillas/plantilla-evaluacion-licitud.md) convierte estas comprobaciones en un documento de trabajo que puede adjuntarse al requerimiento.
 
 ### Cuándo detenerse
 

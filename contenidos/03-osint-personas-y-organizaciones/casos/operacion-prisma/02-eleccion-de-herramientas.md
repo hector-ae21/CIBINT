@@ -1,6 +1,8 @@
 # Operación Prisma · Elección de herramientas
 
-Esta parte se resuelve con el expediente y el [catálogo de herramientas](../../herramientas.md). Todavía no se instala, no se consulta Internet y no se ejecuta ninguna transformación.
+**Cuándo hacerlo:** después de [Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección).
+
+Esta parte se resuelve con el expediente y la tabla de herramientas del tema. El catálogo queda como consulta para ampliar una opción concreta. Todavía no se instala, no se consulta Internet y no se ejecuta ninguna transformación.
 
 ## Elegir por la necesidad
 
@@ -12,7 +14,7 @@ Compras necesita valorar el cambio de canal. No todas las preguntas requieren un
 |---|---|---|---|
 | ¿La imagen tuvo un uso anterior? | Maltego, Lens/TinEye, Hunchly | Búsqueda inversa, si hiciera falta obtener nueva evidencia | Busca coincidencias de imagen; el grafo y la captura tienen otra función |
 
-En el expediente esa pregunta ya cuenta con PRI-F06 y PRI-S05. Por tanto, puede interpretarse antes de buscar. La herramienta se elige para una laguna real, no para repetir una comprobación ya disponible.
+En el expediente esa pregunta ya cuenta con PRI-F06 y PRI-S05. Por tanto, puede interpretarse antes de buscar. La herramienta se elige para una limitación real, no para repetir una comprobación ya disponible.
 
 ## Trabajo guiado
 
@@ -47,4 +49,8 @@ Completa un plan de ejecución para la parte posterior:
 
 La mejor herramienta depende de la pregunta. Puede ser un buscador para localizar un aviso, Maltego para ordenar relaciones, Hunchly para conservar una publicación o Babel Street para un seguimiento multilingüe con acceso adecuado. La respuesta debe explicar por qué; no basta con enumerar marcas.
 
-La elección queda preparada para [Obtención con herramientas](03-obtencion-con-herramientas.md).
+Conserva el plan. Se pondrá en práctica al terminar el análisis del expediente.
+
+**Al terminar:** [continuar el Tema 3: Investigación de personas: identidad y huella digital](../../README.md#investigación-de-personas-identidad-y-huella-digital).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

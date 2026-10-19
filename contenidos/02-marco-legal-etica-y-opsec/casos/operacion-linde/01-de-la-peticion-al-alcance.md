@@ -1,5 +1,7 @@
 # Operación Linde · De la petición al alcance
 
+**Cuándo hacerlo:** después de [Compartir lo que se sabe](../../README.md#compartir-lo-que-se-sabe).
+
 La petición de la dirección general, «quiero saber quién está detrás de esto», es comprensible. Pero tal como está formulada mezcla tres cosas distintas, y solo una de ellas corresponde al equipo de seguridad.
 
 ## Tres preguntas dentro de una
@@ -28,13 +30,13 @@ Aplicando lo visto en el Tema 1, la petición se convierte en un requerimiento q
 
 > **Requerimiento:** valorar antes del martes a las 12:00 si el acceso ofrecido en el foro y los documentos publicados suponen una exposición real de los sistemas de Orvalia, y proponer medidas de contención y los pasos para la denuncia, sin identificar a personas concretas ni interactuar con quien ofrece el acceso.
 
-## La base de licitud, por escrito
+## La base legal, por escrito
 
 El equipo va a tratar datos personales: el alias del foro, los registros de acceso de empleados, los nombres del organigrama publicado. Por eso conviene dejar constancia de la base desde el principio:
 
 | Elemento | Contenido |
 |---|---|
-| Base de licitud | Interés legítimo en la seguridad de la red y de la información (art. 6.1.f y considerando 49 del RGPD) |
+| Base legal | Interés legítimo en la seguridad de la red y de la información (art. 6.1.f y considerando 49 del RGPD) |
 | Necesidad | Sin conocer el alcance de la exposición no pueden decidirse las medidas de contención |
 | Ponderación | Se limita a lo imprescindible para contener; no se buscan datos de la vida personal de nadie |
 | Información a los afectados | No se informa al autor por el momento, porque haría ineficaz la investigación (art. 14.5.b RGPD); la decisión se documenta |
@@ -54,4 +56,6 @@ Se debe revisar cada una de las cinco propuestas de [peticiones.csv](datos/petic
 
 Una petición puede entrar solo en parte. En ese caso se indica qué parte.
 
-La explicación general continúa en [Quién investiga cambia el marco](../../README.md#quién-investiga-cambia-el-marco) y [Protección de datos](../../README.md#protección-de-datos-lo-público-sigue-siendo-dato-personal).
+**Al terminar:** [continuar el Tema 2: Ética profesional: lo que la ley no resuelve](../../README.md#ética-profesional-lo-que-la-ley-no-resuelve).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

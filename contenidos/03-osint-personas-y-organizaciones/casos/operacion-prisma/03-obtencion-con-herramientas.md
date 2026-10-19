@@ -1,5 +1,7 @@
 # Operación Prisma · Obtención con herramientas
 
+**Cuándo hacerlo:** después de [De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención).
+
 Se trabaja después de [elegir las herramientas](02-eleccion-de-herramientas.md). Recupera tu plan: pregunta, opción elegida, entrada, fuente esperada y alternativa. Ahora se utiliza, se conserva el resultado y se revisa si resolvió la pregunta.
 
 ## Objetivos de la práctica
@@ -16,7 +18,7 @@ Si elegiste buscador o archivo web:
 2. Ejecuta y abre la fuente original. Guarda consulta, URL y fecha disponible.
 3. Afina la consulta o localiza otra fuente que pueda contradecir la interpretación.
 4. Si elegiste Wayback, introduce la URL de la página en [Wayback Machine](https://web.archive.org/) y compara dos capturas existentes. Registra fecha de archivo y contenido comparado.
-5. Explica qué parte del procedimiento permitiría comprobar un cambio de canal y qué no ha podido resolverse.
+5. Explica cómo se podría comprobar un cambio de canal y qué no ha podido resolverse.
 
 No se esperan versiones archivadas de `nayade.example`. Para el análisis ficticio se utilizan PRI-F04, PRI-F05 y PRI-S04.
 
@@ -27,12 +29,12 @@ Si elegiste Intelligence X, utiliza el dominio público corporativo definido par
 1. Escribe qué referencia quieres localizar y por qué falta.
 2. Introduce el dominio como selector en [Intelligence X](https://intelx.io/). Si buscas una URL concreta, revisa la [regla de normalización](https://help.intelx.io/get-started/selector/) antes de cambiar la entrada.
 3. Acota por fecha o fuente si la interfaz y el acceso lo permiten; conserva los filtros exactos.
-4. Revisa un resultado pertinente y registra procedencia, contexto, referencia y fechas disponibles. Si no puedes abrirlo, registra la restricción.
+4. Revisa un resultado relevante y registra procedencia, contexto, referencia y fechas disponibles. Si no puedes abrirlo, registra la restricción.
 5. Contrasta la mención con el dominio conocido. Explica por qué su aparición no acredita control ni autorización.
 
-Si no hay acceso o no hay resultados pertinentes, utiliza Google o Wayback y explica qué cobertura cambia. No se descargan resultados con secretos o datos personales ajenos al encargo. El resultado público no se atribuye a Náyade.
+Si no hay acceso o no hay resultados relevantes, utiliza Google o Wayback y explica qué cobertura cambia. No se descargan resultados con secretos o datos personales ajenos al encargo. El resultado público no se atribuye a Náyade.
 
-## Datos societarios: identificar la entidad
+## Datos legales de la empresa: identificar la entidad
 
 Si elegiste OpenCorporates o BORME, utiliza una sociedad real indicada para la consulta. Busca denominación y jurisdicción y conserva número de registro, fuente y fecha. Compara dos candidatos si los hay. Si solo encuentras uno, no inventes otro.
 
@@ -60,10 +62,10 @@ Si el plan incluía una transformación para obtener información nueva, selecci
 
 Si elegiste Babel Street para seguimiento multilingüe y existe acceso institucional:
 
-1. Define término o entidad, periodo, lenguas pertinentes y tipos de fuente. Utiliza los campos equivalentes que ofrezca la cuenta; no se presupone una interfaz de Babel X de 2020.
+1. Define término o entidad, periodo, lenguas relevantes y tipos de fuente. Utiliza los campos equivalentes que ofrezca la cuenta; no se presupone una interfaz de Babel X de 2020.
 2. Ejecuta una consulta acotada sobre publicaciones corporativas del objetivo autorizado.
 3. Selecciona un resultado y comprueba su fuente original, fecha y contexto.
-4. Compara una coincidencia pertinente con una que excluirías por homónimo, contenido antiguo o falta de relación.
+4. Compara una coincidencia relevante con una que excluirías por nombre coincidente, contenido antiguo o falta de relación.
 5. Conserva consulta, filtro, referencia y límite. Explica si la cobertura encontrada justificó la elección.
 
 Si no hay acceso, ejecuta una consulta de buscador y otra por cuenta y fecha en la plataforma pública disponible. Registra que es una alternativa de alcance menor; no se presenta como equivalente a todas las capacidades de Babel Street. La imagen del catálogo ayuda a interpretar la función, pero no se cuenta como una consulta realizada por el estudiante.
@@ -80,7 +82,7 @@ Aplica la distinción entre cuenta, publicación y afirmación y el procedimient
 
 Si elegiste Hunchly, prepara un expediente y habilita la captura solo para el recorrido autorizado. Abre una página relevante, añade una nota y comprueba que se conservan URL, tiempo y contenido. Desactiva la captura antes de navegar fuera de la tarea.
 
-Si no está disponible, conserva una captura o copia permitida junto con URL, fecha, propósito y referencia. Explica qué trazabilidad no has automatizado. El mecanismo de conservación no valida por sí solo el contenido.
+Si no está disponible, conserva una captura o copia permitida junto con URL, fecha, propósito y referencia. Explica qué registro del origen y los pasos seguidos no has automatizado. El mecanismo de conservación no valida por sí solo el contenido.
 
 ## Revisar la elección
 
@@ -88,4 +90,8 @@ Si no está disponible, conserva una captura o copia permitida junto con URL, fe
 |---|---|---|---|---|---|
 | | | | | | |
 
-Cada estudiante debe poder mostrar una consulta o un grafo propio y explicar cómo se obtuvo. Después continúa en [Identidad y huella profesional](04-identidad-y-huella.md), vuelve aquí si hace falta nueva obtención y termina contrastando el expediente.
+Cada estudiante debe poder mostrar una consulta o un grafo propio y explicar cómo se obtuvo. Revisa si la herramienta respondió a la pregunta prevista y qué información sigue pendiente.
+
+**Al terminar:** [continuar el Tema 3: Una vista completa](../../README.md#una-vista-completa).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

@@ -1,6 +1,8 @@
 # Operación Delta · Elección de herramientas
 
-Se resuelve con el expediente y el [catálogo de herramientas](../../herramientas.md), sin consultas, cuentas ni instalaciones. Primero se decide qué dato hace falta; la ejecución viene después.
+**Cuándo hacerlo:** después de [Herramientas disponibles y criterios de elección](../../README.md#herramientas-disponibles-y-criterios-de-elección).
+
+Se resuelve con el expediente y la tabla de herramientas del tema, sin consultas, cuentas ni instalaciones. El catálogo permite ampliar una opción concreta. Primero se decide qué dato hace falta; la ejecución viene después.
 
 ## Ejemplo resuelto
 
@@ -12,7 +14,7 @@ DEL-C02 ya aporta una muestra. Puede interpretarse con ella y dejar la obtenció
 
 ## Trabajo guiado
 
-| Pregunta | Dato disponible | Laguna | Dos opciones | Mejor herramienta y motivo | Qué no elegirías todavía |
+| Pregunta | Dato disponible | Limitación | Dos opciones | Mejor herramienta y motivo | Qué no elegirías todavía |
 |---|---|---|---|---|---|
 | ¿Qué consta en el registro del dominio? | | | | | |
 | ¿Qué destino se observó para un nombre? | | | | | |
@@ -41,4 +43,8 @@ Para SpiderFoot, Amass o una transformación de Maltego, no basta con nombrar la
 
 Elige una opción principal, una herramienta de contraste y una alternativa de acceso. Anota entrada, salida esperada, fecha que conservarás y límite.
 
-Antes de ejecutarlo, interpreta [Registro, DNS y certificados](03-registro-dns-y-certificados.md) con las muestras. La ejecución se realiza posteriormente en [Obtención con herramientas](04-obtencion-con-herramientas.md).
+Las fuentes ya se han interpretado con las muestras. Conserva este plan para la práctica final de consultas.
+
+**Al terminar:** [continuar el Tema 4: De la elección a la obtención](../../README.md#de-la-elección-a-la-obtención).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

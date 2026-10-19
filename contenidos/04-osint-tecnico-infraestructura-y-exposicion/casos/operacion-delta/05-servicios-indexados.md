@@ -1,5 +1,7 @@
 # Operación Delta · Servicios indexados
 
+**Cuándo hacerlo:** después de [Motores de indexación de dispositivos expuestos](../../README.md#motores-de-indexación-de-dispositivos-expuestos).
+
 El [inventario](datos/inventario.csv) dice que el portal de legado se retiró. El [índice de servicios](datos/servicios.csv) conserva una página de acceso. Antes de declarar una contradicción hay que revisar las fechas.
 
 ## Ejemplo resuelto
@@ -14,7 +16,7 @@ La consulta reciente no convierte la observación en reciente. El índice vio el
 
 ## Trabajo guiado
 
-Compara primero DEL-S01 y DEL-S06 atendiendo a las fechas. Si elegiste un índice, retoma [Consultar servicios indexados](04-obtencion-con-herramientas.md#consultar-servicios-indexados): guarda filtros, ficha y fecha, o explica por qué no hubo datos utilizables. Los resultados públicos se registran por separado.
+Compara primero DEL-S01 y DEL-S06 atendiendo a las fechas. Interpreta aquí las muestras. La consulta de un índice real se realizará en la práctica final.
 
 Completa una tabla de lectura:
 
@@ -40,4 +42,6 @@ Una redacción posible es: «El índice B observó un servicio compatible con RD
 
 Las observaciones de los índices A y B son compatibles con un portal de proveedores publicado en sus respectivas fechas. No acreditan su estado a las 10:00 del día 21. Compartir IP y puerto puede reflejar alojamiento de varios sitios según el nombre solicitado.
 
-Continúa en [Tecnologías y prioridades](06-tecnologias-y-prioridades.md). La explicación general está en [Motores de indexación](../../README.md#motores-de-indexación-de-dispositivos-expuestos).
+**Al terminar:** [continuar el Tema 4: Fingerprinting de tecnologías y servicios](../../README.md#fingerprinting-de-tecnologías-y-servicios).
+
+[Situación y materiales del caso](README.md#situación) · [Definiciones de este tema](../../definiciones.md)

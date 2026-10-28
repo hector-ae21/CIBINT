@@ -49,7 +49,7 @@ Cada fila es una observación. No representa todos los registros del nombre ni u
 
 | Campo | Significado |
 |---|---|
-| `certificado_id` | Identificador docente del certificado; no es una huella criptográfica |
+| `certificado_id` | Identificador del certificado en el ejercicio; no es una huella criptográfica |
 | `entrada_id` | Identificador de entrada CT; permite citar filas duplicadas |
 | `nombres_san` | Nombres incluidos en SAN, separados por `;` |
 | `emisor` | Autoridad ficticia |
@@ -68,7 +68,7 @@ DEL-C02 aparece en dos registros: CT-002 y CT-003. Son dos entradas del mismo ce
 | `protocolo` | Identificación declarada por el índice |
 | `nombre_asociado` | Nombre relacionado con la observación |
 | `origen_nombre` | Cómo se obtuvo esa relación |
-| `banner_resumido` | Resumen docente de la respuesta, no una respuesta completa |
+| `banner_resumido` | Resumen de la respuesta elaborado para el ejercicio, no una respuesta completa |
 | `observado_en` | Momento en que el índice observó el servicio |
 | `consulta_en` | Momento en que se consultó el registro |
 | `fuente` | Índice simulado A o B |

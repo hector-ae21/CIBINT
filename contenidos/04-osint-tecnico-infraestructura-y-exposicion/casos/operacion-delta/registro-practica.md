@@ -24,7 +24,7 @@ Se completa con el expediente y el catálogo, sin instalar ni buscar. Compara do
 | OBT-01 | | | | | | | | |
 | OBT-02 | | | | | | | | |
 
-Añade filas por consulta o acción. Distingue consulta propia, demostración docente y exportación preparada. Registra errores, falta de acceso y resultados vacíos; no equivalen a ausencia del activo o la publicación. Las fechas desconocidas se anotan como «no consta» y se explican como una limitación.
+Añade filas por consulta o acción. Distingue consulta propia, demostración en clase y exportación preparada. Registra errores, falta de acceso y resultados vacíos; no equivalen a ausencia del activo o la publicación. Las fechas desconocidas se anotan como «no consta» y se explican como una limitación.
 
 Los dominios ficticios no se consultan. Un grafo manual conserva referencias DEL y separa relaciones observadas, declaradas y pendientes.
 

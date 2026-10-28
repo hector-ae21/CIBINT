@@ -15,6 +15,8 @@ OSINT técnico: infraestructura y superficie de exposición. Estas definiciones 
 - [TTL y DNS pasivo](#ttl-y-dns-pasivo)
 - [Puerto, protocolo y transporte](#puerto-protocolo-y-transporte)
 - [HTTP, cabecera, cookie y banner](#http-cabecera-cookie-y-banner)
+- [Faceta](#faceta)
+- [Metadatos y huella documental](#metadatos-y-huella-documental)
 - [TLS y certificado](#tls-y-certificado)
 - [SAN, comodín y CT](#san-comodín-y-ct)
 - [Índice de servicios](#índice-de-servicios)
@@ -65,6 +67,14 @@ Un **puerto** es un número que ayuda a distinguir servicios de red. El **protoc
 ### HTTP, cabecera, cookie y banner
 
 **HTTP** es un protocolo utilizado para intercambiar recursos web. Una **cabecera** contiene información sobre la petición o la respuesta. Una **cookie** es un dato que la web pide al navegador que conserve y envíe en ciertas peticiones. Un **banner** es información que un servicio devuelve al comunicarse, como un saludo o una cabecera. Estas señales no describen todo el sistema.
+
+### Faceta
+
+En Shodan, una **faceta** resume todos los resultados de una consulta por un campo, como país, puerto, organización o producto. Permite ver la distribución antes de abrir resultados sueltos.
+
+### Metadatos y huella documental
+
+Los **metadatos** son datos sobre un archivo que el programa añade al crearlo o guardarlo, como autor, fechas, programa, ruta o impresora. No se ven al leer el documento. La **huella documental** es lo que el conjunto de documentos publicados revela sobre quien los publica. Un metadato con un nombre o un usuario es un dato personal.
 
 ### TLS y certificado
 

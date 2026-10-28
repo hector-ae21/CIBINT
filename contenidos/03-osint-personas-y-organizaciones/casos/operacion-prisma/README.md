@@ -36,7 +36,7 @@ La relación comercial previa utiliza `nayade.example`. El responsable de compra
 
 ## Condiciones del análisis
 
-- El análisis de Velaria y Náyade utiliza el expediente. Los textos son resúmenes docentes, no copias completas de publicaciones.
+- El análisis de Velaria y Náyade utiliza el expediente. Los textos son resúmenes elaborados para el curso, no copias completas de publicaciones.
 - La obtención posterior incluye consultas sobre referencias públicas. Cada resultado conserva su objetivo; no se presenta información de INCIBE como evidencia del proveedor ficticio.
 - Una relación comercial conocida aporta contexto; no es una fuente abierta. Se distingue de las muestras públicas al citarla.
 - Los perfiles con nombres coincidentes se mantienen separados hasta que exista evidencia suficiente.

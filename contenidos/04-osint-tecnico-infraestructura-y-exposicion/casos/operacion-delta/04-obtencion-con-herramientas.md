@@ -6,7 +6,7 @@ Se realiza después de [elegir herramientas](02-eleccion-de-herramientas.md) e [
 
 ## Objetivo y preparación
 
-Para registro, DNS, CT e índices existentes se utiliza **`example.org`**, un dominio de documentación mantenido por [IANA](https://www.iana.org/help/example-domains), o el dominio autorizado que indique el docente. No se realiza reconocimiento activo amplio ni se solicita un escaneo nuevo. Las IP observadas solo se utilizan para consultar registros ya disponibles.
+Para registro, DNS, CT e índices existentes se utiliza **`example.org`**, un dominio de documentación mantenido por [IANA](https://www.iana.org/help/example-domains), o el dominio autorizado que se indique en clase. No se realiza reconocimiento activo amplio ni se solicita un escaneo nuevo. Las IP observadas solo se utilizan para consultar registros ya disponibles.
 
 Los nombres `darsena.example` son ficticios. Sus relaciones se analizan con las muestras DEL. Las consultas públicas se guardan por separado en el [registro de práctica](registro-practica.md).
 
@@ -52,12 +52,12 @@ Si elegiste Shodan o Censys, prepara una consulta por la IP observada y otra con
 | Censys Platform | `host.ip=IP_OBSERVADA and host.services: (port=443 and protocol=HTTP)` |
 
 1. Comprueba la sintaxis en el [catálogo](../../herramientas.md).
-2. Ejecuta con tu acceso o participa en la consulta docente.
+2. Ejecuta con tu acceso o participa en la consulta que se haga en clase.
 3. Abre una ficha disponible y conserva IP, servicio, respuesta, nombre asociado y fecha de observación.
 4. Compara con una segunda fuente si eso figuraba en el plan.
 5. Si no hay resultados, conserva la consulta. Si hay una restricción de cuenta, registra esa restricción; no la llames «servicio ausente».
 
-Una exportación real y fechada aportada por el docente permite analizar datos cuando no hay acceso. Se indica quién consultó la plataforma y cuándo. Las capturas del catálogo y los CSV simulados no se presentan como resultados de una consulta propia.
+Una exportación real y fechada facilitada en clase permite analizar datos cuando no hay acceso. Se indica quién consultó la plataforma y cuándo. Las capturas del catálogo y los CSV simulados no se presentan como resultados de una consulta propia.
 
 ## Organizar con Maltego o valorar una obtención automatizada
 
@@ -88,7 +88,7 @@ Conserva referencia y fecha del informe. Identifica una relación DNS o de certi
 Esta comprobación aplica lo estudiado sobre tecnologías y prioridades.
 
 1. Parte de DEL-H01 y redacta qué señales contiene y qué no permiten confirmar.
-2. Para una comprobación real, utiliza una web propia o expresamente autorizada que indique el docente.
+2. Para una comprobación real, utiliza una web propia o expresamente autorizada que se indique en clase.
 3. En DevTools, abre Network / Red, recarga, selecciona la petición de documento y lee Headers / Cabeceras y Response / Respuesta.
 4. Si utilizas Wappalyzer, compara una detección con la cabecera o elemento que podría sostenerla. Si no detecta nada, registra el límite.
 5. No deduzcas una vulnerabilidad a partir del producto o versión anunciados.

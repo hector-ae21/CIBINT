@@ -36,7 +36,7 @@ Las referencias permiten verificar conceptos y sintaxis. No hay que leer complet
 | GitHub, [informe del ataque del 28 de febrero de 2018](https://github.blog/engineering/infrastructure/ddos-incident-report/), publicado el 1 de marzo | DDoS mediante amplificación memcached | Exposición, transporte e impacto |
 | Cloudflare, [Memcrashed](https://blog.cloudflare.com/memcrashed-major-amplification-attacks-from-port-11211/), 27 de febrero de 2018 | Exposición de memcached por UDP | Función y necesidad del servicio publicado |
 
-Las interfaces, campos y condiciones de acceso pueden cambiar. Para una demostración se comprueba la documentación oficial y se utiliza únicamente el objetivo autorizado por el docente.
+Las interfaces, campos y condiciones de acceso pueden cambiar. Para una demostración se comprueba la documentación oficial y se utiliza únicamente el objetivo autorizado en clase.
 
 ## Espacios de documentación
 

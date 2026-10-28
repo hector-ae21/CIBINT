@@ -305,6 +305,7 @@ Una vez comprendidas las fuentes, se puede elegir qué herramienta utilizar para
 | ¿A qué destino apunta un nombre? | DNS | La respuesta tiene fecha y puede haber destinos compartidos |
 | ¿Qué nombres aparecen en certificados? | crt.sh y registros CT | No confirma que el servicio esté activo |
 | ¿Qué servicio observó un tercero? | Shodan o Censys | La observación puede ser antigua |
+| ¿Qué revelan los metadatos de los documentos publicados? | FOCA | El autor puede ser el de la plantilla; nombres y rutas son datos personales |
 | ¿Cómo cambió el destino de un nombre? | SecurityTrails | El histórico depende de lo observado y del acceso |
 | ¿Qué página vio un tercero? | Resultados existentes de urlscan.io | No describe el estado actual |
 | ¿Qué relaciones aparecen en un informe? | VirusTotal | Hay que comprobar qué procesamiento provoca la consulta |

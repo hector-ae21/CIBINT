@@ -6,7 +6,7 @@ Se trabaja después de [elegir las herramientas](02-eleccion-de-herramientas.md)
 
 ## Objetivos de la práctica
 
-Velaria y Náyade son ficticias: no se buscan sus nombres como si fueran entidades reales. Para practicar obtención se utiliza **INCIBE, `incibe.es`**, en información corporativa y publicaciones públicas, o el objetivo indicado por el docente. Para relacionar datos se utiliza el propio expediente de Prisma.
+Velaria y Náyade son ficticias: no se buscan sus nombres como si fueran entidades reales. Para practicar obtención se utiliza **INCIBE, `incibe.es`**, en información corporativa y publicaciones públicas, o el objetivo que se indique en clase. Para relacionar datos se utiliza el propio expediente de Prisma.
 
 Las evidencias públicas conservan su objetivo real. Sirven para aprender el procedimiento; no autentican la petición ficticia. Copia el [registro de práctica](registro-practica.md) y anota la herramienta elegida antes de la primera consulta.
 
@@ -75,7 +75,7 @@ Si no hay acceso, ejecuta una consulta de buscador y otra por cuenta y fecha en 
 Aplica la distinción entre cuenta, publicación y afirmación y el procedimiento de búsqueda inversa del tema.
 
 - Para una publicación, parte del canal enlazado por la web oficial. Usa el buscador disponible para una cuenta, término y periodo; abre el original y registra posibles dependencias.
-- Para Lens o TinEye, utiliza una imagen pública elegida por el docente, por ejemplo de la [guía de verificación de Bellingcat](https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/). Abre un resultado y comprueba si es la misma imagen, su fecha y contexto.
+- Para Lens o TinEye, utiliza una imagen pública indicada en clase, por ejemplo de la [guía de verificación de Bellingcat](https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/). Abre un resultado y comprueba si es la misma imagen, su fecha y contexto.
 - No subas material interno del caso. IMG-01 se analiza mediante las referencias aportadas; no se adjunta una fotografía real de esa reunión ficticia.
 
 ## Conservar el resultado

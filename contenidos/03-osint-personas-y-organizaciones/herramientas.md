@@ -18,6 +18,7 @@ Este catálogo amplía las herramientas de la explicación principal. Se puede c
 - [Google Lens y TinEye: contrastar imágenes](#google-lens-y-tineye-contrastar-imágenes)
 - [Wayback Machine: consultar versiones anteriores](#wayback-machine-consultar-versiones-anteriores)
 - [Buscadores, BORME y OSINT Framework: localizar fuentes concretas](#buscadores-borme-y-osint-framework-localizar-fuentes-concretas)
+- [Serus: búsqueda OSINT asistida por IA y control de la exposición](#serus-búsqueda-osint-asistida-por-ia-y-control-de-la-exposición)
 - [Comparar antes de elegir](#comparar-antes-de-elegir)
 
 ## Google: operadores y búsquedas combinadas
@@ -238,6 +239,80 @@ Para un expediente pequeño estas opciones pueden resultar más proporcionadas q
 
 [Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
+## Serus: búsqueda OSINT asistida por IA y control de la exposición
+
+### Cómo funciona
+
+[Serus](https://serus.ai/) es una plataforma comercial de Anon AI Labs que combina dos funciones en una misma cuenta:
+
+- **Intelligence.** Busca a partir de un selector (correo, teléfono, nombre de usuario, nombre, dominio o cartera de criptomonedas) en registros públicos, perfiles de redes sociales, datos de brechas y fuentes de la web oscura. Incluye un asistente, Serus AI, que responde preguntas y lanza investigaciones completas a partir de una instrucción.
+- **Protection.** Vigila la exposición de tus propios datos, avisa cuando aparecen en una fuente nueva y tramita solicitudes de retirada ante los *data brokers*, las empresas que recopilan y venden datos personales.
+
+La diferencia con las demás herramientas del catálogo es que **una IA decide qué fuentes consulta y cómo combina los resultados**. Tú introduces un selector y recibes un conjunto ya agregado. Eso ahorra tiempo, pero tiene tres consecuencias:
+
+| Consecuencia | Qué implica |
+|---|---|
+| No ves cada consulta | La trazabilidad depende de que registres el selector, el modo y la fecha, y de que abras la fuente original de cada resultado |
+| La IA puede unir lo que no debe | Un perfil con el mismo nombre o la misma foto aparece como si fuera tuyo: cada resultado es un **candidato**, no un hecho |
+| Lo que introduces sale de tu equipo | El selector se envía a una empresa de Estados Unidos y queda en tu cuenta. Introducirlo es tratar ese dato |
+
+### La interfaz
+
+![Pantalla de investigación de Serus](../../imagenes/herramientas/serus-investigacion.webp)
+
+Fuente: [Serus](https://serus.ai/), imagen de presentación de la función Intelligence.
+
+La pantalla de investigación tiene una sola caja de búsqueda. Debajo se elige el modo: búsqueda de datos sobre un selector o pregunta al asistente Serus AI. Las sugerencias inferiores lanzan búsquedas en la web oscura o investigaciones OSINT completas. A la izquierda quedan las secciones Protection, Intelligence y Serus AI, y el historial de búsquedas.
+
+![Panel de protección de Serus](../../imagenes/herramientas/serus-proteccion.webp)
+
+Fuente: [Serus](https://serus.ai/), imagen de presentación de la función Protection.
+
+El panel de protección resume tu exposición en una puntuación, cuenta las exposiciones nuevas, ofrece la retirada automática de las encontradas y muestra el estado de la vigilancia. La puntuación es un indicador del propio servicio: describe lo que Serus ha encontrado, no toda tu huella.
+
+### Cuenta y acceso
+
+- Hace falta una cuenta, con Google, Apple o correo.
+- El plan gratuito incluye un número limitado de créditos y de consultas diarias a la web oscura. Es suficiente para una práctica acotada.
+- Las búsquedas ampliadas, la vigilancia continua y la retirada automática son de pago y no se exigen.
+
+### Uso en las prácticas
+
+| Uso | Selector | Qué puede aportar |
+|---|---|---|
+| Huella propia | Tu correo, tu nombre de usuario o tu teléfono | Perfiles vinculados, presencia en *data brokers* y apariciones en brechas, para decidir qué cerrar, cambiar o pedir que se retire |
+| Organización | Su dominio | Referencias públicas, perfiles corporativos y menciones del dominio en brechas, como categoría |
+
+Queda fuera de las prácticas, aunque la herramienta lo permita:
+
+- buscar a **otras personas**: su nombre, correo, teléfono o usuario. Que el servicio acepte el selector no autoriza la búsqueda;
+- abrir, copiar o conservar el contenido de una filtración, como contraseñas o documentos. Se registra solo el servicio afectado, la fecha y el tipo de dato expuesto;
+- usar el asistente para redactar el informe o valorar los hallazgos.
+
+### Procedimiento
+
+1. Crea la cuenta. Para tu huella propia, usa la cuenta con la que quieres vigilarla; para una organización, tu identidad de investigación.
+2. Elige el modo de búsqueda de datos e introduce un único selector. Anota el selector, el modo, la fecha y el número de resultados.
+3. Abre la **fuente original** de cada resultado relevante. Anota la fuente y su fecha, y clasifica el resultado como confirmado, candidato u homónimo.
+4. Si usas el asistente o una investigación completa, guarda la instrucción exacta y la respuesta. Sus conclusiones son hipótesis que hay que contrastar.
+5. En las brechas, anota solo el servicio, la fecha y el tipo de dato. Si aparece una credencial tuya, cámbiala desde el servicio oficial.
+6. Contrasta lo que vayas a usar con Google o con otra herramienta del catálogo.
+7. Al terminar, revisa qué datos han quedado guardados en la cuenta y bórralos si no los necesitas.
+
+### Interpretar los resultados
+
+| Observación | Lectura correcta |
+|---|---|
+| Un perfil aparece vinculado a tu correo | Hay una relación que comprobar: abre el perfil y mira qué dato lo une |
+| Varios perfiles comparten nombre o foto | Son candidatos separados hasta que una evidencia los una |
+| El correo aparece en una brecha | El dato estuvo expuesto en esa fecha; no dice si la contraseña sigue siendo válida |
+| La puntuación de exposición mejora | Serus encuentra menos resultados en sus fuentes; no garantiza que hayan desaparecido todas las copias |
+| No hay resultados | La cobertura del servicio no lo encuentra; no demuestra que no exista |
+
+**Para qué sirve:** tener una primera visión rápida de la exposición de unos identificadores propios o de un dominio, y vigilarla. **Para qué no sirve:** confirmar una identidad, atribuir una cuenta a una persona o sustituir la comprobación en la fuente original. **Acceso:** cuenta gratuita con límites; funciones de pago no exigidas.
+
+[Volver a la explicación del Tema 3](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
 ## Comparar antes de elegir
 
 | Pregunta | Familia de herramienta | Ejemplo |
@@ -250,6 +325,7 @@ Para un expediente pequeño estas opciones pueden resultar más proporcionadas q
 | ¿Qué versión existía antes? | Archivo web | Wayback Machine |
 | ¿La imagen circulaba en otro contexto? | Búsqueda inversa | Lens, TinEye |
 | ¿Cómo conservo lo observado? | Captura de evidencias | Hunchly |
+| ¿Qué datos de unos identificadores propios o de un dominio están expuestos? | Búsqueda agregada con IA y vigilancia | Serus |
 
 La [procedencia de las imágenes](../../imagenes/03-04-capturas.md) permite comprobar sus fuentes. Los objetivos que aparecen en las capturas ilustran la interfaz; no forman parte del alcance de las prácticas.
 

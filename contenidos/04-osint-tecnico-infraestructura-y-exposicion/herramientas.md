@@ -12,6 +12,7 @@ Este catálogo amplía las herramientas de la explicación principal. Las consul
 - [SpiderFoot: automatizar obtención mediante módulos](#spiderfoot-automatizar-obtención-mediante-módulos)
 - [OWASP Amass: descubrir y relacionar activos](#owasp-amass-descubrir-y-relacionar-activos)
 - [Shodan: consultar observaciones de servicios](#shodan-consultar-observaciones-de-servicios)
+- [FOCA: extraer metadatos de los documentos publicados](#foca-extraer-metadatos-de-los-documentos-publicados)
 - [Censys: consultar hosts, sitios y certificados](#censys-consultar-hosts-sitios-y-certificados)
 - [ICANN Lookup, DNS y crt.sh: resolver preguntas acotadas](#icann-lookup-dns-y-crtsh-resolver-preguntas-acotadas)
 - [Wappalyzer y DevTools: reconocer señales de tecnología](#wappalyzer-y-devtools-reconocer-señales-de-tecnología)
@@ -66,27 +67,193 @@ En Delta encajaría para una revisión más amplia de nombres, si la empresa la 
 
 ## Shodan: consultar observaciones de servicios
 
-Shodan indexa respuestas de servicios accesibles en Internet. Permite buscar por campos como IP, nombre y puerto. La unidad de información es el banner, que recoge parte de lo observado por el servicio. La [introducción a las consultas](https://help.shodan.io/the-basics/search-query-fundamentals) explica esa estructura.
+### Cómo funciona
+
+[Shodan](https://www.shodan.io/) es un buscador de servicios conectados a Internet. Sus sistemas recorren de forma continua las direcciones IP públicas, se conectan a los puertos abiertos y guardan lo que responde cada servicio. Cada respuesta guardada es un **banner**, que contiene:
+
+- la dirección IP y el puerto;
+- la fecha de la observación;
+- la organización que tiene asignado el rango de direcciones;
+- la ubicación aproximada;
+- el texto que devolvió el servicio: cabeceras web, nombre y versión del programa, certificado o mensaje de bienvenida.
+
+Una búsqueda sin filtros busca el texto en el contenido del banner. Para buscar por IP, dominio, organización o puerto se usan filtros.
+
+Cuando consultas Shodan, lees observaciones que ya están hechas: tu consulta llega a Shodan, no a la organización. Por eso es una técnica pasiva. Deja de serlo con estas acciones, excluidas de las prácticas:
+
+| Acción excluida | Por qué deja de ser pasiva |
+|---|---|
+| Pedir un escaneo nuevo (*scan on demand*) | Shodan se conecta otra vez a los sistemas por encargo tuyo |
+| Abrir en el navegador o en otro programa una IP o un puerto encontrados | Te conectas tú al servicio de la organización |
+| Abrir Shodan Images o capturas de cámaras y escritorios remotos | Accedes a contenido que nadie ha decidido publicar |
+| Comprobar si una vulnerabilidad listada es real | Es una prueba sobre un sistema ajeno |
+
+### Cuenta y acceso
+
+- Sin iniciar sesión, la búsqueda es muy limitada.
+- Con una **cuenta gratuita** se usan los filtros de esta ficha y se ven las primeras páginas de resultados. Es suficiente para las prácticas.
+- La descarga de resultados, Shodan Images, el filtro de vulnerabilidades y los escaneos bajo demanda son de pago y no se utilizan.
+
+Si la cuenta no permite algo, se anota como una restricción. Una restricción no es un resultado vacío.
+
+### La interfaz
 
 ![Interfaz de búsqueda de Shodan](../../imagenes/herramientas/shodan-interfaz.png)
 
-Fuente: Shodan, [*Navigating the Website*](https://help.shodan.io/the-basics/navigating-the-website). Captura publicada en su documentación; la apariencia puede diferir de la interfaz disponible.
+Fuente: [documentación de Shodan](https://help.shodan.io/the-basics/navigating-the-website). La interfaz actual tiene otro diseño, pero conserva los mismos elementos.
 
-Identifica la caja de consulta y el acceso a resultados. Después hay que abrir una ficha, revisar puerto, protocolo, respuesta y fecha de observación. Un resultado reciente no es una prueba del estado del objetivo en este instante.
+La consulta se escribe en la caja superior. La cuenta se abre desde el botón de la esquina derecha.
 
-| Consulta orientativa | Necesidad |
-|---|---|
-| `hostname:DOMINIO_AUTORIZADO` | Buscar asociaciones de nombre |
-| `ip:IP_OBSERVADA` | Consultar una dirección concreta |
-| `ip:IP_OBSERVADA port:443` | Acotar al puerto previsto |
+![Resultados con facetas y opciones de descarga en Shodan](../../imagenes/herramientas/shodan-exportacion.png)
 
-Los marcadores se sustituyen antes de ejecutar. La [referencia de filtros](https://www.shodan.io/search/filters) permite comprobar su disponibilidad. Las restricciones de cuenta deben distinguirse de un resultado vacío.
+Fuente: [documentación de Shodan](https://help.shodan.io/the-basics/navigating-the-website). Búsqueda de ejemplo, ajena a las prácticas.
 
-![Opciones de exportación en Shodan](../../imagenes/herramientas/shodan-exportacion.png)
+Detrás del cuadro de descarga está la página de resultados. A la izquierda aparecen las **facetas**, que resumen todos los resultados por país, servicio, organización, sistema operativo y producto. A la derecha, cada resultado muestra su IP, su organización y el principio del banner. Las facetas se leen **antes** de abrir resultados sueltos: dicen, por ejemplo, si la mayoría pertenece a un proveedor de alojamiento y no a la organización.
 
-Fuente: Shodan, [misma guía de navegación](https://help.shodan.io/the-basics/navigating-the-website). La imagen permite diferenciar resultados conservados de una nueva obtención. La exportación y sus formatos dependen del acceso.
+![Informe agregado de Shodan](../../imagenes/herramientas/shodan-informe.png)
+
+Fuente: [documentación de Shodan](https://help.shodan.io/the-basics/navigating-the-website). El ejemplo trata de una vulnerabilidad de 2014 y solo muestra el formato.
+
+El botón de informe convierte una consulta en gráficos por país, servicio y organización. Para describir una organización, una distribución de este tipo es más útil que una lista de direcciones. En un informe público se presentan cifras agregadas, no fichas de equipos concretos.
+
+### Filtros útiles para una organización
+
+Un filtro se escribe `nombre:valor`, sin espacio. Si el valor tiene espacios, va entre comillas: `org:"Nombre de la Entidad"`. Para combinar filtros se escriben seguidos: `hostname:DOMINIO port:443`.
+
+| Consulta | Qué devuelve | Precaución |
+|---|---|---|
+| `ip:DIRECCIÓN` | La ficha de una IP concreta, con todos sus puertos | Muestra la última observación de cada puerto, no el estado actual |
+| `hostname:DOMINIO` | Banners con un nombre de host que contiene el dominio | Incluye subdominios y nombres parecidos de otras entidades |
+| `ssl:"DOMINIO"` | Servicios cuyo certificado menciona el dominio | El certificado puede estar en un proveedor compartido o en una red de distribución de contenidos (CDN) |
+| `ssl.cert.subject.cn:DOMINIO` | Certificados emitidos exactamente para ese nombre | Más preciso que `ssl:`; deja fuera certificados emitidos para varios nombres |
+| `org:"NOMBRE"` | Banners de rangos de IP asignados a ese nombre | El titular del rango suele ser el proveedor de alojamiento, no su cliente |
+| `net:RANGO` | Banners de un rango concreto | Solo si otra fuente fiable demuestra que el rango es de la organización |
+| `port:443`, `country:ES` | Acotar por puerto o país | Se añaden a otra consulta, no se usan solos |
+
+Los marcadores en mayúsculas se sustituyen por los datos del objetivo. Se empieza por la consulta más acotada y se amplía de una en una, para saber qué cambia cada filtro.
+
+### Cómo leer una ficha
+
+Al pulsar en un resultado se abre la ficha de la IP, con todos sus puertos y banners.
+
+| Campo | Qué permite afirmar | Qué no demuestra |
+|---|---|---|
+| IP y nombres de host | Esos nombres estaban asociados a la IP en la observación | Que la organización controle el equipo |
+| Organización e ISP | Quién tiene asignado el rango | Quién usa el servicio |
+| Puerto y banner | Qué respondió el servicio en esa fecha | Que siga respondiendo hoy |
+| Producto y versión | Lo que el servicio declaró de sí mismo | La versión real: el banner se puede modificar |
+| Certificado | Para qué nombres se emitió | Que todos esos nombres estén en uso |
+| Fecha de la observación | Cuándo se recogió el dato | El estado actual |
+| Vulnerabilidades, si aparecen | Que la versión declarada figura en un catálogo de fallos | Que el fallo exista o se pueda aprovechar |
+
+Cada resultado se clasifica en uno de tres grupos:
+
+- **de la organización**, cuando otra fuente lo respalda, como su web, sus certificados o su DNS;
+- **de un proveedor**: alojamiento, nube, CDN o correo;
+- **relación no demostrada**, que queda como pendiente.
 
 En Delta ayuda a interpretar DEL-S04. Consultar datos existentes no equivale a solicitar un escaneo nuevo: esta última acción queda fuera del encargo.
+
+### Procedimiento
+
+1. Parte del dominio y del nombre legal ya validados con fuentes corporativas.
+2. Inicia sesión con tu cuenta de investigación.
+3. Ejecuta `hostname:DOMINIO`. Después, `ssl:` u `org:` si la pregunta lo necesita. Anota cada consulta exacta, la fecha y el número de resultados.
+4. Lee las facetas.
+5. Abre solo las fichas que la pregunta necesita. Anota puerto, producto declarado, fecha de observación y titular del rango.
+6. Clasifica cada resultado en uno de los tres grupos y contrasta los que atribuyas a la organización.
+7. Si aparece un servicio delicado, como un escritorio remoto, una cámara, un panel de control industrial o una base de datos, no lo abras ni captures su contenido, y avisa por el canal privado de la asignatura.
+
+**Para qué sirve:** describir qué parte de la organización está expuesta a Internet y qué depende de proveedores. **Para qué no sirve:** demostrar quién es el propietario de un activo, la versión real de un servicio o que un fallo exista.
+
+[Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
+
+## FOCA: extraer metadatos de los documentos publicados
+
+### Cómo funciona
+
+**FOCA** (*Fingerprinting Organizations with Collected Archives*) es una herramienta gratuita y de código abierto creada por ElevenPaths, de Telefónica. Trabaja en tres pasos:
+
+1. **Busca** en Google, Bing y DuckDuckGo los documentos publicados en un dominio, con consultas del tipo `site:DOMINIO filetype:pdf`.
+2. **Descarga** los documentos encontrados, como lo haría cualquier visitante de la web.
+3. **Extrae los metadatos** de cada documento y los agrupa por categorías para toda la organización.
+
+También analiza documentos que ya tienes en tu equipo.
+
+Los **metadatos** son datos sobre el documento que el programa añade al crearlo o guardarlo y que no se ven al leerlo: autor, organización, fechas de creación y modificación, programa y versión, plantilla, ruta en la que se guardó o impresora. Un documento aislado dice poco. Cientos de documentos de una misma organización permiten reconstruir su **huella documental**.
+
+| Metadato | Qué revela de la organización | Cómo podría aprovecharlo un atacante | Medida defensiva |
+|---|---|---|---|
+| Autor o usuario | El formato de los nombres de usuario internos | Hacer creíble un mensaje o deducir el formato de las cuentas | Limpiar los metadatos antes de publicar |
+| Ruta local o de red | Nombres de servidores, unidades compartidas y carpetas | Dar apariencia interna a un engaño | Exportar desde una ubicación neutra o limpiar las rutas |
+| Programa y versión | Qué software de ofimática se usa y si está actualizado | Preparar un archivo adjunto dirigido | Actualizar el software y limpiar los metadatos |
+| Impresora | Nombres de equipos internos | Ampliar el mapa del entorno interno | Limpiar los metadatos |
+| Correo | Direcciones de contacto o personales | Suplantación o mensajes dirigidos | Usar buzones genéricos en los documentos públicos |
+| Fechas | Antigüedad y ritmo de publicación | Detectar documentos antiguos que nadie revisa | Revisar y retirar lo obsoleto |
+
+### Instalación
+
+FOCA funciona en **Windows de 64 bits** y necesita:
+
+- Microsoft .NET Framework 4.7.1;
+- Microsoft Visual C++ 2010 x64 o posterior;
+- SQL Server 2014 o posterior. La edición gratuita **SQL Server Express** es suficiente.
+
+Pasos:
+
+1. Instala SQL Server Express con la instancia por defecto, `SQLEXPRESS`.
+2. Descarga `FOCA-v3.4.7.1.zip` desde la [página de versiones del repositorio](https://github.com/ElevenPaths/FOCA/releases). Es la última versión, de agosto de 2021.
+3. Descomprímelo en una carpeta de trabajo y ejecuta `FOCA.exe`.
+4. Al arrancar, FOCA busca la instancia de SQL Server. Si no la encuentra, pide una cadena de conexión: `Data Source=.\SQLEXPRESS;Integrated Security=True`.
+
+En macOS o Linux se usa una máquina virtual con Windows o un equipo del aula.
+
+FOCA no recibe actualizaciones desde 2022, y los buscadores pueden bloquear sus consultas o devolver pocos resultados. En ese caso se aplica el [procedimiento alternativo](#procedimiento-alternativo-análisis-local).
+
+### La interfaz
+
+![Interfaz principal de FOCA Open Source](../../imagenes/herramientas/foca-interfaz.png)
+
+Fuente: Alumbra456, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:FOCAInterfazPrincipal.png), 2018, licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es). FOCA Open Source 3.4, sin modificar.
+
+| Zona | Contenido | Uso en las prácticas |
+|---|---|---|
+| Árbol de la izquierda | `Network`, `Domains` y `Metadata`, con `Documents` y `Metadata Summary` | Solo se trabaja en `Metadata` |
+| Panel derecho | Formulario del proyecto: nombre, dominio, dominios alternativos, carpeta de descarga, fecha y notas | Se rellena al crear el proyecto |
+| Panel inferior | Registro de actividad: hora, origen, gravedad y mensaje | `Save log to File` lo guarda para la bitácora |
+
+`Network` y `Domains` se rellenan solos con los servidores y dominios que aparecen en las URL y en los metadatos. Desde esos nodos, y desde `Plugins`, FOCA lanza búsquedas DNS, rastreos y pruebas contra los servidores de la organización. Eso es reconocimiento activo y queda fuera de las prácticas. Lo que aparezca en esos nodos se trata como un dato de los documentos, no como una comprobación.
+
+### Procedimiento
+
+1. **Proyecto.** En `Project > New project`, escribe un nombre, el dominio principal de la organización y, solo si son suyos, los dominios alternativos. La carpeta de descarga debe estar fuera del repositorio. En las notas, escribe la pregunta y el alcance. Pulsa `Create`.
+2. **Búsqueda.** Selecciona `Metadata > Documents`. Marca los buscadores y las extensiones que respondan a la pregunta, por ejemplo `pdf`, `docx`, `xlsx`, `pptx` y `odt`, y pulsa `Search All`. Anota cuántos documentos aparecen y de qué tipo.
+3. **Selección.** No descargues todo. Elige un número limitado de documentos, de tipos y fechas variados, y descárgalos con el botón derecho, `Download`.
+4. **Extracción.** Con el botón derecho, ejecuta `Extract Metadata` y después `Analyze Metadata`.
+5. **Resumen.** Abre `Metadata Summary`: `Users`, `Folders`, `Printers`, `Software`, `Emails`, `Operating Systems` y `Servers`. Anota cuántos elementos hay en cada categoría y qué patrones se repiten.
+6. **Detalle.** Abre algunos documentos para comprobar fechas, programa y autor. Distingue el programa que creó el documento del que lo convirtió a PDF.
+7. **Cierre.** Guarda el registro con `Save log to File`. Al terminar, borra los documentos descargados y el proyecto.
+
+### Procedimiento alternativo: análisis local
+
+Si la búsqueda de FOCA falla, localiza los documentos con Google, con `site:DOMINIO filetype:pdf`, y descárgalos desde la web pública. En FOCA, añádelos a `Documents` con el botón derecho (`Add file` o `Add folder`) o arrastrándolos a la lista, y sigue desde el paso 4.
+
+Si no puedes ejecutar FOCA, usa [ExifTool](https://exiftool.org/): extrae los mismos metadatos documento a documento, aunque sin el resumen por categorías. Registra el cambio.
+
+### Interpretar los resultados
+
+| Observación | Lectura correcta |
+|---|---|
+| Un autor aparece en muchos documentos | Puede ser el autor de la plantilla, no de cada documento |
+| El programa es una herramienta de conversión a PDF | Describe la conversión, no el equipo en el que se escribió |
+| Una ruta contiene un nombre de usuario | Es un dato personal: se seudonimiza y no se investiga a esa persona |
+| El documento está en el dominio de la organización | Puede haberlo elaborado un tercero, como un proveedor o un organismo |
+| No aparecen metadatos | La organización los limpia, o el documento se generó sin ellos |
+| Las fechas son antiguas | El documento sigue publicado; no dice nada del software actual |
+
+Los nombres, usuarios y correos de los metadatos son **datos personales**. En una entrega se presentan agregados o con seudónimos (`USR-01`, `USR-02`…). Se describe el patrón, como «formato nombre.apellido», sin publicar los valores. Un metadato no autoriza a investigar a la persona que generó el documento.
+
+**Para qué sirve:** valorar qué revela una organización, sin querer, a través de los documentos que publica. **Para qué no sirve:** describir su infraestructura actual o identificar a quién pertenece una cuenta. **Licencia:** gratuita, [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html).
 
 [Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
@@ -116,7 +283,7 @@ host.ip=IP_OBSERVADA and host.services: (port=443 and protocol=HTTP)
 
 La agrupación obliga a que las condiciones correspondan al mismo servicio. Sin ella, varios campos pueden coincidir en servicios distintos del host. La sintaxis de Legacy Search es diferente.
 
-En Delta permite comparar DEL-S01 y DEL-S06 por procedencia y fecha. El acceso o una exportación real preparada por el docente determina qué se puede consultar; no se exige contratar un plan.
+En Delta permite comparar DEL-S01 y DEL-S06 por procedencia y fecha. El acceso o una exportación real facilitada en clase determina qué se puede consultar; no se exige contratar un plan.
 
 [Volver a la explicación del Tema 4](README.md#herramientas-disponibles-y-criterios-de-elección) · [Índice del catálogo](#herramientas-por-función)
 
@@ -197,7 +364,7 @@ En Delta ayuda a interpretar una página histórica como DEL-S03 y las señales 
 
 Antes de consultar hay que revisar qué acción provoca la interfaz. La guía de búsqueda advierte de que los indicadores consultados o enviados por la web pueden ser analizados e incorporados al conjunto de datos. Por tanto, no se presenta cualquier búsqueda web como pasiva ni se envían indicadores internos o personales.
 
-Para este caso se puede interpretar un informe ya preparado por el docente, con referencia y fecha, o consultar un indicador público cuando el alcance permita ese procesamiento. Se registra procedencia, relación y límite; no se solicita un nuevo análisis de un objetivo ajeno ni se descargan muestras de malware.
+Para este caso se puede interpretar un informe ya facilitado en clase, con referencia y fecha, o consultar un indicador público cuando el alcance permita ese procesamiento. Se registra procedencia, relación y límite; no se solicita un nuevo análisis de un objetivo ajeno ni se descargan muestras de malware.
 
 En Delta encaja para comparar relaciones y reputación como contexto, sin convertir DEL-S04 en una intrusión. La configuración y el modo de consulta se justifican en [Elección de herramientas](casos/operacion-delta/02-eleccion-de-herramientas.md); las evidencias se conservan en [Obtención](casos/operacion-delta/04-obtencion-con-herramientas.md#contrastar-un-informe-de-reputación).
 
@@ -214,6 +381,7 @@ En Delta encaja para comparar relaciones y reputación como contexto, sin conver
 | ¿Qué relaciones y reputación constan en un informe? | VirusTotal | Si el alcance permite el modo de consulta |
 | ¿Qué nombres aparecen en certificados? | CT | Si se debe contrastar inventario |
 | ¿Qué servicio observó un tercero? | Shodan o Censys | Si interesa comparar cobertura y fecha |
+| ¿Qué revelan los documentos publicados? | FOCA | Si hace falta revisar documentos uno a uno con ExifTool |
 | ¿Cómo represento las relaciones? | Maltego | Si el grafo ayuda a interpretar el conjunto |
 | ¿Cómo automatizo una obtención amplia? | SpiderFoot o Amass | Solo con alcance y configuración revisados |
 

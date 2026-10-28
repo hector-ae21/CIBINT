@@ -144,6 +144,7 @@ La herramienta se elige según la pregunta. Para unas pocas publicaciones puede 
 | Seguir muchas menciones en varios idiomas | Babel Street | Fuentes cubiertas, filtros y acceso disponible |
 | Guardar páginas y el recorrido de consulta | Hunchly | Contenido conservado, dirección y fecha |
 | Consultar listas de sanciones cuando el encargo lo pida | OpenSanctions | Categoría, identificadores y lista de origen |
+| Revisar la exposición de unos identificadores propios o de un dominio | Serus | Fuente original de cada resultado, candidatos y homónimos, y qué datos se envían al servicio |
 
 Esta tabla basta para preparar la elección del caso. El [catálogo de herramientas](herramientas.md) amplía cada opción con ejemplos y capturas; se consulta cuando haga falta más detalle.
 

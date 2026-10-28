@@ -6,7 +6,7 @@ Selección breve para consultar en el punto indicado. Las lecturas complementan 
 |---|---|---|
 | Google, [Afinar búsquedas](https://support.google.com/websearch/answer/2466433?hl=es) | Operadores | Escribir consultas acotadas |
 | Bellingcat, [A Beginner's Guide to Social Media Verification](https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/), 2021 | Principios iniciales y uno de los ejemplos | Revisar origen y contexto de imágenes republicadas |
-| BOE, [Boletín Oficial del Registro Mercantil](https://www.boe.es/diario_borme/) | Un sumario y el acto publicado que señale el docente | Distinguir publicación sobre una sociedad de autenticación de canales |
+| BOE, [Boletín Oficial del Registro Mercantil](https://www.boe.es/diario_borme/) | Un sumario y el acto publicado que se indique en clase | Distinguir publicación sobre una sociedad de autenticación de canales |
 | ACNUDH y Human Rights Center, [Protocolo de Berkeley](https://humanrights.berkeley.edu/wp-content/uploads/archive/2024/02/Berkeley-Protocol.pdf), 2022 | Capítulos V y VI | Planificación, obtención y análisis de fuentes abiertas |
 
 ## Documentos de trabajo

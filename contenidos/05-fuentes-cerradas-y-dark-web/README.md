@@ -227,19 +227,6 @@ El [contraste documental de casos reales](casos/casos-reales.md) utiliza solo es
 
 **Práctica 5:** [Umbral · Valoración final y contraste de casos](casos/operacion-umbral/05-valoracion-final.md). Al terminar, regresa a [Aplicación al proyecto individual](#aplicación-al-proyecto-individual).
 
-## Aplicación al proyecto individual
-
-La aplicación del tema no obliga a obtener una filtración. Puede consistir en evaluar un aviso, justificar por qué no se utiliza una fuente, documentar límites de verificación o proponer una revisión por el responsable adecuado.
-
-| Proyecto | Aplicación posible |
-|---|---|
-| Investigación sobre uno mismo | Analizar un aviso legítimo recibido y la documentación del proveedor, sin publicar datos personales ni comprobar contraseñas |
-| Web o dominio propio | Valorar un aviso autorizado del alojamiento o de exposición, distinguiendo dominio, cuenta, secreto y sesión |
-| Incidente documentado de una organización | Comparar comunicados e informes públicos y atribuir las afirmaciones sobre filtración a sus emisores |
-| Revisión de proveedores | Evaluar procedencia, licencia, cobertura y condiciones de una fuente antes de incorporarla al método |
-
-Las fechas, el canal de entrega, la evaluación y las condiciones de uso de IA se rigen por el enunciado del curso. Estos ejercicios son material de aprendizaje y no crean una actividad evaluable nueva.
-
 ## Continuación
 
 El [registro de práctica](casos/operacion-umbral/registro-practica.md) reúne las decisiones del caso. Los términos están en [Definiciones](definiciones.md), los procedimientos de consulta en [Herramientas](herramientas.md) y las fuentes de referencia en [Recursos](recursos.md).

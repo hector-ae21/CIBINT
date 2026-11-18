@@ -1,0 +1,15 @@
+9d89a40a8a6e0ee163f36e37d5a9b367  .gitattributes
+fd0e31c2388400a771bf2b5bba990ef8  01-fuentes-y-permisos.md
+0235e35438ef6a7acab1ad44d60780b5  02-acceso-y-opsec.md
+c8f6b58181f7c6892df96540f29cc0dc  03-alerta-y-credenciales.md
+90144b281d2cf9b390bd6d534ddcdb87  04-riesgos-y-comunicacion.md
+60d15f91888686679115c81005ab5036  05-valoracion-final.md
+87b8167449a92ef06fc85af9b18a2fe9  README.md
+cda0ad985005fc77ef7000908a92a889  comprobar-expediente.mjs
+e36adfc8caa3d9f2b87b5a7052606b6c  datos/README.md
+08c0043e1b132cb0d9c01d2597e7ed6d  datos/cronologia.csv
+0be87dfd0ce6be4f045ad432c11d2f52  datos/cuentas.csv
+09643887fd566a06aa52020260843538  datos/fuentes.csv
+f4270bcf48410d2cd310c6db50c63a46  datos/observaciones.csv
+3c072620000ef0026eae1f832ba70ac1  datos/rango-simulado.txt
+a871ddf6e6e07e5cd0dcb18efd180e69  registro-practica.md

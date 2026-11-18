@@ -1,0 +1,13 @@
+evento_id,fecha_hora_utc,evento,fuente_id
+UMB-C01,2023-06-10T00:00:00Z,Fecha declarada del incidente H23-01 con hora de referencia no conocida,UMB-F06
+UMB-C02,2023-06-12T10:00:00Z,Publicacion del comunicado historico,UMB-F06
+UMB-C03,2026-11-16T10:00:00Z,Condiciones contractuales disponibles para el encargo,UMB-F01
+UMB-C04,2026-11-16T21:50:00Z,Sesion de equipo no habitual de A-04 pendiente de contraste,UMB-F07
+UMB-C05,2026-11-17T08:00:00Z,Proveedor A incorpora la alerta sobre PUB-26,UMB-F02
+UMB-C06,2026-11-17T09:30:00Z,Boletin reproduce la alerta A,UMB-F03
+UMB-C07,2026-11-17T11:00:00Z,Oferta de muestra no adquirida,UMB-F08
+UMB-C08,2026-11-18T08:00:00Z,Exportacion B con referencias de H23-01,UMB-F04
+UMB-C09,2026-11-18T09:00:00Z,Inventario de cuentas al corte,UMB-F05
+UMB-C10,2026-11-18T09:20:00Z,Se facilita el resumen de acceso,UMB-F07
+UMB-C11,2026-11-18T10:00:00Z,Apertura de revision sin confirmar brecha nueva,UMB-F09
+UMB-C12,2026-11-18T10:15:00Z,Ficha documental de servicio onion legitimo,UMB-F10

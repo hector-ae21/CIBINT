@@ -14,7 +14,7 @@ Los temas siguen los contenidos de la guía docente de Ciberinteligencia. En los
 - [x] [02 · Marco legal, ética y OPSEC del analista](contenidos/02-marco-legal-etica-y-opsec/README.md)
 - [x] [03 · OSINT: personas y organizaciones](contenidos/03-osint-personas-y-organizaciones/README.md)
 - [x] [04 · OSINT técnico: infraestructura y superficie de exposición](contenidos/04-osint-tecnico-infraestructura-y-exposicion/README.md)
-- [ ] [05 · Fuentes cerradas y dark web](contenidos/05-fuentes-cerradas-y-dark-web/README.md)
+- [x] [05 · Fuentes cerradas y dark web](contenidos/05-fuentes-cerradas-y-dark-web/README.md)
 - [ ] [06 · Threat Intelligence y MITRE ATT&CK](contenidos/06-threat-intelligence-y-mitre-attck/README.md)
 - [ ] [07 · Análisis y elaboración de informes de inteligencia](contenidos/07-analisis-y-elaboracion-de-informes/README.md)
 - [ ] [08 · Herramientas y automatización del analista](contenidos/08-herramientas-y-automatizacion/README.md)

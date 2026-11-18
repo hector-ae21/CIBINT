@@ -1,0 +1,6 @@
+cuenta_id,funcion,estado_al_corte,responsable_rol,ultima_revision_utc
+A-01,soporte,activa,identidades,2026-11-18T09:00:00Z
+A-02,operaciones,activa,identidades,2026-11-18T09:00:00Z
+A-03,cuenta_historica,deshabilitada,identidades,2026-11-18T09:00:00Z
+A-04,administracion,activa,identidades,2026-11-18T09:00:00Z
+SVC-01,integracion_de_servicio,activa,responsable_aplicacion,2026-11-18T09:00:00Z

@@ -1,0 +1,9 @@
+registro_id,cuenta_id,referencia_origen,categoria,fecha_incidente_declarada,primera_observacion_utc,fuente_id,estado_verificacion
+UMB-R01,A-01,H23-01,correo_y_hash,2023-06-10,2026-11-17T08:00:00Z,UMB-F02,Referencia historica sin valor secreto
+UMB-R02,A-01,H23-01,correo_y_hash,2023-06-10,2026-11-18T08:00:00Z,UMB-F04,Repeticion del mismo origen de UMB-R01
+UMB-R03,A-02,H23-01,correo_y_hash,2023-06-10,2026-11-17T08:00:00Z,UMB-F02,Referencia historica sin valor secreto
+UMB-R04,A-03,H23-01,correo_y_hash,2023-06-10,2026-11-17T08:00:00Z,UMB-F02,Referencia historica sin valor secreto
+UMB-R05,A-04,PUB-26,cookie_sesion,no_consta,2026-11-17T08:00:00Z,UMB-F02,Categoria declarada por proveedor sin token ni prueba de validez
+UMB-R06,A-05,PUB-26,correo_declarado,no_consta,2026-11-17T08:00:00Z,UMB-F02,Asociacion no contrastada con el inventario disponible
+UMB-R07,SVC-01,PUB-26,clave_api,no_consta,2026-11-17T08:00:00Z,UMB-F02,Categoria declarada sin clave ni prueba de uso
+UMB-R08,A-02,H23-01,correo_y_hash,2023-06-10,2026-11-18T08:00:00Z,UMB-F04,Repeticion del mismo origen de UMB-R03

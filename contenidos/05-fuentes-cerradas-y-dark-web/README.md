@@ -23,7 +23,7 @@ El análisis de fuentes cerradas estudia información cuyo acceso tiene condicio
 
 El objetivo de este tema es **valorar fuentes y alertas de exposición, documentar sus límites y proponer una respuesta proporcionada**. No se requiere entrar en mercados, descargar filtraciones ni comprobar si funciona una contraseña. La búsqueda de credenciales filtradas prevista en la guía docente se aborda como una actividad defensiva de detección y valoración mediante servicios legítimos, referencias públicas y resultados simulados. No autoriza a recopilar o utilizar las credenciales.
 
-El caso [Operación Umbral](casos/operacion-umbral/README.md#situación) plantea una alerta sobre **Nácar Servicios**, una entidad ficticia. Todos sus registros están preparados para docencia. Las cuentas se representan mediante identificadores y no se incluyen correos, contraseñas ni tokens reales. Los dominios `.example` del expediente no se consultan.
+El caso [Operación Umbral](casos/operacion-umbral/README.md#situación) plantea una alerta sobre **Nácar Servicios**, una entidad ficticia. Las cuentas se representan mediante identificadores y no se incluyen correos, contraseñas ni tokens reales. Los dominios `.example` del expediente no se consultan.
 
 ## Surface web, deep web y dark web: diferencias
 

@@ -50,9 +50,9 @@ El orden de lectura lo marca el tema. Cada práctica se abre después de su expl
 |---|---|---|
 | 1 | [Clasificación de fuentes y permisos](01-fuentes-y-permisos.md) | [Diferencias entre entornos](../../README.md#surface-web-deep-web-y-dark-web-diferencias) |
 | 2 | [Plan de acceso y OPSEC](02-acceso-y-opsec.md) | [Preparación del acceso](../../README.md#acceso-seguro-y-búsqueda-de-credenciales-filtradas) |
-| 3 | [Contraste de la alerta y consulta por prefijo](03-alerta-y-credenciales.md) | [Búsqueda defensiva](../../README.md#búsqueda-defensiva-de-exposición-de-credenciales) |
-| 4 | [Riesgos, conservación y comunicación](04-riesgos-y-comunicacion.md) | [Riesgos legales y operacionales](../../README.md#riesgos-legales-y-operacionales-específicos) |
-| 5 | [Valoración final y contraste de casos](05-valoracion-final.md) | [Casos documentados](../../README.md#casos-documentados-y-práctica-de-contraste) |
+| 3 | [Contraste de la alerta y consulta por prefijo](03-alerta-y-credenciales.md) | [Monitorización y credenciales](../../README.md#monitorización-y-búsqueda-de-credenciales-filtradas) |
+| 4 | [Riesgos, conservación y comunicación](04-riesgos-y-comunicacion.md) | [Riesgos legales, éticos y operacionales](../../README.md#riesgos-legales-éticos-y-operacionales-específicos) |
+| 5 | [Valoración final y contraste de casos](05-valoracion-final.md) | [Casos de referencia](../../README.md#casos-de-referencia-y-criterio-del-analista) |
 
 ## Verificación del paquete
 

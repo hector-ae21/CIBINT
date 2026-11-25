@@ -13,6 +13,8 @@ La herramienta se elige después de definir la pregunta y el acceso permitido. E
 | ¿Varias alertas repiten un mismo origen? | CSV, hoja de cálculo o script local | Unidad de recuento y regla para identificar duplicados |
 | ¿Qué permite Tor Browser? | Documentación oficial y demostración delimitada | Una conexión no acredita anonimato absoluto ni legitimidad del destino |
 | ¿Cómo funciona una consulta por prefijo? | Demostración local con datos de prueba | No consulta un servicio real ni evalúa contraseñas personales |
+| ¿Qué servicios `.onion` existen o cómo se verifican? | Páginas oficiales (`onion.torproject.org`, `proton.me/tor`), cabecera `Onion-Location` y [Ahmia](https://ahmia.fi/) | Cobertura parcial en buscadores; verificar siempre la dirección carácter por carácter |
+| ¿Cómo seguir actividad de ransomware sin entrar a su `.onion`? | Rastreadores públicos como [Ransomware.live](https://www.ransomware.live/) | Recoge afirmaciones de los grupos; no confirma el alcance real del incidente |
 | ¿Qué debe conservarse? | Registro del caso y huellas de archivos autorizados | No se conservan secretos ni muestras sustraídas |
 
 ## Tor Browser: documentación y demostración delimitada

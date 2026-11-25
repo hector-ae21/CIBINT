@@ -31,4 +31,4 @@ Elegir el acceso mínimo que responde al encargo y explicar sus riesgos. El plan
 
 Completa la sección de acceso del [registro de práctica](registro-practica.md). Debe quedar una decisión por opción y un plan suficiente para continuar con las muestras entregadas. Si no se realiza demostración de navegador, registra «análisis documental; sin navegación propia».
 
-**Al terminar:** [continuar el Tema 5: Búsqueda defensiva de exposición de credenciales](../../README.md#búsqueda-defensiva-de-exposición-de-credenciales).
+**Al terminar:** [continuar el Tema 5: Qué hay realmente en la dark web y en entornos cerrados](../../README.md#qué-hay-realmente-en-la-dark-web-y-en-entornos-cerrados).

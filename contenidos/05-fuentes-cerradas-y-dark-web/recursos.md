@@ -15,6 +15,10 @@ Referencias consultadas el **18 de noviembre de 2026**. Las páginas técnicas y
 | Tor Project, [Security levels](https://support.torproject.org/tor-browser/features/security-levels/) | Standard, Safer y Safest | Justificar configuración |
 | Tor Project, [Attacks on onion routing](https://support.torproject.org/about-tor/security/attacks-on-onion-routing/) | Correlación de tráfico | Evitar afirmaciones de anonimato absoluto |
 | Tor Project, [comprobación de conexión](https://check.torproject.org/) | Resultado de la petición | Demostración opcional sin publicar la IP |
+| Tor Project, [directorio oficial de servicios onion](https://onion.torproject.org/) | Verificación de direcciones `.onion` del Proyecto Tor | Contrastar una dirección `.onion` contra su fuente oficial |
+| Proton, [acceso oficial mediante Tor](https://proton.me/tor) | Dirección onion verificada y recomendaciones | Ejemplo de servicio legítimo verificable en abierto |
+| Ahmia, [buscador de servicios onion](https://ahmia.fi/) | Indexación con filtro de contenido ilegal grave | Observar cómo se indexa Tor y sus límites de cobertura |
+| Ransomware.live, [seguimiento de sitios de extorsión](https://www.ransomware.live/) | Registro público de grupos y publicaciones de ransomware | Estudiar el funcionamiento de los *Data Leak Sites* sin conectarse a servidores criminales |
 
 ## Referencias de exposición y consultas
 

@@ -1,6 +1,6 @@
 # Umbral · Contraste de la alerta y consulta por prefijo
 
-**Cuándo hacerlo:** después de [Búsqueda defensiva de exposición de credenciales](../../README.md#búsqueda-defensiva-de-exposición-de-credenciales), incluidas las explicaciones de fechas y consulta por rango.
+**Cuándo hacerlo:** después de [Monitorización y búsqueda de credenciales filtradas](../../README.md#monitorización-y-búsqueda-de-credenciales-filtradas).
 
 [Situación y materiales](README.md#situación) · [Definiciones](../../definiciones.md)
 
@@ -38,4 +38,4 @@ Explica:
 
 Incorpora al [registro](registro-practica.md) el recuento con su unidad, las repeticiones, la cronología y la conclusión de alcance. Las categorías `cookie_sesion` y `clave_api` se conservan como categorías declaradas, sin inventar su contenido o validez.
 
-**Al terminar:** [continuar el Tema 5: Riesgos legales y operacionales específicos](../../README.md#riesgos-legales-y-operacionales-específicos).
+**Al terminar:** [continuar el Tema 5: Riesgos legales, éticos y operacionales específicos](../../README.md#riesgos-legales-éticos-y-operacionales-específicos).

@@ -1,6 +1,6 @@
 # Umbral · Valoración final y contraste de casos
 
-**Cuándo hacerlo:** después de [Método de análisis y valoración](../../README.md#método-de-análisis-y-valoración) y [Casos documentados y práctica de contraste](../../README.md#casos-documentados-y-práctica-de-contraste).
+**Cuándo hacerlo:** después de [Casos de referencia y criterio del analista](../../README.md#casos-de-referencia-y-criterio-del-analista).
 
 [Situación y materiales](README.md#situación) · [Definiciones](../../definiciones.md)
 
@@ -40,4 +40,4 @@ Debe poder explicarse qué cambiaría la conclusión si la cuenta A-04 resultara
 
 La entrega del ejercicio, si se solicita, seguirá el canal y las condiciones del curso. No se publica ningún dato ajeno al expediente ni se crea una actividad evaluable por iniciativa propia.
 
-**Al terminar:** [continuar el Tema 5: Aplicación al proyecto individual](../../README.md#aplicación-al-proyecto-individual).
+**Al terminar:** [continuar el Tema 5: Encaje con el proyecto final y continuación](../../README.md#encaje-con-el-proyecto-final-y-continuación).

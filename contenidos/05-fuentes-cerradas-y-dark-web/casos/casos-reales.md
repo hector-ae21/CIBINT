@@ -1,6 +1,6 @@
 # Tema 5 · Contraste documental de casos reales
 
-**Cuándo hacerlo:** después de [Casos documentados y práctica de contraste](../README.md#casos-documentados-y-práctica-de-contraste).
+**Cuándo hacerlo:** después de [Casos de referencia y criterio del analista](../README.md#casos-de-referencia-y-criterio-del-analista).
 
 Las lecturas son públicas y se limitan a las explicaciones señaladas. No se abren enlaces a muestras, listas o archivos sustraídos. Se conserva título, autor, fecha y referencia de cada afirmación utilizada.
 
@@ -32,4 +32,4 @@ Responde:
 
 Completa una tabla con: afirmación, fuente primaria, unidad o categoría, limitación y pregunta defensiva que permite formular. Separa la fecha del hecho de la publicación y la consulta propia. No se exige recuperar cifras de las bases originales ni incorporar datos personales.
 
-**Al terminar:** [Umbral · Valoración final](operacion-umbral/05-valoracion-final.md) o [volver al Tema 5](../README.md#casos-documentados-y-práctica-de-contraste).
+**Al terminar:** [Umbral · Valoración final](operacion-umbral/05-valoracion-final.md) o [volver al Tema 5](../README.md#casos-de-referencia-y-criterio-del-analista).

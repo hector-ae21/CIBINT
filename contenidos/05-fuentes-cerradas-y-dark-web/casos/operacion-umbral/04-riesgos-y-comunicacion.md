@@ -1,6 +1,6 @@
 # Umbral · Riesgos, conservación y comunicación
 
-**Cuándo hacerlo:** después de [Riesgos legales y operacionales específicos](../../README.md#riesgos-legales-y-operacionales-específicos).
+**Cuándo hacerlo:** después de [Riesgos legales, éticos y operacionales específicos](../../README.md#riesgos-legales-éticos-y-operacionales-específicos).
 
 [Situación y materiales](README.md#situación) · [Definiciones](../../definiciones.md)
 
@@ -31,4 +31,4 @@ Definir qué información debe conservarse, a quién debe comunicarse y qué dec
 
 Conserva una tabla de decisiones y un mensaje privado propuesto de hasta 180 palabras. Debe describir lo conocido, la incertidumbre y la revisión necesaria, sin reproducir material sensible ni sustituir las decisiones del responsable del tratamiento.
 
-**Al terminar:** [continuar el Tema 5: Método de análisis y valoración](../../README.md#método-de-análisis-y-valoración).
+**Al terminar:** [continuar el Tema 5: Casos de referencia y criterio del analista](../../README.md#casos-de-referencia-y-criterio-del-analista).

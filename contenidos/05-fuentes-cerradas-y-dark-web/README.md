@@ -8,12 +8,12 @@ Esta página contiene la explicación principal. Los cinco ejercicios de **Opera
 
 1. [Objeto de estudio y alcance](#objeto-de-estudio-y-alcance)
 2. [Surface web, deep web y dark web: diferencias](#surface-web-deep-web-y-dark-web-diferencias)
-3. [Acceso seguro y búsqueda de credenciales filtradas](#acceso-seguro-y-búsqueda-de-credenciales-filtradas)
-4. [Riesgos legales y operacionales específicos](#riesgos-legales-y-operacionales-específicos)
-5. [Método de análisis y valoración](#método-de-análisis-y-valoración)
-6. [Casos documentados y práctica de contraste](#casos-documentados-y-práctica-de-contraste)
-7. [Aplicación al proyecto individual](#aplicación-al-proyecto-individual)
-8. [Continuación](#continuación)
+3. [Acceso seguro, Tor y seguridad operacional](#acceso-seguro-y-búsqueda-de-credenciales-filtradas)
+4. [Qué hay realmente en la dark web y en entornos cerrados](#qué-hay-realmente-en-la-dark-web-y-en-entornos-cerrados)
+5. [Monitorización y búsqueda de credenciales filtradas](#monitorización-y-búsqueda-de-credenciales-filtradas)
+6. [Riesgos legales, éticos y operacionales específicos](#riesgos-legales-éticos-y-operacionales-específicos)
+7. [Casos de referencia y criterio del analista](#casos-de-referencia-y-criterio-del-analista)
+8. [Encaje con el proyecto final y continuación](#encaje-con-el-proyecto-final-y-continuación)
 
 ## Objeto de estudio y alcance
 
@@ -105,143 +105,118 @@ Los niveles **Standard**, **Safer** y **Safest** modifican las funciones disponi
 
 Tor tampoco ofrece anonimato absoluto frente a un observador capaz de correlacionar tráfico en varios puntos. Una VPN no corrige por sí sola esa limitación ni valida la identidad de una fuente. La [documentación sobre ataques restantes](https://support.torproject.org/about-tor/security/attacks-on-onion-routing/) describe el problema de correlación. La elección de una red o navegador debe responder al riesgo y a la autorización, no a una promesa general de invisibilidad.
 
-En estas prácticas se utiliza documentación pública y el expediente local. El catálogo incluye una demostración opcional limitada a servicios oficiales; no requiere entrar en mercados ni consultar enlaces de una filtración.
 
-**Práctica 2:** [Umbral · Plan de acceso y seguridad operacional](casos/operacion-umbral/02-acceso-y-opsec.md). Al terminar, regresa a [Búsqueda defensiva de exposición de credenciales](#búsqueda-defensiva-de-exposición-de-credenciales).
+**Práctica 2:** [Umbral · Plan de acceso y seguridad operacional](casos/operacion-umbral/02-acceso-y-opsec.md). Al terminar, regresa a [Qué hay realmente en la dark web y en entornos cerrados](#qué-hay-realmente-en-la-dark-web-y-en-entornos-cerrados).
 
-### Búsqueda defensiva de exposición de credenciales
+## Qué hay realmente en la dark web y en entornos cerrados
 
-El objetivo defensivo es saber qué cuentas o servicios requieren revisión, no obtener contraseñas. La evidencia útil puede ser una notificación legítima, una referencia de exposición, las categorías de datos afectadas o un informe autorizado del responsable del servicio. No es necesario poseer el secreto para justificar una revisión.
+Cuando se habla de la dark web suele aparecer una imagen exagerada: un rincón secreto de Internet donde todo es ilegal. En la práctica el panorama es más mezclado, y entender qué convive dentro ahorra muchos errores de análisis.
 
-| Información | Significado | Limitación |
+### Servicios legítimos y verificación de direcciones `.onion`
+
+En la red Tor existen servicios completamente legales y públicos. Medios de comunicación internacionales como **BBC News** mantienen réplicas `.onion` para que personas en países con censura puedan leer noticias sin bloqueos. Organizaciones periodísticas como **ProPublica** o **The New York Times** operan buzones de **SecureDrop** para recibir filtraciones de fuentes anónimas. También tienen servicio onion buscadores orientados a la privacidad como **DuckDuckGo**, proveedores de correo cifrado como **Proton**, el propio **Proyecto Tor** e incluso portales institucionales.
+
+El problema práctico está en cómo llegar a ellos. Una dirección onion v3 es una cadena de 56 caracteres aparentemente aleatorios. Nadie la recuerda de memoria, y esa dificultad la aprovechan quienes montan copias falsas (*phishing* o clones con enlaces manipulados) en directorios y wikis anónimas. Por eso en ciberinteligencia rige una regla sencilla: una dirección `.onion` no se da por buena porque aparezca en una lista cualquiera. Se verifica primero en la web oficial de la organización (por ejemplo, en `onion.torproject.org` o `proton.me/tor`) o mediante la cabecera `Onion-Location`, que muestra un aviso directo en la barra de direcciones de Tor Browser cuando visitas la web oficial.
+
+### Ecosistema delictivo y canales cerrados
+
+Junto a esos servicios legítimos existe el ecosistema subterráneo que interesa vigilar desde defensa. Tampoco funciona de forma uniforme; cada espacio tiene sus reglas y su utilidad para un analista:
+
+| Entorno | Qué suele circular | Cómo opera habitualmente | Qué tiene en cuenta el analista |
+|---|---|---|---|
+| **Foros cerrados** | Accesos corporativos (*Initial Access Brokers*), bases de datos robadas, herramientas y ofertas de colaboración | Registro restringido, invitación o fianza; reputación interna, moderación y sistemas de depósito (*escrow*) | Hay competencia y estafas internas; una publicación en un foro es una afirmación, no una prueba |
+| **Mercados clandestinos** | Credenciales, tarjetas, sesiones de navegador y documentación robada | Tiendas automatizadas con pago en criptomonedas y vida corta por operaciones policiales o *exit scams* | Las direcciones cambian o se clonan con frecuencia; el inventario anunciado suele estar inflado o reciclado |
+| **Sitios de extorsión (*Data Leak Sites*)** | Nombres de víctimas de ransomware, cuentas atrás, pruebas de robo y enlaces de descarga | Blogs en `.onion` gestionados por grupos de ransomware para presionar el pago del rescate | Casi nunca hace falta conectarse al `.onion`: rastreadores públicos y plataformas CTI indexan estos avisos sin exponer tu equipo |
+| **Mensajería cifrada y *paste sites*** | Volcados rápidos, logs de *infostealers*, avisos de brechas y reventa de listas | Canales de Telegram que abren y cierran a diario, además de repositorios temporales de texto | Buena parte de la actividad actual ocurre fuera de Tor; los enlaces caducan rápido y se reenvían sin origen claro |
+
+Conviene quedarse con una idea clave: en estos entornos abunda el ruido. Es muy habitual que un vendedor junte filtraciones de hace años y las anuncie como una brecha nueva, que infle el número de cuentas para ganar prestigio o que simplemente estafe a otros compradores. Leer un título llamativo en un foro o un canal nunca basta para dar por hecho un ataque reciente.
+
+## Monitorización y búsqueda de credenciales filtradas
+
+Uno de los trabajos más habituales de ciberinteligencia defensiva es detectar si circulan credenciales o datos internos de una organización. El objetivo es claro: saber qué cuentas, equipos o servicios necesitan revisión cuanto antes, **sin descargar bases de datos robadas y sin probar si una contraseña funciona**.
+
+### De dónde salen las credenciales que aparecen en alertas
+
+No todas las exposiciones tienen el mismo origen ni exigen la misma urgencia. Un analista necesita distinguir tres fuentes habituales:
+
+- **Brechas de terceros:** un servicio externo sufre un robo de base de datos y en él aparecen correos corporativos registrados por empleados. El riesgo principal es que alguien haya reutilizado la misma contraseña en el trabajo (*credential stuffing*). Además, no es lo mismo que se filtren contraseñas en texto claro a que se filtren *hashes* robustos.
+- **Combolists y colecciones agregadas:** archivos enormes que mezclan cientos de brechas antiguas (el caso más conocido fue *Collection #1*, en 2019). Se reempaquetan una y otra vez con fechas nuevas, así que generan muchas falsas alarmas si no se comprueba de cuándo procede realmente cada registro.
+- **Logs de *infostealers*:** aquí el escenario cambia por completo. Un *infostealer* es un malware que infecta un equipo concreto (corporativo o personal) y roba de golpe las contraseñas guardadas en el navegador, las cookies de sesión activas, los tokens y datos del sistema. Si circula una cookie o un token de sesión reciente, cambiar la contraseña o tener activada la autenticación multifactor (MFA) puede no ser suficiente: hace falta revocar sesiones activas y revisar el equipo infectado.
+
+### Herramientas y servicios legítimos para comprobar exposición
+
+En lugar de entrar a buscar archivos en foros clandestinos, el trabajo defensivo se apoya en servicios legales y verificables:
+
+- **Have I Been Pwned (HIBP):** permite comprobar si una dirección propia o un dominio corporativo verificado aparece en brechas conocidas. Devuelve en qué incidente figuró la cuenta y qué categorías de datos se expusieron, nunca la contraseña. Para comprobar si una contraseña concreta está comprometida ofrece **Pwned Passwords** con un modelo de *k-anonimato*: el cliente calcula en local el hash SHA-1 de la contraseña, envía al servidor solo los 5 primeros caracteres y compara el resto de sufijos en el propio equipo. De ese modo nunca se transmite la contraseña real. (Conviene recordar que SHA-1 se usa ahí por compatibilidad con ese protocolo de consulta, no como método recomendado para guardar contraseñas en un sistema).
+- **Plataformas de inteligencia y monitorización:** servicios como Intelligence X, Hudson Rock, DeHashed o proveedores comerciales de vigilancia digital indexan menciones de dominios, referencias de brechas y rastros de *infostealers*. Aportan visibilidad temprana, pero su utilidad depende de revisar qué cobertura tienen, de dónde sacan el dato y qué permite hacer su licencia.
+- **Buscadores de la red Tor:** motores como **Ahmia** permiten explorar qué servicios `.onion` están indexados filtrando material ilegal grave. Son útiles para entender cómo funciona el descubrimiento en Tor, sabiendo que solo ven una fracción de la red y que muchos resultados son clones, estafas o páginas caídas.
+
+### Cuatro comprobaciones antes de elevar una alerta
+
+Cuando llega un aviso de fuga —venga de un proveedor, de una noticia o de una consulta legítima—, antes de redactar conclusiones conviene pasar por cuatro filtros:
+
+| Comprobación | Qué miras exactamente | Error típico que evita |
 |---|---|---|
-| Dirección de correo en una notificación | Relaciona un identificador con el incidente descrito por la fuente | No demuestra que la contraseña actual se conozca o que se haya accedido a otras cuentas |
-| Contraseña o hash mencionado en una alerta | Señala una categoría de dato potencialmente expuesta | No se copia ni se prueba; puede ser histórica, falsa o no corresponder al acceso actual |
-| Cookie o token de sesión | Puede representar una sesión ya establecida | Cambiar una contraseña no debe darse por equivalente a invalidar todas las sesiones |
-| Clave de API o secreto de una aplicación | Puede dar acceso a una función técnica | Deben identificarse responsable y alcance, sin utilizar el secreto |
-| Registro de un infostealer | Puede incluir información recogida de un equipo, como sesiones o datos de autenticación | No acredita por sí solo el estado actual de cada cuenta o la extensión del compromiso |
+| **1. Origen e independencia** | ¿Quién vio el dato originalmente? ¿Dos proveedores lo obtuvieron por separado o ambos copian el mismo aviso? | Contar el mismo incidente dos veces o creer que un rumor repetido está confirmado |
+| **2. Fechas reales** | Separar la fecha del incidente, la fecha de publicación, la de indexación del proveedor y la de tu consulta | Tratar una brecha de hace tres años reempaquetada ayer como una intrusión activa |
+| **3. Tipo de dato y estado de la cuenta** | Correo, hash, contraseña en claro, cookie/token o clave API; contrastar si la cuenta sigue activa o está dada de baja | Dar la misma urgencia a un correo antiguo dado de baja que a una sesión activa o una clave técnica |
+| **4. Volumen y muestra** | Distinguir filas, pares únicos, cuentas activas y personas afectadas | Dar por buena la cifra que anuncia un vendedor sin respaldo independiente |
 
-Una **cookie** es un dato que una web almacena y recupera del navegador; no todas son de autenticación. Un **token de sesión** permite representar una sesión o autorización. Un **infostealer** es un programa malicioso diseñado para sustraer información. Estas distinciones explican por qué una alerta sobre sesiones puede requerir revisar dispositivos, permisos y revocación, además de contraseñas.
+Con esas cuatro comprobaciones ya puedes proponer acciones útiles al equipo responsable (revocar sesiones, rotar claves, revisar un equipo concreto o contrastar el inventario) sin necesidad de ver el secreto robado.
 
-Una contraseña en texto claro y un hash de contraseña no representan la misma exposición. El hash no es un cifrado reversible con una clave; su resistencia depende del método y de sus parámetros. Conocer la presencia de hashes no permite afirmar que se hayan recuperado las contraseñas ni descartar el riesgo. La [guía de almacenamiento de contraseñas de OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) explica esa diferencia.
+**Práctica 3:** [Umbral · Contraste de la alerta y consulta por prefijo](casos/operacion-umbral/03-alerta-y-credenciales.md). Al terminar, regresa a [Riesgos legales, éticos y operacionales específicos](#riesgos-legales-éticos-y-operacionales-específicos).
 
-La **autenticación multifactor (MFA)** comprueba factores distintos para verificar un acceso. Una sesión posterior puede mantenerse mediante su propio secreto, por lo que no se debe afirmar que activar MFA o cambiar una contraseña resuelve por sí solo cualquier sustracción de sesión. Debe revisarse el mecanismo concreto de invalidación y renovación. Las referencias de [gestión de sesiones de NIST](https://pages.nist.gov/800-63-4/sp800-63b/session/) y [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) permiten contrastar esta separación.
+## Riesgos legales, éticos y operacionales específicos
 
-Los informes sobre **Genesis Market** muestran la comercialización conjunta de datos de acceso y huellas de navegador. La [Policía de Países Bajos](https://www.politie.nl/en/news/2023/april/5/operation-cookiemonster.html) describe la operación de retirada del mercado en abril de 2023. Ese contexto orienta las preguntas sobre sesiones, pero no acredita que una organización concreta esté afectada.
+Trabajar con fuentes cerradas o entrar en la red Tor introduce riesgos que no existen en el OSINT convencional sobre webs públicas. Conocerlos bien evita meter en un problema a la organización y a ti mismo.
 
-### Consultas legítimas y resultados negativos
+### Límites legales que no cambian porque el dato esté filtrado
 
-La información debe obtenerse por un medio admitido: notificación del proveedor, servicio legítimo con las verificaciones exigidas, exportación autorizada o informe público. No se realizan búsquedas de contraseñas de compañeros, empleados o clientes, ni se abren muestras ofrecidas por vendedores.
+En España y en la Unión Europea hay dos frentes legales que conviene tener siempre presentes:
 
-**Have I Been Pwned (HIBP)** ofrece funciones diferentes para referencias de brechas y para contraseñas. La consulta de una dirección no devuelve su contraseña. Algunas funciones requieren verificación del control del dominio o de la cuenta. La [FAQ de HIBP](https://haveibeenpwned.com/FAQs) explica la separación entre sus servicios y las limitaciones de consulta.
+- **Código Penal:** el acceso sin autorización a sistemas o cuentas ajenas, el descubrimiento y revelación de secretos o el uso de credenciales que no son tuyas están tipificados en los artículos 197, 197 bis y 197 ter del [Código Penal](https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444). Probar una contraseña encontrada en una filtración «solo para verificar si sigue activa» no es una comprobación técnica inofensiva: es un acceso no autorizado.
+- **Protección de datos (RGPD y LOPDGDD):** que una base de datos con nombres, teléfonos o correos esté circulando por Internet no la convierte en pública ni te da base jurídica para descargarla, guardarla o compartirla. Siguen aplicándose los principios de licitud, finalidad y minimización ([RGPD, arts. 5 y 6](https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=es) y [LO 3/2018](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673)).
+- **Notificación de brechas:** si una alerta se confirma como brecha de datos personales, corresponde al responsable del tratamiento —con su equipo legal y el delegado de protección de datos— decidir la notificación a la autoridad de control (en España, la [AEPD](https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion), sin dilación indebida y en un máximo de 72 horas desde que se tiene constancia, art. 33 RGPD) y, si hay alto riesgo, la comunicación a las personas afectadas (art. 34). El papel del analista es aportar hechos claros y a tiempo, no sustituir esa decisión ni esperar parado al límite de las 72 horas.
 
-Un resultado negativo significa que no se ha encontrado una coincidencia en la consulta y cobertura disponibles. No demuestra que nunca existiera exposición. Un error de autenticación, la falta de una licencia o una función no contratada tampoco equivalen a un resultado negativo.
+### Riesgos técnicos y operacionales
 
-En la asignatura se estudian resultados preparados y documentación pública. Cualquier uso posterior sobre cuentas propias o dominios autorizados debe estar previsto en el alcance y cumplir las condiciones del servicio. No se introducen credenciales reales en una demostración ni se descargan colecciones para ampliar la búsqueda.
+Más allá de la ley, investigar en la dark web expone tanto la operación como el equipo del analista:
 
-### Consulta por prefijo de hash
-
-Un **hash** es una huella calculada sobre un dato. En esta consulta se utiliza el algoritmo SHA-1 para obtener una huella que se divide en dos partes; no se envía el dato original. El procedimiento se conoce como consulta por rango o modelo de **k-anonimato**: se pide un conjunto de resultados que comparten prefijo, en lugar de identificar directamente el valor completo.
-
-**Pwned Passwords** permite comprobar coincidencias mediante un modelo de consulta por prefijo: se calcula localmente SHA-1, se envían los primeros cinco caracteres y se compara el resto con los sufijos devueltos. El servicio no recibe así la contraseña completa ni su hash completo en esa consulta. La [explicación de Pwned Passwords](https://haveibeenpwned.com/Passwords) describe el modelo; la [API oficial](https://haveibeenpwned.com/api/v3#PwnedPasswords) documenta su uso.
-
-El resultado indica una coincidencia en ese conjunto, no que una cuenta concreta esté comprometida. La consulta no vincula por sí sola el valor con una persona. SHA-1 se utiliza aquí para dividir la búsqueda de un protocolo existente; no se recomienda como mecanismo de almacenamiento de contraseñas. Tampoco se confunde con las huellas SHA-256 y MD5 utilizadas para identificar archivos de evidencia.
-
-La práctica incluye una demostración **local, sin red**, con un valor de prueba conocido y una respuesta simulada. No sirve para comprobar contraseñas reales ni consulta HIBP. Su finalidad es interpretar el prefijo, el sufijo y el resultado sin enviar secretos a ningún servicio.
-
-### Fechas, duplicados y alcance de una coincidencia
-
-Una fecha reciente puede corresponder a la incorporación de un dato antiguo. Deben separarse al menos la fecha del incidente, la publicación, la observación del proveedor y la consulta propia. Si una fecha no consta, se anota esa limitación; no se sustituye por otra.
-
-| Situación | Interpretación adecuada |
-|---|---|
-| Dos proveedores repiten un registro con el mismo origen | Dos observaciones no equivalen a dos incidentes ni a confirmación independiente |
-| El aviso contiene una cuenta actualmente activa | Justifica revisión según el dato y el contexto; no demuestra que su secreto siga siendo válido |
-| Una cuenta histórica está deshabilitada | Reduce una vía concreta de acceso, pero no descarta reutilización, sesiones u otros datos expuestos |
-| El vendedor anuncia miles de cuentas | Es una afirmación del vendedor hasta contar con respaldo; una muestra pequeña no valida el volumen |
-| No se identifica una cuenta en el inventario | Puede faltar cobertura o existir un error de asociación; no se atribuye a otra persona para completar la lista |
-
-**Práctica 3:** [Umbral · Contraste de la alerta y consulta por prefijo](casos/operacion-umbral/03-alerta-y-credenciales.md). Al terminar, regresa a [Riesgos legales y operacionales específicos](#riesgos-legales-y-operacionales-específicos).
-
-## Riesgos legales y operacionales específicos
-
-### Autorización y tratamiento de datos
-
-El acceso técnico, la autorización del encargo, las condiciones de la fuente y el tratamiento de datos deben revisarse por separado. Un proveedor puede autorizar una consulta y restringir la exportación. Una cuenta legítima no permite consultar personas ajenas al encargo. La autorización académica tampoco sustituye los permisos del titular de un sistema.
-
-En España, el [Código Penal](https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444) regula, entre otras conductas, el descubrimiento y revelación de secretos y el acceso no autorizado a sistemas. Los artículos 197, 197 bis y 197 ter requieren atender a sus elementos concretos; no toda situación tiene la misma calificación. En la práctica, probar una credencial o eludir una restricción no se convierte en una acción permitida por alegar finalidad docente.
-
-El **Reglamento General de Protección de Datos (RGPD)** exige justificar el tratamiento y aplicar principios como finalidad, minimización y limitación de conservación. Que un dato se haya difundido sin permiso no elimina su protección. Los [artículos 5 y 6 del RGPD](https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=es) son referencias para esta evaluación. La [Ley Orgánica 3/2018](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673) completa el marco español. No se presume una base jurídica por el mero interés del investigador.
-
-En una investigación profesional deben definirse responsable, finalidad, personas autorizadas, conservación y condiciones del proveedor, incluidos los flujos de datos que puedan requerir revisión. Los casos de este tema utilizan datos de prueba para que el razonamiento no dependa de tratar información personal real.
-
-### Riesgos del acceso y del contenido
-
-| Riesgo | Cómo puede aparecer | Decisión de trabajo |
+| Riesgo | Cómo aparece en la práctica | Qué hace el analista |
 |---|---|---|
-| Suplantación de la fuente | Copia de un portal o dirección recibida sin verificar | Contrastar su procedencia antes de acceder |
-| Identificación de la investigación | Reutilización de cuenta, consultas o archivos que revelan el objetivo | Mantener el entorno y las consultas dentro del plan de OPSEC |
-| Contenido malicioso | Archivo, documento activo o enlace presentado como muestra | No descargar ni abrir; detener la acción y utilizar el canal previsto |
-| Obtención excesiva | Exportación completa de personas ajenas al encargo | Solicitar un resumen o una exportación mínima autorizada |
-| Pérdida de control de la difusión | Captura con nombres o secretos publicada para justificar una conclusión | Conservar solo lo necesario y separar el informe de la evidencia reservada |
-| Engaño o información preparada | Datos antiguos vendidos como nuevos o resultados fabricados | Contrastar fechas, origen y coherencia; mantener la atribución de la afirmación |
-| Sesgo de confirmación | Interpretar cualquier coincidencia como prueba de la hipótesis inicial | Comparar explicaciones alternativas y buscar información que pueda refutarla |
+| **Suplantación de `.onion`** | Clones que cambian un par de caracteres para robar accesos o desviar tráfico | Verificar siempre la dirección en un canal oficial antes de fiarse del contenido |
+| **Explotación del navegador** | Páginas con JavaScript malicioso que intentan desanonimizar o explotar fallos | Mantener Tor Browser actualizado y en nivel **Safer** o **Safest** |
+| **Fuga por archivos descargados** | Abrir un PDF, documento o comprimido fuera de Tor puede ejecutar malware o conectar directamente a Internet revelando tu IP real | No descargar muestras ni archivos de sitios no confiables; analizar en entorno aislado solo si hay procedimiento y autorización |
+| **Exposición de identidad** | Usar cuentas personales, consultar con tu nombre o repetir hábitos de búsqueda | Separar entorno, no iniciar sesión con cuentas personales y no interactuar con actores |
+| **Contacto o pago a delincuentes** | Negociar, pedir muestras o pagar para verificar una venta | Prohibido en el análisis ordinario: expone a estafas, extorsión y responsabilidades legales |
+| **Contenido delictivo inesperado** | Directorios sin moderar o redirecciones hacia material ilegal grave | Aplicar el protocolo de parada y aviso inmediato; proteger también la salud psicológica del equipo |
 
-Se detiene el trabajo si una fuente exige pagar al presunto vendedor, contactar con él, entregar una cuenta personal, abrir una muestra o utilizar un secreto. En el entorno profesional esas situaciones requieren competencias y autorizaciones distintas; no forman parte de estas prácticas. Se comunica el hallazgo por el canal privado previsto, sin reenviar el contenido sensible.
+### Qué hacer si aparece contenido delictivo o información sensible inesperada
 
-### Conservación y respuesta a una posible brecha
+En un entorno poco controlado como Tor es fácil encontrarse, sin buscarlo, con un enlace redirigido a un mercado ilícito, datos robados en abierto o contenido delictivo grave. Ante cualquier hallazgo de ese tipo, el protocolo es directo:
 
-El registro mínimo conserva la pregunta, la referencia, las fechas, el tipo de dato, las condiciones de acceso, la decisión y la limitación. No incluye la contraseña, cookie o token. Si se conserva un archivo permitido, se anotan SHA-256 y MD5 de la misma versión; las dos huellas permiten comparaciones y no acreditan su veracidad ni sustituyen la custodia. MD5 no debe utilizarse como garantía criptográfica de seguridad; sus limitaciones se describen en el [RFC 6151](https://www.rfc-editor.org/rfc/rfc6151).
+1. **Parar en seco:** cerrar la pestaña o la sesión sin seguir pinchando enlaces, sin interactuar con nadie y sin descargar nada.
+2. **No reproducir el material:** no se guardan copias de datos robados, ni credenciales, ni capturas que muestren contenido delictivo o datos personales de terceros.
+3. **Anotar lo mínimo necesario:** fecha y hora, qué enlace o referencia llevó hasta ahí, qué tipo de actividad o indicio se vio y qué acción tomaste (por ejemplo, cerrar la sesión sin descargar archivos).
+4. **Comunicarlo por el canal privado o ético:** en una empresa se escala al equipo de respuesta, legal o autoridades competentes según la gravedad. En esta asignatura, el aviso se envía siempre por el **canal privado del repositorio (`SECURITY.md`)**, nunca en un *pull request*, *issue* o foro público.
 
-Una alerta puede requerir elevar el caso al equipo de respuesta y al responsable de protección de datos antes de completar el análisis. La decisión sobre una brecha no corresponde al estudiante ni se resuelve publicando una captura. El artículo 33 del RGPD contempla la notificación sin dilación indebida y, de ser posible, en 72 horas desde la constancia, salvo que sea improbable el riesgo; el artículo 34 regula la comunicación a las personas cuando sea probable un alto riesgo, con sus excepciones. La [orientación de la AEPD](https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion) ayuda a distinguir ambas decisiones.
+Si conservas evidencias permitidas (como informes autorizados o registros propios), conviene calcular sus huellas (`SHA-256` y, si se usa como referencia complementaria, `MD5`, sabiendo que `MD5` ya no sirve como garantía criptográfica según el [RFC 6151](https://www.rfc-editor.org/rfc/rfc6151)) y guardarlas con control de acceso.
 
-No se confunde la recepción de un rumor con una constatación suficiente ni se retrasa una actuación necesaria hasta terminar el informe. Deben documentarse el conocimiento disponible, la evaluación y las actualizaciones. Tampoco se presenta el plazo de 72 horas como un periodo concedido para esperar sin actuar.
+**Práctica 4:** [Umbral · Riesgos, conservación y comunicación](casos/operacion-umbral/04-riesgos-y-comunicacion.md). Al terminar, regresa a [Casos de referencia y criterio del analista](#casos-de-referencia-y-criterio-del-analista).
 
-**Práctica 4:** [Umbral · Riesgos, conservación y comunicación](casos/operacion-umbral/04-riesgos-y-comunicacion.md). Al terminar, regresa a [Método de análisis y valoración](#método-de-análisis-y-valoración).
+## Casos de referencia y criterio del analista
 
-## Método de análisis y valoración
+Dos casos reales bien documentados resumen casi todo lo que hay que saber en este tema, sin necesidad de tocar ningún archivo robado:
 
-La fuente acredita primero lo que publica o registra. Su afirmación debe atribuirse a quien la emite hasta disponer de contraste. Que un intermediario diga haber visto una muestra puede justificar una comprobación interna, pero no convierte esa muestra en evidencia examinada por el analista.
+- **Genesis Market (abril de 2023):** la operación internacional *Cookie Monster* ([Policía de Países Bajos](https://www.politie.nl/en/news/2023/april/5/operation-cookiemonster.html) y [Europol](https://www.europol.europa.eu/media-press/newsroom/news/takedown-of-notorious-hacker-marketplace-selling-your-identity-to-criminals)) desmanteló un mercado por invitación donde se vendían «bots» o perfiles completos extraídos con *infostealers*: contraseñas, cookies de sesión y huellas del navegador. Ese caso demuestra por qué una alerta de credenciales hoy obliga a preguntar siempre si hay sesiones comprometidas y un equipo infectado detrás.
+- **Collection #1 (enero de 2019):** en su [análisis público](https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/), Troy Hunt desmontó un paquete de más de 773 millones de direcciones únicas y 21 millones de contraseñas únicas que mezclaba cientos de brechas previas. Es el mejor ejemplo de por qué no se pueden confundir filas con cuentas activas ni cuentas con personas afectadas, y de por qué la fecha de aparición de un paquete no dice cuándo ocurrió el robo.
 
-| Paso | Pregunta | Resultado esperado |
-|---|---|---|
-| Formular el encargo | ¿Qué decisión necesita información? | Preguntas delimitadas y destinatario |
-| Revisar el acceso | ¿Fuente y acción están autorizadas? | Procedimiento y condiciones de parada |
-| Obtener lo necesario | ¿Qué referencia mínima responde a la pregunta? | Evidencia permitida con fecha y procedencia |
-| Contrastar | ¿Hay independencia, actualidad y relación con el objetivo? | Hallazgos y explicaciones alternativas |
-| Valorar | ¿Qué puede sostenerse y con qué confianza? | Conclusiones proporcionadas y limitaciones |
-| Proponer respuesta | ¿Qué revisión o protección justifica la evidencia? | Prioridad, responsable propuesto y dato pendiente |
+Con el tiempo, lo que diferencia a un buen analista en este bloque no es cuántos sitios `.onion` conoce, sino su criterio: atribuir siempre cada afirmación a su emisor, distinguir lo que ha observado directamente de lo que dice un tercero, priorizar por impacto real (una cookie activa o una clave de API pesan mucho más que una brecha de 2018) y saber exactamente dónde parar.
 
-En una alerta histórica, la prioridad puede ser revisar exposición y reutilización sin afirmar una intrusión actual. En una alerta sobre un posible token de sesión reciente, puede justificarse una revisión urgente de sesiones y dispositivos aunque no se haya probado su validez. La urgencia depende de la consecuencia plausible y del respaldo disponible; no exige convertir una hipótesis en certeza.
+El [contraste documental de casos reales](casos/casos-reales.md) propone preguntas breves sobre estas dos lecturas públicas.
 
-Las recomendaciones distinguen quién analiza, quién autoriza y quién ejecuta las medidas. Cambiar secretos, revocar sesiones, revisar registros y comprobar dispositivos son acciones del equipo responsable dentro de su procedimiento, no pruebas que el estudiante deba realizar para demostrar el hallazgo.
+**Práctica 5:** [Umbral · Valoración final y contraste de casos](casos/operacion-umbral/05-valoracion-final.md). Al terminar, regresa a [Encaje con el proyecto final y continuación](#encaje-con-el-proyecto-final-y-continuación).
 
-## Casos documentados y práctica de contraste
+El [registro de práctica](casos/operacion-umbral/registro-practica.md) reúne el seguimiento completo de Operación Umbral. Tienes el vocabulario en [Definiciones](definiciones.md), el apoyo técnico en [Herramientas](herramientas.md) y los enlaces de consulta en [Recursos](recursos.md).
 
-Dos referencias públicas permiten aplicar este método sin acceder a sus datos sustraídos:
-
-- **Genesis Market y la operación de abril de 2023.** Permite estudiar la relación entre datos de autenticación, sesiones y huellas de navegador, y distinguir el comunicado de una autoridad de una observación propia del mercado. [Comunicado de la Policía de Países Bajos](https://www.politie.nl/en/news/2023/april/5/operation-cookiemonster.html).
-- **Collection #1, descrita en enero de 2019.** Permite diferenciar filas, combinaciones y direcciones únicas en una colección de orígenes diversos. Esas unidades no se transforman automáticamente en personas o incidentes nuevos. [Análisis original de Troy Hunt](https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/).
-
-El [contraste documental de casos reales](casos/casos-reales.md) utiliza solo esas explicaciones públicas y señala qué partes consultar. No requiere abrir enlaces a muestras, listas o archivos de los incidentes.
-
-**Práctica 5:** [Umbral · Valoración final y contraste de casos](casos/operacion-umbral/05-valoracion-final.md). Al terminar, regresa a [Aplicación al proyecto individual](#aplicación-al-proyecto-individual).
-
-## Aplicación al proyecto individual
-
-La aplicación del tema no obliga a obtener una filtración. Puede consistir en evaluar un aviso, justificar por qué no se utiliza una fuente, documentar límites de verificación o proponer una revisión por el responsable adecuado.
-
-| Proyecto | Aplicación posible |
-|---|---|
-| Investigación sobre uno mismo | Analizar un aviso legítimo recibido y la documentación del proveedor, sin publicar datos personales ni comprobar contraseñas |
-| Web o dominio propio | Valorar un aviso autorizado del alojamiento o de exposición, distinguiendo dominio, cuenta, secreto y sesión |
-| Incidente documentado de una organización | Comparar comunicados e informes públicos y atribuir las afirmaciones sobre filtración a sus emisores |
-| Revisión de proveedores | Evaluar procedencia, licencia, cobertura y condiciones de una fuente antes de incorporarla al método |
-
-Las fechas, el canal de entrega, la evaluación y las condiciones de uso de IA se rigen por el enunciado del curso. Estos ejercicios son material de aprendizaje y no crean una actividad evaluable nueva.
-
-## Continuación
-
-El [registro de práctica](casos/operacion-umbral/registro-practica.md) reúne las decisiones del caso. Los términos están en [Definiciones](definiciones.md), los procedimientos de consulta en [Herramientas](herramientas.md) y las fuentes de referencia en [Recursos](recursos.md).
-
-El siguiente tema desarrolla la [inteligencia de amenazas y MITRE ATT&CK](../06-threat-intelligence-y-mitre-attck/README.md): cómo relacionar indicadores, comportamientos y fuentes sin atribuir un actor o una técnica por una sola coincidencia.
+En el siguiente tema pasamos a [Threat Intelligence y MITRE ATT&CK](../06-threat-intelligence-y-mitre-attck/README.md), donde conectaremos estas observaciones con indicadores de compromiso (IOC), tácticas, técnicas y procedimientos (TTP) y perfilado de actores.
